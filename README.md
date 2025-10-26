@@ -35,8 +35,22 @@
 
 ## Setup
 
+- Clone the repository on your local device
 ```bash
 git clone https://github.com/mebz2/nexus
+```
+
+- Go into the cloned repository
+```bash
 cd nexus
+```
+
+- Install all the packages for the client
+```bash
+npm install
+```
+
+- Run it on a local server
+```bash
 npm run dev
 ```

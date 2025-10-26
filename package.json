@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "_comment": "these lines make npm run dev and npm install work from the root directory",
     "install:client": "cd client && npm install",
     "dev": "npm run dev --prefix client dev",
     "postinstall": "npm run install:client"

@@ -33,21 +33,21 @@
 </div>
 <table>
     <tr>
-        <td>
+        <td align="center" style="border:none; padding: 20px;">
             <img src="assets/mongo.png" width="50" height="75" >
             <h3>Mongo DB<h3>
         </td>
-        <td>
+        <td align="center" style="border:none; padding: 20px;>
             <img src="assets/express.png" width="75" height="75" >
             <h3>Expressjs<h3>
         </td>
-        <td>
-        <img src="assets/react.png" width="85" height="75" >
-        <h3>Reactjs<h3>
+        <td align="center" style="border:none; padding: 20px;>
+            <img src="assets/react.png" width="85" height="75" >
+            <h3>Reactjs<h3>
         </td>
-        <td>
-        <img src="assets/node.png" width="75" height="75" >
-        <h3>Nodejs</h3>
+        <td align="center" style="border:none; padding: 20px;>
+            <img src="assets/node.png" width="75" height="75" >
+            <h3>Nodejs</h3>
         </td>
     </tr>
 </table>

@@ -28,7 +28,7 @@
     </div>
     <div style="display: flex; align-items:center; flex-direction: row;">
       <img src="assets/node.png" width="75" height="75" >
-      <h3>Nodejs<h3>
+      <p style="font-size: 24px">Nodejs<p>
     </div>
 </div>
 

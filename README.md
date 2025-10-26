@@ -11,27 +11,6 @@
 
 ## Technologies
 - **nexus** is built using the **MERN** Stack
-
-
-<div style="display:flex; gap: 60px; justify-content: center; flex-direction: row;">
-    <div style="display: flex; align-items:center; flex-direction: row;">
-        <img src="assets/mongo.png" width="50" height="75" >
-        <h3>Mongo DB<h3>
-    </div>
-    <div style="display: flex; align-items:center; flex-direction: row;">
-        <img src="assets/express.png" width="75" height="75" >
-        <h3>Expressjs<h3>
-    </div>
-    <div style="display: flex; align-items:center; flex-direction: row;">
-      <img src="assets/react.png" width="85" height="75" >
-      <h3>Reactjs<h3>
-    </div>
-    <div style="display: flex; align-items:center; flex-direction: row;">
-      <img src="assets/node.png" width="75" height="75" >
-      <h3>Nodejs</h3>
-    </div>
-</div>
-
 <table align="center" style="border-collapse: collapse; border: none;">
   <tr>
     <td align="center" style="border:none; padding:20px;">

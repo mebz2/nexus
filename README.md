@@ -33,20 +33,22 @@
 </div>
 <table>
     <tr>
-        <img src="assets/mongo.png" width="50" height="75" >
-        <h3>Mongo DB<h3>
-    </tr>
-    <tr>
-        <img src="assets/express.png" width="75" height="75" >
-        <h3>Expressjs<h3>
-    </tr>
-    <tr>
-      <img src="assets/react.png" width="85" height="75" >
-      <h3>Reactjs<h3>
-    </tr>
-    <tr>
-      <img src="assets/node.png" width="75" height="75" >
-      <h3>Nodejs</h3>
+        <td>
+            <img src="assets/mongo.png" width="50" height="75" >
+            <h3>Mongo DB<h3>
+        </td>
+        <td>
+            <img src="assets/express.png" width="75" height="75" >
+            <h3>Expressjs<h3>
+        </td>
+        <td>
+        <img src="assets/react.png" width="85" height="75" >
+        <h3>Reactjs<h3>
+        </td>
+        <td>
+        <img src="assets/node.png" width="75" height="75" >
+        <h3>Nodejs</h3>
+        </td>
     </tr>
 </table>
 

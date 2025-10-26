@@ -31,26 +31,28 @@
       <h3>Nodejs</h3>
     </div>
 </div>
-<table>
-    <tr>
-        <td align="center" style="border:none; padding: 20px;">
-            <img src="assets/mongo.png" width="50" height="75" >
-            <h3>Mongo DB<h3>
-        </td>
-        <td align="center" style="border:none; padding: 20px;>
-            <img src="assets/express.png" width="75" height="75" >
-            <h3>Expressjs<h3>
-        </td>
-        <td align="center" style="border:none; padding: 20px;>
-            <img src="assets/react.png" width="85" height="75" >
-            <h3>Reactjs<h3>
-        </td>
-        <td align="center" style="border:none; padding: 20px;>
-            <img src="assets/node.png" width="75" height="75" >
-            <h3>Nodejs</h3>
-        </td>
-    </tr>
+
+<table align="center" style="border-collapse: collapse; border: none;">
+  <tr>
+    <td align="center" style="border:none; padding:20px;">
+      <img src="assets/mongo.png" width="50" height="75">
+      <h3>MongoDB</h3>
+    </td>
+    <td align="center" style="border:none; padding:20px;">
+      <img src="assets/express.png" width="75" height="75">
+      <h3>Express.js</h3>
+    </td>
+    <td align="center" style="border:none; padding:20px;">
+      <img src="assets/react.png" width="85" height="75">
+      <h3>React.js</h3>
+    </td>
+    <td align="center" style="border:none; padding:20px;">
+      <img src="assets/node.png" width="75" height="75">
+      <h3>Node.js</h3>
+    </td>
+  </tr>
 </table>
+
 
 ## Setup
 

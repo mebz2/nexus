@@ -14,20 +14,28 @@
 
 
 <div style="display:flex; gap: 60px; justify-content: center;">
-    <div style="display: flex; align-items:center; flex-direction: column;">
+    <div style="display: flex; align-items:center; flex-direction: row;">
         <img src="assets/mongo.png" width="50" height="75" >
         <h3>Mongo DB<h3>
     </div>
-    <div style="display: flex; align-items:center; flex-direction: column;">
+    <div style="display: flex; align-items:center; flex-direction: row;">
         <img src="assets/express.png" width="75" height="75" >
         <h3>Expressjs<h3>
     </div>
-    <div>
+    <div style="display: flex; align-items:center; flex-direction: row;">
       <img src="assets/react.png" width="85" height="75" >
       <h3>Reactjs<h3>
     </div>
-    <div>
+    <div style="display: flex; align-items:center; flex-direction: row;">
       <img src="assets/node.png" width="75" height="75" >
       <h3>Nodejs<h3>
     </div>
 </div>
+
+## Setup
+
+```bash
+git clone https://github.com/mebz2/nexus
+cd nexus
+npm run dev
+```

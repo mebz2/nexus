@@ -42,8 +42,7 @@
 #### Archive
 - [ ] upload personal files
 - [ ] delete files
-- [ ] Personal archive
-- [ ] Todo lists for study Groups, each task can be assigned to a person
+
 ----
 ## Extras
 - [ ] Subject directories for files

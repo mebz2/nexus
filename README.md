@@ -52,5 +52,5 @@ npm install
 
 - Run it on a local server
 ```bash
-npm run dev
+npm run dev --prefix client
 ```

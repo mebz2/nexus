@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+h1 {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.login-gradient {
+    background: linear-gradient(90deg, #7d76ff 0%, #67b0ff 100%);
+}
+@theme {
+    --color-btn: #6e82ff;
+    --color-border: #d9d7ff;
+    --color-btn-hover: #24307e;
+}

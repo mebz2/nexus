@@ -47,7 +47,7 @@ cd nexus
 
 - Install all the packages for the client
 ```bash
-npm install
+npm install --prefix client
 ```
 
 - Run it on a local server

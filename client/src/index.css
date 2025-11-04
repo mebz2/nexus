@@ -9,9 +9,24 @@ h2 {
     font-size: 24px;
     font-weight: bold;
 }
+
+/*gradient is copied from figma*/
 .login-gradient {
     background: linear-gradient(90deg, #7d76ff 0%, #67b0ff 100%);
 }
+
+.navbar-gradient {
+    background: linear-gradient(90deg, #d6d4ff 0%, #c9e3ff 100%);
+}
+
+.content-gradient {
+    background: linear-gradient(178.02deg, #f4faff 2.73%, #e2e5ff 98.19%);
+}
+
+.card-gradient {
+    background: linear-gradient(1.76deg, #cfe0ff 1.5%, #f3f3ff 98.58%);
+}
+
 @theme {
     --color-btn: #6e82ff;
     --color-border: #d9d7ff;

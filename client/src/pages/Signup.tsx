@@ -1,7 +1,5 @@
-import Button from "../components/Button";
-import FormHeader from "../components/FormHeader";
-import Textfield from "../components/Textfield";
 import { Link } from "react-router-dom";
+import { Textfield, Button, FormHeader } from "../components";
 
 const handleClick = () => {
   console.log("hello");
@@ -10,7 +8,7 @@ const handleClick = () => {
 function Signup() {
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="w-[491px] h-[752px] border border-border  rounded-[10px]">
+      <div className="w-[491px] h-[752px] shadow-xl shadow-[#4C23FF]/15  rounded-[10px]">
         {/*form header*/}
         <FormHeader
           header="Create Your Account"

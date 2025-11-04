@@ -1,7 +1,5 @@
-import Button from "../components/Button";
-import Textfield from "../components/Textfield";
-import FormHeader from "../components/FormHeader";
 import { Link } from "react-router-dom";
+import { Textfield, Button, FormHeader } from "../components";
 
 const handleClick = () => {
   const email = document.getElementById("email") as HTMLInputElement | null; // incase the element doesn't exist assign null
@@ -32,7 +30,7 @@ function Login() {
     // div for the screen
     <div className="flex flex-col justify-center items-center h-screen">
       {/*container for form*/}
-      <div className="w-[491px] h-[553px] border border-border  rounded-[10px]">
+      <div className="w-[491px] h-[553px]   rounded-[10px] shadow-xl shadow-[#4C23FF]/15">
         {/*form header container*/}
         <FormHeader
           header="Welcome Back"

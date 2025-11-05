@@ -44,12 +44,14 @@ function Signup() {
             errorId="cpassword-error"
           />
 
-          <Button
-            label="Create Account"
-            height={45}
-            width={403}
-            onClick={handleClick}
-          />
+          <Link to="/home">
+            <Button
+              label="Create Account"
+              height={45}
+              width={403}
+              onClick={handleClick}
+            />
+          </Link>
           <p>
             Already have an account?{" "}
             <Link to="/login" className="text-btn  hover:text-purple-950">

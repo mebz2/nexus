@@ -2,27 +2,7 @@ import { Link } from "react-router-dom";
 import { Textfield, Button, FormHeader } from "../components";
 
 const handleClick = () => {
-  const email = document.getElementById("email") as HTMLInputElement | null; // incase the element doesn't exist assign null
-  const password = document.getElementById(
-    "password",
-  ) as HTMLInputElement | null;
-
-  if (!email || !password) return; // if any of the fields aren't found exit the function
-  if (email.value == "") {
-    const emailError = document.getElementById(
-      "email-error",
-    ) as HTMLParagraphElement;
-    emailError.style.display = "block";
-    emailError.textContent = "*Email is required";
-  } else if (password.value == "") {
-    const passwordError = document.getElementById(
-      "password-error",
-    ) as HTMLParagraphElement;
-    passwordError.style.display = "block";
-    passwordError.textContent = "*Password is required";
-  } else {
-    console.log("success");
-  }
+  console.log("clicked");
 };
 
 function Login() {
@@ -57,7 +37,14 @@ function Login() {
           />
 
           {/*login button*/}
-          <Button label="Login" height={45} width={403} onClick={handleClick} />
+          <Link to="/home">
+            <Button
+              label="Login"
+              height={45}
+              width={403}
+              onClick={handleClick}
+            />
+          </Link>
 
           <p>
             Don't have an account?{" "}

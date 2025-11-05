@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Navbar = () => {
+  const [background, setBackground] = useState(false);
   return (
     <div className="navbar-gradient h-[100px]  flex items-center p-10 pl-20 pr-20 justify-between ">
       {/*logo and tag line*/}
@@ -11,8 +13,20 @@ const Navbar = () => {
         </p>
       </div>
       <Link to="/login">
-        <div className="hover:bg-white hover:cursor-pointer rounded-full h-14 w-14 flex justify-center items-center">
-          <FaRegUser className="text-3xl text-purple-950" />
+        <div
+          onMouseEnter={() => setBackground(true)}
+          onMouseLeave={() => setBackground(false)}
+          className={`
+           hover:cursor-pointer rounded-full h-17 w-17 flex justify-center items-center
+          ${background ? "bg-[#8B68FF]" : ""}
+          `}
+        >
+          <FaRegUser
+            className={`
+            text-3xl text-purple-950"
+            ${background ? "text-white" : ""}
+            `}
+          />
         </div>
       </Link>
     </div>

@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { FaUsers } from "react-icons/fa";
 import { IoMdArrowRoundForward } from "react-icons/io";
-import Navbar from "./Navbar";
+import { BiSolidArchiveIn } from "react-icons/bi";
 import Activity from "./Activity";
+import Navbar from "./Navbar";
 
 export default function Homepage() {
   const [visible, setVisible] = useState<"group" | "archive" | null>(null);
   return (
-    <div className="content-gradient h-screen">
+    <div className="content-gradient h-full">
       {/*nav bar*/}
       <Navbar />
       <div className="flex flex-col  p-20 items-center ">
@@ -23,16 +25,18 @@ export default function Homepage() {
             onMouseEnter={() => setVisible("group")}
             onMouseLeave={() => setVisible(null)}
             id="study-groups"
-            className="card-gradient flex justify-center items-center
+            className="
+            card-gradient flex flex-col justify-center items-center
             h-64 w-72 rounded-[10px] shadow-lg shadow-[#4C23FF]/15
             hover:shadow-xl hover:shadow-[#4C23FF]/20 hover:cursor-pointer
             relative"
           >
+            <FaUsers className="text-7xl text-[#8B68FF]" />
             <h2 className="text-[#6B6875]">Study Groups</h2>
             <IoMdArrowRoundForward
               id="groups-arrow"
               size={30}
-              className={`text-white absolute bottom-2.5 right-2.5
+              className={`text-purple-400 absolute bottom-2.5 right-2.5
               ${visible == "group" ? "visible" : "invisible"}`}
             />
           </div>
@@ -42,11 +46,12 @@ export default function Homepage() {
             onMouseEnter={() => setVisible("archive")}
             onMouseLeave={() => setVisible(null)}
             id="archive"
-            className="card-gradient flex justify-center items-center
-                        h-64 w-72 rounded-[10px] shadow-lg shadow-[#4C23FF]/15
-                        hover:shadow-xl hover:shadow-[#4C23FF]/20 hover:cursor-pointer
-                        relative"
+            className="card-gradient flex flex-col justify-center items-center
+                      h-64 w-72 rounded-[10px] shadow-lg shadow-[#4C23FF]/15
+                      hover:shadow-xl hover:shadow-[#4C23FF]/20 hover:cursor-pointer
+                      relative"
           >
+            <BiSolidArchiveIn className="text-7xl text-[#8B68FF]" />
             <h2 className="text-[#6B6875]">Archive</h2>
             <IoMdArrowRoundForward
               id="archive-arrow"

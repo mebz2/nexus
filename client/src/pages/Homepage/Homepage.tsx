@@ -1,6 +1,7 @@
-import Navbar from "./Navbar";
-import { IoMdArrowRoundForward } from "react-icons/io";
 import { useState } from "react";
+import { IoMdArrowRoundForward } from "react-icons/io";
+import Navbar from "./Navbar";
+import Activity from "./Activity";
 
 export default function Homepage() {
   const [visible, setVisible] = useState<"group" | "archive" | null>(null);
@@ -57,11 +58,17 @@ export default function Homepage() {
         </div>
 
         {/*recent activities*/}
-        <div className="h-80  w-[80%] rounded-2xl bg-[#EEEDFF] shadow-lg shadow-[#4C23FF]/20 pl-10 pt-2.5">
+        <div className="h-96  w-[80%] rounded-2xl bg-[#EEEDFF] shadow-lg shadow-[#4C23FF]/20 pl-10 pt-2.5">
           <h1 className=" text-neutral-600">Recent Activities</h1>
           <p className="text-sm text-[#6B6875] font-medium">
             Stay updated with your activities
           </p>
+
+          {/*Activity*/}
+          <Activity />
+          <Activity />
+          <Activity />
+          <Activity />
         </div>
       </div>
     </div>

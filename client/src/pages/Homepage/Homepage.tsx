@@ -1,6 +1,9 @@
 import Navbar from "./Navbar";
+import { IoMdArrowRoundForward } from "react-icons/io";
+import { useState } from "react";
 
 export default function Homepage() {
+  const [visible, setVisible] = useState<"group" | "archive" | null>(null);
   return (
     <div className="content-gradient h-screen">
       {/*nav bar*/}
@@ -14,24 +17,47 @@ export default function Homepage() {
 
         {/*card container*/}
         <div className="flex w-[80%] mt-10 h-80 items-center gap-28">
+          {/*study groups card*/}
           <div
+            onMouseEnter={() => setVisible("group")}
+            onMouseLeave={() => setVisible(null)}
+            id="study-groups"
             className="card-gradient flex justify-center items-center
-            h-64 w-72 rounded-[10px] shadow-md shadow-black/15
-            hover:shadow-lg hover:shadow-black/20 hover:cursor-pointer"
+            h-64 w-72 rounded-[10px] shadow-lg shadow-[#4C23FF]/15
+            hover:shadow-xl hover:shadow-[#4C23FF]/20 hover:cursor-pointer
+            relative"
           >
             <h2 className="text-[#6B6875]">Study Groups</h2>
+            <IoMdArrowRoundForward
+              id="groups-arrow"
+              size={30}
+              className={`text-white absolute bottom-2.5 right-2.5
+              ${visible == "group" ? "visible" : "invisible"}`}
+            />
           </div>
+
+          {/*archive card*/}
           <div
+            onMouseEnter={() => setVisible("archive")}
+            onMouseLeave={() => setVisible(null)}
+            id="archive"
             className="card-gradient flex justify-center items-center
-            h-64 w-72 rounded-[10px] shadow-md shadow-black/15 hover:shadow-lg
-            hover:shadow-black/20 hover:cursor-pointer"
+                        h-64 w-72 rounded-[10px] shadow-lg shadow-[#4C23FF]/15
+                        hover:shadow-xl hover:shadow-[#4C23FF]/20 hover:cursor-pointer
+                        relative"
           >
             <h2 className="text-[#6B6875]">Archive</h2>
+            <IoMdArrowRoundForward
+              id="archive-arrow"
+              size={30}
+              className={`text-white absolute bottom-2.5 right-2.5
+              ${visible == "archive" ? "visible" : "invisible"}`}
+            />
           </div>
         </div>
 
         {/*recent activities*/}
-        <div className="h-80  w-[80%] rounded-2xl bg-[#EEEDFF] shadow-md shadow-[#4C23FF]/10 pl-10 pt-2.5">
+        <div className="h-80  w-[80%] rounded-2xl bg-[#EEEDFF] shadow-lg shadow-[#4C23FF]/20 pl-10 pt-2.5">
           <h1 className=" text-neutral-600">Recent Activities</h1>
           <p className="text-sm text-[#6B6875] font-medium">
             Stay updated with your activities

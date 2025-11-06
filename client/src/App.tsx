@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { Homepage } from "./pages/Homepage";
-import Groups from "./pages/Groups/Groups";
+import { Groups } from "./pages/Groups";
 function App() {
   return (
     <BrowserRouter>

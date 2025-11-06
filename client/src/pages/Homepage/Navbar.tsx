@@ -18,7 +18,7 @@ const Navbar = () => {
           onMouseLeave={() => setBackground(false)}
           className={`
            hover:cursor-pointer rounded-full h-17 w-17 flex justify-center items-center
-          ${background ? "bg-[#8B68FF]" : ""}
+          ${background ? "bg-[#D6D4FF]" : ""}
           `}
         >
           <FaRegUser
@@ -32,4 +32,6 @@ const Navbar = () => {
     </div>
   );
 };
+
+// ${background ? "bg-[#8B68FF]" : ""}
 export default Navbar;

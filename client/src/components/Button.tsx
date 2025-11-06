@@ -12,10 +12,11 @@ const Button = ({ label, height, width, onClick }: ButtonProps) => {
       onClick={onClick}
       className="
       outline-none
-      bg-btn text-white rounded-[5px] font-medium
+      text-lg
+      bg-btn text-white rounded-[10px] font-medium
+      hover:shadow-lg
       hover:shadow-btn
       hover:cursor-pointer
-      hover:bg-btn-hover
       "
     >
       {label}

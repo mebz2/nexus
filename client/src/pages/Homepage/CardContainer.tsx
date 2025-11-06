@@ -32,7 +32,7 @@ const CardContainer = ({ visible, setVisible }: ContainerProps) => {
           <IoMdArrowRoundForward
             id="groups-arrow"
             size={30}
-            className={`text-white absolute bottom-2.5 right-2.5
+            className={`text-[#1D158C] absolute bottom-2.5 right-2.5
             ${visible == "group" ? "visible" : "invisible"}`}
           />
         </div>
@@ -51,9 +51,8 @@ const CardContainer = ({ visible, setVisible }: ContainerProps) => {
         <BiSolidArchiveIn className="text-7xl text-[#8B68FF]" />
         <h2 className="text-[#6B6875]">Archive</h2>
         <IoMdArrowRoundForward
-          id="archive-arrow"
           size={30}
-          className={`text-white absolute bottom-2.5 right-2.5
+          className={`text-[#1D158C] absolute bottom-2.5 right-2.5
             ${visible == "archive" ? "visible" : "invisible"}`}
         />
       </div>
@@ -71,9 +70,8 @@ const CardContainer = ({ visible, setVisible }: ContainerProps) => {
         <FaCalendarCheck className="text-7xl text-[#8B68FF]" />
         <h2 className="text-[#6B6875]">Calendar</h2>
         <IoMdArrowRoundForward
-          id="archive-arrow"
           size={30}
-          className={`text-white absolute bottom-2.5 right-2.5
+          className={`text-[#1D158C] absolute bottom-2.5 right-2.5
                       ${visible == "calendar" ? "visible" : "invisible"}`}
         />
       </div>
@@ -93,7 +91,7 @@ const CardContainer = ({ visible, setVisible }: ContainerProps) => {
         <IoMdArrowRoundForward
           id="archive-arrow"
           size={30}
-          className={`text-white absolute bottom-2.5 right-2.5
+          className={`text-[#1D158C] absolute bottom-2.5 right-2.5
                                 ${visible == "inbox" ? "visible" : "invisible"}`}
         />
       </div>

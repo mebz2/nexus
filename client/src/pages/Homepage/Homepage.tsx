@@ -8,7 +8,7 @@ export default function Homepage() {
     "group" | "archive" | "calendar" | "inbox" | null
   >(null);
   return (
-    <div className="content-gradient h-screen">
+    <div className="content-gradient h-full">
       {/*nav bar*/}
       <Navbar />
       <div className="flex flex-col  p-20 items-center ">

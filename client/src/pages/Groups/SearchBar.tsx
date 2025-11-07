@@ -23,7 +23,11 @@ const SearchBar = () => {
             ${focus == true ? "border-[#1D158C]" : "border-border"}
             `}
       >
-        <RiSearchLine className="text-2xl" />
+        <RiSearchLine
+          className={`
+          text-2xl
+        `}
+        />
       </button>
     </div>
   );

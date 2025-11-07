@@ -18,9 +18,11 @@ export default function Homepage() {
           <h1 className="ml-2"> Name!</h1>
         </div>
 
+        {/*cards*/}
         <CardContainer visible={visible} setVisible={setVisible} />
+
         {/*recent activities*/}
-        <div className="h-96  w-[80%] rounded-2xl bg-[#EEEDFF] shadow-lg shadow-[#4C23FF]/20 pl-10 pt-2.5 hover:shadow-2xl">
+        <div className="h-full  w-[80%] rounded-2xl bg-[#EEEDFF] shadow-lg shadow-[#4C23FF]/20 pl-10 pb-2.5 pt-2.5 hover:shadow-2xl">
           <h1 className=" text-neutral-600">Recent Activities</h1>
           <p className="text-sm text-[#6B6875] font-medium">
             Stay updated with your activities

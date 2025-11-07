@@ -9,7 +9,7 @@ const SearchBar = () => {
         onBlur={() => setFocus(false)}
         type="text"
         className={`
-          h-16 w-96 mt-6 border-t-2 border-l-2
+          h-12 w-96 mt-6 border-t-2 border-l-2
           border-b-2 border-r
           rounded-l-4xl pl-16
           text-lg outline-none
@@ -17,7 +17,7 @@ const SearchBar = () => {
         placeholder="Search"
       />
       <button
-        className={`h-16 w-20 border-r-2 border-t-2 border-b-2
+        className={`h-12 w-20 border-r-2 border-t-2 border-b-2
             rounded-r-4xl  flex justify-center items-center hover:cursor-pointer
             outline-none
             ${focus == true ? "border-[#1D158C]" : "border-border"}

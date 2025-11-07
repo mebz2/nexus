@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Textfield, Button, FormHeader } from "../components";
+import { Textfield, Button, FormHeader } from "../../components";
 
 const handleClick = () => {
   console.log("hello");

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Activity from "./Activity";
+import Activity from "./components/Activity";
 import Navbar from "./Navbar";
-import CardContainer from "./CardContainer";
+import CardContainer from "./components/CardContainer";
 
 export default function Homepage() {
   const [visible, setVisible] = useState<

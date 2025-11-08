@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const GroupCard = () => {
   const [visible, setVisible] = useState<boolean>(false);
   return (
-    <Link to="/group">
+    <Link to="/group/overview">
       <div
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}

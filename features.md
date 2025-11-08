@@ -1,16 +1,21 @@
 # FEATURES
 
 ## Core
+
+### Things to use
+  - react icons 
+  - react dropdown
 ---
 #### User
 - [ ] Create Account
+  - [ ] verify email(use better auth)
 - [ ] Delete Account
 - [ ] Edit Account Information
-- [ ] Recieve and respond to invitations
+- [ ] Receive and respond to invitations
 - [ ] Calendar, with information from group calendar
 - [ ] Recent Activities
   - [ ] Use que for Activities
-  - [ ] Update que everytime a change happens in joined groups
+  - [ ] Update que every time a change happens in joined groups
 ----
 #### Group
 - [ ] Create Group
@@ -19,7 +24,7 @@
 - [ ] Edit Group Information
 - [ ] Invite People to the Group
   - [ ] searching and completion for user email addresses
-- [ ] Kickout members from the Group
+- [ ] Kick-out members from the Group
 - [ ] Promote members in the Group
 - [ ] Group Calendar
   - [ ] Add events to the calendar
@@ -36,7 +41,7 @@
   - [ ] Clear task
   - [ ] Remove task
 - [ ] Recent Activities
-  - [ ] Use a que for activites
+  - [ ] Use a que for activities
   - [ ] update if there is any thing that happened in the group
 ----
 #### Archive
@@ -46,7 +51,9 @@
 ----
 ## Extras
 - [ ] Subject directories for files
-- [ ] use priority ques for recent activites
+- [ ] use priority ques for recent activities
 - [ ] Notice Board
   - [ ] owner and admins can post information on the notice board
   - [ ] contains information about upcoming events from the calendar
+
+- [ ] Use qr codes somewhere if needed

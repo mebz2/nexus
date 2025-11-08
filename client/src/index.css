@@ -4,6 +4,10 @@
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+body {
+    overflow-y: hidden;
+}
+
 h1 {
     font-size: 32px;
     font-weight: bolder;

@@ -1,4 +1,5 @@
-import { Navbar, SearchBar, GroupCard } from "./components";
+import { Navbar, GroupCard } from "./components";
+import { SearchBar } from "../../components";
 
 function Groups() {
   return (

@@ -3,21 +3,22 @@ type ButtonProps = {
   height: number;
   width: number;
   onClick: () => void;
+  radius?: number;
 };
-const Button = ({ label, height, width, onClick }: ButtonProps) => {
+const Button = ({ label, height, width, onClick, radius }: ButtonProps) => {
   return (
     <button
       type="button"
       style={{ height, width }}
       onClick={onClick}
-      className="
+      className={`
       outline-none
       text-lg
-      bg-btn text-white rounded-[10px] font-medium
+      bg-btn text-white ${radius ? `rounded-[${radius}px]` : "rounded-[8px]"} font-medium
       hover:shadow-lg
       hover:shadow-btn
       hover:cursor-pointer
-      "
+      `}
     >
       {label}
     </button>

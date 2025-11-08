@@ -1,3 +1,6 @@
 export { default as Navbar } from "./Navbar";
 export { default as Overview } from "./Overview";
 export { default as NavBtn } from "./Button";
+export { default as Files } from "./Files";
+export { default as Tasks } from "./Tasks";
+export { default as Members } from "./Members";

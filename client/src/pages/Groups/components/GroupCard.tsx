@@ -13,7 +13,7 @@ type GroupCardProps = {
 const GroupCard = (group: GroupCardProps) => {
 	const [visible, setVisible] = useState<boolean>(false);
 	return (
-		<Link to="/group/overview">
+		<Link to="/group">
 			<div
 				onMouseEnter={() => setVisible(true)}
 				onMouseLeave={() => setVisible(false)}

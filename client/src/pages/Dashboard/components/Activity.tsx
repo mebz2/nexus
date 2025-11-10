@@ -8,8 +8,8 @@ const Activity = ({ name, timestamp }: ActivityProps) => {
 		<div className="flex items-center gap-6 mt-3">
 			<FaDotCircle className="text-purple-800" />
 			<div className="w-full h-14 gap-1 items-end p-2.5 ">
-				<p className="font-semibold">{name}</p>
-				<p className="text-xs text-[#737373]">{timestamp}</p>
+				<p className="font-semibold line-clamp-1">{name}</p>
+				<p className="text-xs text-[#737373]">{timestamp} hours ago</p>
 			</div>
 		</div>
 	);

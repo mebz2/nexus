@@ -27,7 +27,7 @@ export default function Dashboard() {
 					<p className="text-sm text-[#6B6875] font-medium">
 						Stay updated with your activities
 					</p>
-					{MockActivities.map((activity) => {
+					{MockActivities.slice(0, 4).map((activity) => {
 						return (
 							<Activity
 								key={activity.id}

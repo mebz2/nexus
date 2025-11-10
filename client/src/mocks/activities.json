@@ -1,0 +1,17 @@
+[
+	{
+		"id": 1,
+		"name": "Activity 1",
+		"timestamp": 30
+	},
+	{
+		"id": 2,
+		"name": "Activity 2",
+		"timestamp": 200
+	},
+	{
+		"id": 3,
+		"name": "Activity 3",
+		"timestamp": 400
+	}
+]

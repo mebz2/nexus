@@ -24,8 +24,8 @@ const GroupCard = (group: GroupCardProps) => {
 			      hover:cursor-pointer hover:shadow-xl hover:shadow-[#4C23FF]/20
 			     `}
 			>
-				<h2>{group.name}</h2>
-				<p>{group.description}</p>
+				<h2 className="line-clamp-1">{group.name}</h2>
+				<p className="line-clamp-3">{group.description}</p>
 				<IoMdArrowRoundForward
 					className={`text-3xl text-[#1D158C]
 				        absolute bottom-2.5 right-3.5

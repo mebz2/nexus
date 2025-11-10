@@ -1,6 +1,6 @@
 import { Navbar, GroupCard } from "./components";
 import { SearchBar } from "../../components";
-import MockGroups from "../../mocks/studyGroups.json";
+import { MockGroups } from "../../mocks/";
 
 function Groups() {
 	return (

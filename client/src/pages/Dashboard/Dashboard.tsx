@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Activity, Navbar, CardContainer } from "./components";
-import Activities from "../../mocks/activities.json";
+import { MockActivities } from "../../mocks";
 
 export default function Dashboard() {
 	const [visible, setVisible] = useState<
@@ -27,7 +27,7 @@ export default function Dashboard() {
 					<p className="text-sm text-[#6B6875] font-medium">
 						Stay updated with your activities
 					</p>
-					{Activities.map((activity) => {
+					{MockActivities.map((activity) => {
 						return (
 							<Activity
 								key={activity.id}

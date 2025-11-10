@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Activity, Navbar, CardContainer } from "./components";
 import Activities from "../../mocks/activities.json";
 
-export default function Homepage() {
+export default function Dashboard() {
 	const [visible, setVisible] = useState<
 		"group" | "archive" | "calendar" | "inbox" | null
 	>(null);

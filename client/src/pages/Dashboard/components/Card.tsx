@@ -16,16 +16,16 @@ const Card = ({ id, label, Icon }: CardProps) => {
 			onMouseLeave={() => setVisible(false)}
 			id={id}
 			className="
-          card-gradient flex flex-col justify-center items-center
+          bg-white flex flex-col justify-center items-center
           h-64 w-72 rounded-[10px] shadow-sm shadow-[#4C23FF]/15
           hover:shadow-xl hover:shadow-[#4C23FF]/20 hover:cursor-pointer
-          relative border-t-2 border-border"
+          relative border border-[#E0E1E3]"
 		>
-			<Icon className="text-7xl text-[#8B68FF]" />
+			<Icon className="text-7xl text-black" />
 			<h2 className="text-[#6B6875]">{label}</h2>
 			<IoMdArrowRoundForward
 				size={30}
-				className={`text-[#1D158C] absolute bottom-2.5 right-4.5
+				className={`text-black absolute bottom-2.5 right-4.5
             ${visible ? "visible" : "invisible"}`}
 			/>
 		</div>

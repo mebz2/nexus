@@ -1,35 +1,37 @@
 import { useState } from "react";
-import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaAngleDown } from "react-icons/fa6";
 const Navbar = () => {
 	const [background, setBackground] = useState(false);
 	return (
-		<div className="navbar-gradient h-20  flex items-center p-10 pl-20 pr-20 justify-between ">
+		<div className=" bg-[#EEEFF1] h-20  flex items-center p-10 pl-8 pr-8 justify-between ">
 			{/*logo and tag line*/}
 			<div className="h-[70px] w-[300px] flex flex-col justify-center  ">
 				<Link to="/home">
 					<h1 className="m-0 hover:cursor-pointer">nexus</h1>
 				</Link>
-				<p className="mt-0 text-xs font-bold text-[#6B6875]">
-					Unlock your learning all in one place
-				</p>
 			</div>
-			<Link to="/login">
-				<div
-					onMouseEnter={() => setBackground(true)}
-					onMouseLeave={() => setBackground(false)}
-					className={`
-			           hover:cursor-pointer rounded-full h-17 w-17 flex justify-center items-center
-			          ${background ? "bg-[#D6D4FF]" : ""}
-			        `}
-				>
-					<FaRegUser
-						className={`
-				            text-3xl text-black  outline-none"
-			            `}
-					/>
-				</div>
-			</Link>
+
+			<div className="flex gap-3 items-center">
+				<Link to="/login">
+					<div
+						onMouseEnter={() => setBackground(true)}
+						onMouseLeave={() => setBackground(false)}
+						className="
+			           hover:cursor-pointer rounded-sm h-10 w-9 flex
+					justify-center items-center bg-black"
+					>
+						<p className="text-white font-bold text-xl">N</p>
+					</div>
+				</Link>
+
+				<p className="text-sm font-medium">Name</p>
+				<FaAngleDown
+					className="
+					hover:cursor-pointer
+				"
+				/>
+			</div>
 		</div>
 	);
 };

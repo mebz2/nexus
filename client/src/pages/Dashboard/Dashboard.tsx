@@ -1,12 +1,7 @@
-import { useState } from "react";
 import { Activity, Navbar, CardContainer } from "./components";
 import { MockActivities } from "../../mocks";
 
 export default function Dashboard() {
-	const [visible, setVisible] = useState<
-		"group" | "archive" | "calendar" | "inbox" | null
-	>(null);
-
 	return (
 		<div className="content-gradient h-screen">
 			{/*nav bar*/}
@@ -19,7 +14,7 @@ export default function Dashboard() {
 				</div>
 
 				{/*cards*/}
-				<CardContainer visible={visible} setVisible={setVisible} />
+				<CardContainer />
 
 				{/*recent activities*/}
 				<div className="h-full  w-[80%] rounded-2xl bg-[#EEEDFF] shadow-lg shadow-[#4C23FF]/20 pl-10 pb-5 pt-2.5 hover:shadow-2xl">

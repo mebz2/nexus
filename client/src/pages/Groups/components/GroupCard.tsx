@@ -18,17 +18,17 @@ const GroupCard = (group: GroupCardProps) => {
 				onMouseEnter={() => setVisible(true)}
 				onMouseLeave={() => setVisible(false)}
 				className={`
-			      h-72 w-96 border border-border p-5 flex
+			      h-72 w-72 border-t border-border p-5 flex
 			      flex-col gap-10 card-gradient rounded-xl
-			      shadow-lg relative
-			      hover:cursor-pointer hover:shadow-xl hover:shadow-[#4C23FF]/20
+			      shadow-xs relative
+			      hover:cursor-pointer hover:shadow-lg hover:shadow-[#4C23FF]/20
 			     `}
 			>
 				<h2 className="line-clamp-1">{group.name}</h2>
 				<p className="line-clamp-3">{group.description}</p>
 				<IoMdArrowRoundForward
-					className={`text-3xl text-[#1D158C]
-				        absolute bottom-2.5 right-3.5
+					className={`text-3xl text-black
+				        absolute bottom-3 right-5
 				        ${visible ? "visible" : "invisible"}
 			        `}
 				/>
@@ -36,5 +36,4 @@ const GroupCard = (group: GroupCardProps) => {
 		</Link>
 	);
 };
-
 export default GroupCard;

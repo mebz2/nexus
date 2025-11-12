@@ -7,7 +7,9 @@ const Navbar = () => {
 		<div className="navbar-gradient h-20  flex items-center p-10 pl-20 pr-20 justify-between ">
 			{/*logo and tag line*/}
 			<div className="h-[70px] w-[300px] flex flex-col justify-center  ">
-				<h1 className="m-0 hover:cursor-pointer">nexus</h1>
+				<Link to="/home">
+					<h1 className="m-0 hover:cursor-pointer">nexus</h1>
+				</Link>
 				<p className="mt-0 text-xs font-bold text-[#6B6875]">
 					Unlock your learning all in one place
 				</p>
@@ -23,7 +25,7 @@ const Navbar = () => {
 				>
 					<FaRegUser
 						className={`
-				            text-3xl text-purple-950 text-black"
+				            text-3xl text-black  outline-none"
 			            `}
 					/>
 				</div>

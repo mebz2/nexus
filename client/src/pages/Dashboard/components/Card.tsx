@@ -16,10 +16,10 @@ const Card = ({ id, label, Icon }: CardProps) => {
 			onMouseLeave={() => setVisible(false)}
 			id={id}
 			className="
-          bg-white flex flex-col justify-center items-center
-          h-64 w-72 rounded-[10px] shadow-sm shadow-[#4C23FF]/15
-          hover:shadow-xl hover:shadow-[#4C23FF]/20 hover:cursor-pointer
-          relative border border-[#E0E1E3]"
+	          bg-white flex flex-col justify-center items-center
+	          h-64 w-72 rounded-[10px] shadow-sm
+	          hover:shadow-xl hover:cursor-pointer
+	          relative border border-[#E0E1E3]"
 		>
 			<Icon className="text-7xl text-black" />
 			<h2 className="text-[#6B6875]">{label}</h2>

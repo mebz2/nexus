@@ -41,7 +41,12 @@ export default function Dashboard() {
 				</div>
 
 				{/*recent activities*/}
-				<div className="h-full  w-[80%] rounded-2xl bg-white shadow-lg shadow-[#4C23FF]/20 pl-10 pb-5 pt-2.5 hover:shadow-2xl">
+				<div
+					className="
+						h-full  w-[80%] rounded-2xl bg-white
+						border-2  border-[#E0E1E3]
+						pl-10 pb-5 pt-2.5 hover:shadow-xl"
+				>
 					<h1 className=" text-neutral-600">Recent Activities</h1>
 					<p className="text-sm text-[#6B6875] font-medium">
 						Stay updated with your activities

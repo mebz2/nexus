@@ -3,13 +3,13 @@
 ## Core
 
 ### Things to use
-  - authentication framework
   - react icons for icons
   - react dropdown
+  - Clerk for authentication
 ---
 #### User
 - Create Account
-  - verify email(use better auth)
+  - verify email(use auth framework)
 - Delete Account
 - Edit Account Information
 - Receive and respond to invitations

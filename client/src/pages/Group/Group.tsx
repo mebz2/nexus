@@ -9,7 +9,10 @@ export default function Group() {
 		<div className="flex h-full flex-col items-center">
 			<Navbar />
 
-			<div className="w-[60%] h-12 mt-2.5 bg-[#F3F3FF] flex items-center justify-center gap-5 rounded-lg">
+			<div
+				className="w-[60%] h-12 mt-2.5 bg-[#F3F3FF]
+				flex items-center justify-center gap-5 rounded-lg"
+			>
 				<Link to="/group">
 					<NavBtn
 						label="Overview"

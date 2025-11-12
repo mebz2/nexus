@@ -9,24 +9,26 @@ const SearchBar = () => {
 				onBlur={() => setFocus(false)}
 				type="text"
 				className={`
-          h-12 w-96 mt-6 border-t-2 border-l-2
-          border-b-2 border-r
-          rounded-l-3xl pl-16
-          text-lg outline-none
-          ${focus == true ? "border-purple-950" : "border-border"}`}
+		          h-12 w-full mt-6 border-t-2 border-l-2
+		          border-b-2 border-r
+		          rounded-l-3xl pl-16
+		          text-sm outline-none
+		          ${focus == true ? "border-black" : "border-border"}
+				`}
 				placeholder="Search"
 			/>
 			<button
-				className={`h-12 w-20 border-r-2 border-t-2 border-b-2
-            rounded-r-3xl  flex justify-center items-center hover:cursor-pointer
-            outline-none
-            ${focus == true ? "border-purple-950" : "border-border"}
-            `}
+				className={`
+					h-12 w-20 border-r-2 border-t-2 border-b-2
+		            rounded-r-3xl  flex justify-center items-center hover:cursor-pointer
+		            outline-none
+		            ${focus == true ? "border-black" : "border-border"}
+	            `}
 			>
 				<RiSearchLine
 					className={`
-          text-2xl
-        `}
+			          text-2xl
+			        `}
 				/>
 			</button>
 		</div>

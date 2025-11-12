@@ -8,16 +8,25 @@ const handleClick = () => {
 function Login() {
 	return (
 		// div for the screen
-		<div className="flex flex-col justify-center items-center h-screen bg-[#EEEFF1]">
+		<div
+			className="flex flex-col justify-center items-center
+			h-screen bg-[#EEEFF1]"
+		>
 			{/*Login Container*/}
-			<div className="w-[491px] border border-border rounded-[10px] shadow-xl shadow-[#4C23FF]/15 h-fit">
+			<div
+				className="w-[491px] border border-border
+				rounded-[10px] shadow-xl shadow-[#4C23FF]/15 h-fit"
+			>
 				{/*form header container*/}
 				<FormHeader
 					header="Welcome Back"
 					message="Enter your credentials to access your account"
 				/>
 				{/*form container*/}
-				<div className="h-[450px] bg-white flex flex-col items-center p-[30px] gap-7 rounded-b-[10px]">
+				<div
+					className="h-[450px] bg-white flex flex-col items-center
+					p-[30px] gap-7 rounded-b-[10px]"
+				>
 					{/*email text field*/}
 					<Textfield
 						id="email"

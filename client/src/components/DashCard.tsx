@@ -16,16 +16,16 @@ const Card = ({ id, label, Icon }: CardProps) => {
 			onMouseLeave={() => setVisible(false)}
 			id={id}
 			className="
-	          bg-white flex flex-col justify-center items-center
-	          h-64 w-72 rounded-[10px] shadow-sm
-	          hover:shadow-xl hover:cursor-pointer
-	          relative border border-border"
+	          bg-white flex  justify-center items-center
+	          h-full w-full rounded-[10px]
+	           hover:cursor-pointer
+	          border border-border gap-[10%]
+			  "
 		>
-			<Icon className="text-7xl text-black" />
-			<h2 className="text-[#6B6875]">{label}</h2>
+			<Icon className="text-[120%] text-black" />
+			<p className="text-[110%] font-semibold text-black">{label}</p>
 			<IoMdArrowRoundForward
-				size={30}
-				className={`text-black absolute bottom-2.5 right-4.5
+				className={`text-black text-[100%]
             ${visible ? "visible" : "invisible"}`}
 			/>
 		</div>

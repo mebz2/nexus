@@ -7,16 +7,25 @@ const handleClick = () => {
 
 function Signup() {
 	return (
-		<div className="flex justify-center items-center h-screen bg-[#EEEFF1]">
+		<div
+			className="flex justify-center items-center
+			h-screen bg-[#EEEFF1]"
+		>
 			{/*Singup Container*/}
-			<div className="w-[491px] shadow-xl shadow-[#4C23FF]/15  border border-border rounded-[10px] h-fit">
+			<div
+				className="w-[491px] shadow-xl shadow-[#4C23FF]/15
+				border border-border rounded-[10px] h-fit"
+			>
 				{/*form header*/}
 				<FormHeader
 					header="Create Your Account"
 					message="Enter your details to get started with nexus"
 				/>
 				{/*form container*/}
-				<div className="h-[600px] flex flex-col items-center p-[30px] gap-7 bg-white rounded-b-[10px]">
+				<div
+					className="h-[600px] flex flex-col items-center
+					p-[30px] gap-7 bg-white rounded-b-[10px]"
+				>
 					<Textfield
 						id="username"
 						label="Username"

@@ -1,4 +1,4 @@
-import { Activity, Navbar, Card } from "./components";
+import { Navbar, Card, Activity } from "../../components";
 import { MockActivities } from "../../mocks";
 import { Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
@@ -8,9 +8,11 @@ import { BiSolidArchiveIn } from "react-icons/bi";
 
 export default function Dashboard() {
 	return (
+		// parent
 		<div className="bg-[#ECEDEF] h-screen">
 			{/*nav bar*/}
 			<Navbar />
+			{/*content*/}
 			<div className="flex flex-col  p-20 items-center ">
 				{/*welcome back message*/}
 				<div className=" flex w-[80%]">
@@ -18,7 +20,7 @@ export default function Dashboard() {
 					<h1 className="ml-2"> Name!</h1>
 				</div>
 
-				{/*cards*/}
+				{/*card container*/}
 				<div className="flex w-[80%] mt-10 h-80 items-center justify-between">
 					<Link to="/groups">
 						<Card
@@ -44,7 +46,7 @@ export default function Dashboard() {
 				<div
 					className="
 						h-full  w-[80%] rounded-2xl bg-white
-						border-2  border-[#E0E1E3]
+						border-2  border-border
 						pl-10 pb-5 pt-2.5 hover:shadow-xl"
 				>
 					<h1 className=" text-neutral-600">Recent Activities</h1>

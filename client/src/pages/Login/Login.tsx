@@ -10,7 +10,7 @@ function Login() {
 		// div for the screen
 		<div className="flex flex-col justify-center items-center h-screen bg-[#EEEFF1]">
 			{/*Login Container*/}
-			<div className="w-[491px]    rounded-[10px] shadow-xl shadow-[#4C23FF]/15 h-fit">
+			<div className="w-[491px] border border-border rounded-[10px] shadow-xl shadow-[#4C23FF]/15 h-fit">
 				{/*form header container*/}
 				<FormHeader
 					header="Welcome Back"
@@ -48,10 +48,7 @@ function Login() {
 
 					<p>
 						Don't have an account?{" "}
-						<Link
-							to="/signup"
-							className="text-btn  hover:text-purple-950"
-						>
+						<Link to="/signup" className="text-btn">
 							Create one here
 						</Link>
 					</p>

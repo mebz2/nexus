@@ -19,7 +19,7 @@ const Card = ({ id, label, Icon }: CardProps) => {
 	          bg-white flex flex-col justify-center items-center
 	          h-64 w-72 rounded-[10px] shadow-sm
 	          hover:shadow-xl hover:cursor-pointer
-	          relative border border-[#E0E1E3]"
+	          relative border border-border"
 		>
 			<Icon className="text-7xl text-black" />
 			<h2 className="text-[#6B6875]">{label}</h2>

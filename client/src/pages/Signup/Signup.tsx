@@ -8,7 +8,8 @@ const handleClick = () => {
 function Signup() {
 	return (
 		<div className="flex justify-center items-center h-screen bg-[#EEEFF1]">
-			<div className="w-[491px] shadow-xl shadow-[#4C23FF]/15  rounded-[10px] h-fit">
+			{/*Singup Container*/}
+			<div className="w-[491px] shadow-xl shadow-[#4C23FF]/15  border border-border rounded-[10px] h-fit">
 				{/*form header*/}
 				<FormHeader
 					header="Create Your Account"
@@ -55,10 +56,7 @@ function Signup() {
 					</Link>
 					<p>
 						Already have an account?{" "}
-						<Link
-							to="/login"
-							className="text-btn  hover:text-purple-950"
-						>
+						<Link to="/login" className="text-btn">
 							Sign in here
 						</Link>
 					</p>

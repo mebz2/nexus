@@ -1,5 +1,4 @@
-import { Navbar, GroupCard } from "./components";
-import { SearchBar } from "../../components";
+import { Navbar, SearchBar, GroupCard } from "../../components";
 import { MockGroups } from "../../mocks/";
 
 function Groups() {

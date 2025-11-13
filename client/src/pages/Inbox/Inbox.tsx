@@ -1,11 +1,11 @@
 import { Layout } from "../../components";
 
-function Archive() {
+function Inbox() {
 	return (
 		<Layout>
-			<h1>Archive</h1>
+			<h1>Inbox</h1>
 		</Layout>
 	);
 }
 
-export default Archive;
+export default Inbox;

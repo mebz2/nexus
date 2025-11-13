@@ -1,5 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Login, Signup, Dashboard, Groups, Group, Archive } from "./pages";
+import {
+	Login,
+	Signup,
+	Dashboard,
+	Groups,
+	Group,
+	Archive,
+	Inbox,
+} from "./pages";
 import { Files, Members, Overview, Tasks } from "./pages/Group/components";
 function App() {
 	return (
@@ -11,6 +19,7 @@ function App() {
 				<Route path="/home" element={<Dashboard />} />
 				<Route path="/groups" element={<Groups />} />
 				<Route path="/archive" element={<Archive />} />
+				<Route path="/inbox" element={<Inbox />} />
 				<Route path="/group" element={<Group />}>
 					<Route index element={<Overview />} />
 					<Route path="files" element={<Files />} />

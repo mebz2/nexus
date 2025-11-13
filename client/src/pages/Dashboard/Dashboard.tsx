@@ -41,7 +41,7 @@ export default function Dashboard() {
 						Icon={FaCalendarCheck}
 					/>
 					<Card
-						path="/archive"
+						path="/inbox"
 						id="inbox"
 						label="Inbox"
 						Icon={IoMdMail}

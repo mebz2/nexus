@@ -6,3 +6,4 @@ export { default as Navbar } from "./Navbar";
 export { default as Card } from "./DashCard";
 export { default as Activity } from "./Activity";
 export { default as GroupCard } from "./GroupCard";
+export { default as Layout } from "./Layout/Layout";

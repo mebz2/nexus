@@ -22,46 +22,31 @@ export default function Dashboard() {
 					className="flex  mt-10  mb-5 items-center
 					justify-between h-[20%] w-[80%] "
 				>
-					<Link
-						to="/groups"
-						className="no-underline text-inherit w-[23%]
-						h-[60%] shadow-sm hover:shadow-xl rounded-[10px]"
-					>
-						<Card
-							id="study-groups"
-							label="Study Groups"
-							Icon={FaUsers}
-						/>
-					</Link>
-					<Link
-						to="/archive"
-						className="no-underline text-inherit w-[23%]
-						h-[60%] shadow-sm hover:shadow-xl rounded-[10px]"
-					>
-						<Card
-							id="archive"
-							label="Archive"
-							Icon={BiSolidArchiveIn}
-						/>
-					</Link>
-					<Link
-						to="/groups"
-						className="no-underline text-inherit w-[23%]
-						h-[60%] shadow-sm hover:shadow-xl rounded-[10px]"
-					>
-						<Card
-							id="calendar"
-							label="Calendar"
-							Icon={FaCalendarCheck}
-						/>
-					</Link>
-					<Link
-						to="/groups"
-						className="no-underline text-inherit w-[23%]
-						h-[60%] shadow-sm hover:shadow-xl rounded-[10px]"
-					>
-						<Card id="inbox" label="Inbox" Icon={IoMdMail} />
-					</Link>
+					<Card
+						path="/groups"
+						id="study-groups"
+						label="Study Groups"
+						Icon={FaUsers}
+					/>
+
+					<Card
+						path="/archive"
+						id="archive"
+						label="Archive"
+						Icon={BiSolidArchiveIn}
+					/>
+					<Card
+						path="/archive"
+						id="calendar"
+						label="Calendar"
+						Icon={FaCalendarCheck}
+					/>
+					<Card
+						path="/archive"
+						id="inbox"
+						label="Inbox"
+						Icon={IoMdMail}
+					/>
 				</div>
 
 				{/*recent activities*/}

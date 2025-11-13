@@ -7,7 +7,7 @@ type LayoutProps = {
 };
 
 function Layout({ children }: LayoutProps) {
-	const [collapse, setCollapse] = useState<boolean>(true);
+	const [collapse, setCollapse] = useState<boolean>(false);
 	return (
 		<div className="flex flex-col bg-content h-screen">
 			<Navbar collapse={collapse} setCollapse={setCollapse} />

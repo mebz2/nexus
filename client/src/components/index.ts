@@ -5,4 +5,5 @@ export { default as SearchBar } from "./SearchBar";
 export { default as Card } from "./DashCard";
 export { default as Activity } from "./Activity";
 export { default as GroupCard } from "./GroupCard";
+export { default as GroupButton } from "./GroupButton";
 export { default as Layout } from "./Layout/Layout";

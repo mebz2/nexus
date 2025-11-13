@@ -1,10 +1,9 @@
-import { Navbar, SearchBar, GroupCard } from "../../components";
+import { SearchBar, GroupCard, Layout } from "../../components";
 import { MockGroups } from "../../mocks/";
 
 function Groups() {
 	return (
-		<div className="bg-content h-screen">
-			<Navbar />
+		<Layout>
 			<div className="flex flex-col items-center gap-2.5 ">
 				<SearchBar />
 				<div
@@ -16,7 +15,7 @@ function Groups() {
 					})}
 				</div>
 			</div>
-		</div>
+		</Layout>
 	);
 }
 

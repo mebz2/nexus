@@ -1,4 +1,4 @@
-import { Navbar, Card, Activity } from "../../components";
+import { Card, Activity, Layout } from "../../components";
 import { MockActivities } from "../../mocks";
 import { Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
@@ -8,10 +8,7 @@ import { BiSolidArchiveIn } from "react-icons/bi";
 
 export default function Dashboard() {
 	return (
-		// parent
-		<div className="bg-content h-screen">
-			{/*nav bar*/}
-			<Navbar />
+		<Layout>
 			{/*content*/}
 			<div className="flex flex-col  p-20 items-center h-full ">
 				{/*welcome back message*/}
@@ -89,6 +86,6 @@ export default function Dashboard() {
 					})}
 				</div>
 			</div>
-		</div>
+		</Layout>
 	);
 }

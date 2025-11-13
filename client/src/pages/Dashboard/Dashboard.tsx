@@ -1,6 +1,5 @@
 import { Card, Activity, Layout } from "../../components";
 import { MockActivities } from "../../mocks";
-import { Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaCalendarCheck } from "react-icons/fa6";
@@ -10,7 +9,7 @@ export default function Dashboard() {
 	return (
 		<Layout>
 			{/*content*/}
-			<div className="flex flex-col  p-20 items-center h-full ">
+			<div className="flex flex-col p-20 items-center h-full">
 				{/*welcome back message*/}
 				<div className=" flex w-[80%]">
 					<h1 className="text-[#6B6875]">Welcome back,</h1>{" "}

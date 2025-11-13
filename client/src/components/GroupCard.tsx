@@ -20,8 +20,8 @@ const GroupCard = (group: GroupCardProps) => {
 				className={`
 			      h-[110%] w-[110%] border-t border-border p-5 flex
 			      flex-col gap-10 bg-white rounded-xl
-			      shadow-xs relative
-			      hover:cursor-pointer hover:shadow-lg hover:shadow-[#4C23FF]/20
+			      shadow-sm hover:shadow-2xl relative
+			      hover:cursor-pointer
 			     `}
 			>
 				<h2 className="line-clamp-1">{group.name}</h2>

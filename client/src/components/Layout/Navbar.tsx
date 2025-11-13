@@ -1,13 +1,28 @@
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
-const Navbar = () => {
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
+import type React from "react";
+import type { SetStateAction } from "react";
+
+type NavbarProps = {
+	collapse: boolean;
+	setCollapse: React.Dispatch<SetStateAction<boolean>>;
+};
+const Navbar = ({ collapse, setCollapse }: NavbarProps) => {
+	const handleClick = () => {
+		setCollapse(!collapse);
+	};
 	return (
-		<div className=" bg-[#EEEFF1] h-20  flex items-center p-10 pl-8 pr-8 justify-between ">
+		<div className=" bg-[#EEEFF1] h-20  flex items-center  pr-8 justify-between ">
 			{/*logo and tag line*/}
-			<div className="h-[70px] w-[300px] flex flex-col justify-center  ">
+			<div className="h-full w-[15.7%] flex gap-2.5 pl-5 justify-between  items-center  ">
 				<Link to="/home">
 					<h1 className="m-0 hover:cursor-pointer">nexus</h1>
 				</Link>
+
+				<div className="hover:cursor-pointer" onClick={handleClick}>
+					{collapse ? <FaChevronRight /> : <FaChevronLeft />}
+				</div>
 			</div>
 
 			<div className="flex gap-3 items-center">

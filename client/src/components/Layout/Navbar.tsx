@@ -15,7 +15,7 @@ const Navbar = ({ collapse, setCollapse }: NavbarProps) => {
 	return (
 		<div className=" bg-[#EEEFF1] h-20  flex items-center  pr-8 justify-between box-border">
 			{/*logo and tag line*/}
-			<div className="h-full w-[15%] flex gap-2.5 pl-5 justify-between  items-center  ">
+			<div className="bg-[#E8E9EB] h-full w-[15.2%] flex gap-2.5 pl-5 justify-between  items-center  ">
 				<Link to="/home">
 					<h1 className="m-0 hover:cursor-pointer">nexus</h1>
 				</Link>

@@ -18,10 +18,10 @@ const GroupCard = (group: GroupCardProps) => {
 				onMouseEnter={() => setVisible(true)}
 				onMouseLeave={() => setVisible(false)}
 				className={`
-			      h-[110%] w-[110%] border-t border-border p-5 flex
+			      h-full w-full border-t border-border p-5 flex
 			      flex-col gap-10 bg-white rounded-xl
 			      shadow-sm hover:shadow-2xl relative
-			      hover:cursor-pointer
+			      hover:cursor-pointer box-border
 			     `}
 			>
 				<h2 className="line-clamp-1">{group.name}</h2>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
 	const navigate = useNavigate();
 	return (
-		<div className="w-full bg-white box-border p-2.5 pl-6 border-r border-[#EBEBEB] ">
+		<div className="hidden lg:block w-full bg-white box-border p-2.5 pl-6 border-r border-[#EBEBEB] ">
 			<div
 				className="bg-white w-fit flex mb-2.5"
 				onClick={() => navigate("/home")}

@@ -7,6 +7,8 @@ import {
 	Group,
 	Archive,
 	Inbox,
+	Settings,
+	Calendar,
 } from "./pages";
 import { Files, Members, Overview, Tasks } from "./pages/Group/components";
 function App() {
@@ -19,6 +21,8 @@ function App() {
 				<Route path="/home" element={<Dashboard />} />
 				<Route path="/groups" element={<Groups />} />
 				<Route path="/archive" element={<Archive />} />
+				<Route path="/settings" element={<Settings />} />
+				<Route path="/calendar" element={<Calendar />} />
 				<Route path="/inbox" element={<Inbox />} />
 				<Route path="/group" element={<Group />}>
 					<Route index element={<Overview />} />

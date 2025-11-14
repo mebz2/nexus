@@ -5,3 +5,5 @@ export { default as Groups } from "./Groups/Groups";
 export { default as Group } from "./Group/Group";
 export { default as Archive } from "./Archive/Archive";
 export { default as Inbox } from "./Inbox/Inbox";
+export { default as Settings } from "./Settings/Settings";
+export { default as Calendar } from "./Calendar/Calendar";

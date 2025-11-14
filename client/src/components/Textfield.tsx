@@ -15,7 +15,10 @@ const Textfield = ({
 }: TextfieldProps) => {
 	return (
 		<div className="flex flex-col w-[403px] gap-2">
-			<label htmlFor={id} className="text-sm font-medium">
+			<label
+				htmlFor={id}
+				className="text-sm font-medium hover:cursor-pointer"
+			>
 				{label}
 			</label>
 			<input
@@ -28,7 +31,7 @@ const Textfield = ({
 		        h-[41px] p-[15px]
 		        focus:border-border
 		        focus:shadow-[0_0_10px_3px_rgba(59,130,246)]
-		        focus:shadow-btn
+		        focus:shadow-gray-600
 		        focus:outline-none
         "
 			/>

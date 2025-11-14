@@ -7,7 +7,7 @@ import { BiSolidArchiveIn } from "react-icons/bi";
 
 export default function Dashboard() {
 	return (
-		<Layout>
+		<Layout path="Home">
 			{/*content*/}
 			<div className="flex flex-col p-20 items-center  h-full">
 				{/*welcome back message*/}

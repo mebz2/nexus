@@ -5,7 +5,7 @@ import { Layout, GroupButton } from "../../components";
 export default function Group() {
 	const [active, setActive] = useState<string>("Overview");
 	return (
-		<Layout>
+		<Layout path="Groups>Group">
 			{/*content*/}
 			<div className="flex h-full flex-col items-center">
 				{/*navbar*/}

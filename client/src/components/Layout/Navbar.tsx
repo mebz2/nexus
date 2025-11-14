@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 
-const Navbar = () => {
+const Navbar = ({ path }: { path: string }) => {
 	return (
-		<div className=" bg-white h-20  flex items-center  pr-8 justify-between box-border border-b border-[#EBEBEB]">
-			{/*logo and tag line*/}
-			<div className="bg-white h-full w-[15.2%] flex gap-2.5 pl-5 justify-between  items-center  ">
-				<Link to="/home">
-					<h1 className="m-0 hover:cursor-pointer">nexus</h1>
-				</Link>
+		<div className=" bg-white h-full  flex items-center pl-10 pr-8 justify-between box-border border-b border-[#EBEBEB]">
+			{/*bread crumbs*/}
+			<div>
+				<p>{path}</p>
 			</div>
 
+			{/*user name and dropdown*/}
 			<div className="flex gap-3 h-full items-center ">
 				<Link
 					to="/login"

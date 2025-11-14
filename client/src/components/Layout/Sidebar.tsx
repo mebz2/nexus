@@ -1,6 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
 	return (
-		<div className="w-[15%] bg-white box-border p-2.5 border-r border-[#EBEBEB] ">
+		<div className="w-full bg-white box-border p-2.5 border-r border-[#EBEBEB] ">
+			<div className="bg-white w-fit flex">
+				<Link to="/home">
+					<h1 className="m-0 hover:cursor-pointer">nexus</h1>
+				</Link>
+			</div>
 			<ul className="list-disc pl-6 ">
 				<li>
 					one

@@ -12,7 +12,7 @@ export default function Group() {
 				<div
 					className="
 					w-[60%] h-[3.3%] mt-2.5 bg-[#F3F3FF]
-					flex items-center justify-between gap-5
+					grid grid-cols-4
 					rounded-lg"
 				>
 					<GroupButton

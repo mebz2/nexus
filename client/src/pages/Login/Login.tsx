@@ -50,14 +50,12 @@ function Login() {
 					/>
 
 					{/*login button*/}
-					<Link to="/home">
-						<Button
-							label="Login"
-							height={45}
-							width={403}
-							onClick={handleClick}
-						/>
-					</Link>
+					<Button
+						label="Login"
+						height={45}
+						width={403}
+						onClick={handleClick}
+					/>
 
 					<p>
 						Don't have an account?{" "}

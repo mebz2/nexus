@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 type ButtonProps = {
 	label: string;
 	height: number;
@@ -6,15 +8,16 @@ type ButtonProps = {
 	radius?: number;
 };
 const Button = ({ label, height, width, onClick, radius }: ButtonProps) => {
+	const navigate = useNavigate();
 	return (
 		<button
 			type="button"
 			style={{ height, width }}
-			onClick={onClick}
+			onClick={() => navigate("/home")}
 			className={`
 		      outline-none text-lg bg-black text-white
 		      ${radius ? `rounded-[${radius}px]` : "rounded-lg"} font-medium
-		      hover:shadow-xl hover:shadow-black/25
+		      hover:shadow-lg hover:shadow-gray-600
 		      hover:cursor-pointer
 	      `}
 		>

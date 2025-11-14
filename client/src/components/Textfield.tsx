@@ -14,7 +14,7 @@ const Textfield = ({
 	placeholder,
 }: TextfieldProps) => {
 	return (
-		<div className="flex flex-col w-[403px] gap-2">
+		<div className="flex flex-col w-full gap-2">
 			<label
 				htmlFor={id}
 				className="text-sm font-medium hover:cursor-pointer"

@@ -25,15 +25,14 @@ const Navbar = ({ collapse, setCollapse }: NavbarProps) => {
 				</div>
 			</div>
 
-			<div className="flex gap-3 items-center">
-				<Link to="/login">
-					<div
-						className="
+			<div className="flex gap-3 h-full items-center ">
+				<Link
+					to="/login"
+					className="
 						hover:cursor-pointer rounded-sm h-10 w-9 flex
 						justify-center items-center bg-black"
-					>
-						<p className="text-white font-bold text-xl">N</p>
-					</div>
+				>
+					<p className="text-white font-bold text-xl">N</p>
 				</Link>
 
 				<p className="text-sm font-medium">Name</p>

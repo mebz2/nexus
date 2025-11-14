@@ -14,8 +14,11 @@ function Login() {
 		>
 			{/*Login Container*/}
 			<div
-				className="w-[491px] border border-border
-				rounded-[10px] shadow-xl shadow-[#4C23FF]/15 h-fit"
+				className="
+				w-[25%] border border-border
+				rounded-[10px] shadow-2xl shadow-gray-400 h-fit
+				bg-white
+				"
 			>
 				{/*form header container*/}
 				<FormHeader
@@ -24,8 +27,9 @@ function Login() {
 				/>
 				{/*form container*/}
 				<div
-					className="h-[450px] bg-white flex flex-col items-center
-					p-[30px] gap-7 rounded-b-[10px]"
+					className="
+					bg-white flex flex-col items-center
+					p-9 gap-7 rounded-b-[10px]"
 				>
 					{/*email text field*/}
 					<Textfield
@@ -79,3 +83,5 @@ function Login() {
 }
 
 export default Login;
+
+// className="w-[491px] border border-border

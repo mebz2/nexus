@@ -95,5 +95,30 @@
 		"members": 10,
 		"createdAt": "2025-02-15T13:00:00Z",
 		"updatedAt": "2025-03-29T07:50:00Z"
+	},
+	{
+		"id": "e27b4d90-7c1a-4b53-9e57-b36e4a75abb4",
+		"name": "Networking",
+		"description": "A group dedicated to cybersecurity research, ethical hacking, and threat analysis.",
+		"members": 10,
+		"createdAt": "2025-02-15T13:00:00Z",
+		"updatedAt": "2025-03-29T07:50:00Z"
+	},
+	{
+		"id": "e27b4d90-7c8a-4c53-9e57-b36e4a75abb4",
+		"name": "History",
+		"description": "A group dedicated to cybersecurity research, ethical hacking, and threat analysis.",
+		"members": 10,
+		"createdAt": "2025-02-15T13:00:00Z",
+		"updatedAt": "2025-03-29T07:50:00Z"
+	},
+
+	{
+		"id": "a27b4d90-7c8a-4c53-9e57-b38e4a75abb4",
+		"name": "Civics",
+		"description": "A group dedicated to cybersecurity research, ethical hacking, and threat analysis.",
+		"members": 10,
+		"createdAt": "2025-02-15T13:00:00Z",
+		"updatedAt": "2025-03-29T07:50:00Z"
 	}
 ]

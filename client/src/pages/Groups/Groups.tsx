@@ -14,8 +14,9 @@ function Groups() {
 					{MockGroups.map((group) => {
 						return <GroupCard key={group.id} {...group} />;
 					})}
+
+					<div className="col-span-5  border">pagination</div>
 				</div>
-				<div>pagination</div>
 			</div>
 		</Layout>
 	);

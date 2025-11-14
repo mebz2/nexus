@@ -5,7 +5,7 @@ type FormHeaderProps = {
 const FormHeader = ({ header, message }: FormHeaderProps) => {
 	return (
 		<div
-			className=" bg-white h-[152px] flex flex-col
+			className=" p-2.5 bg-white h-[25%] w-full flex flex-col
 			justify-center items-center rounded-t-[10px]"
 		>
 			<h1 className="">nexus</h1>

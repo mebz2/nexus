@@ -8,16 +8,17 @@ function Groups() {
 				<SearchBar />
 				<div
 					className="
-					h-full w-full grid grid-cols-5
-					grid-rows-4 pl-15 pr-15 pt-10  pb-10 gap-5 "
+					h-[80%] w-full grid grid-cols-5
+					grid-rows-3 pl-15 pr-15 pt-10  pb-5
+				 	gap-5 mb-0 "
 				>
 					{MockGroups.map((group) => {
 						return <GroupCard key={group.id} {...group} />;
 					})}
+				</div>
 
-					<div className="col-span-5 flex justify-center items-center">
-						pagination
-					</div>
+				<div className=" mt-0 flex w-full justify-center items-center ">
+					pagination
 				</div>
 			</div>
 		</Layout>

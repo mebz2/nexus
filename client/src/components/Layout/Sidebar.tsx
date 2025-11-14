@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
 	const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Sidebar = () => {
 					className="text-[#797E87] hover:cursor-pointer hover:text-black font-semibold"
 					onClick={() => navigate("/home")}
 				>
-					Home
+					Dashboard
 				</li>
 				<li
 					className="text-[#797E87] hover:cursor-pointer hover:text-black font-semibold"

@@ -22,7 +22,7 @@ const Card = ({ id, label, Icon, path }: CardProps) => {
 				bg-white h-[60%] shadow-sm hover:shadow-xl rounded-[10px]
 				flex  justify-center items-center hover:cursor-pointer border border-border gap-[10%]"
 		>
-			<Icon className="text-[120%] text-black" />
+			<Icon className="hidden lg:block text-[120%] text-black" />
 			<p className="text-[110%] font-semibold text-black">{label}</p>
 			<IoMdArrowRoundForward
 				className={`text-black text-[100%]

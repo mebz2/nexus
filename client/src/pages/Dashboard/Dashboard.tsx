@@ -18,13 +18,14 @@ export default function Dashboard() {
 
 				{/*card container*/}
 				<div
-					className="flex  mt-10  mb-5 items-center
+					className="
+					flex  mt-10  mb-5 items-center
 					justify-between h-[20%] w-[80%] "
 				>
 					<Card
 						path="/groups"
-						id="study-groups"
-						label="Study Groups"
+						id="groups"
+						label="Groups"
 						Icon={FaUsers}
 					/>
 

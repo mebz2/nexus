@@ -9,9 +9,9 @@ export default function Dashboard() {
 	return (
 		<Layout path="Home">
 			{/*content*/}
-			<div className="flex flex-col p-20 items-center h-full">
+			<div className="flex flex-col items-start p-20 md:items-center h-full ">
 				{/*welcome back message*/}
-				<div className=" flex w-[80%]">
+				<div className=" flex sm:justify-start w-full md:w-[80%]">
 					<h1 className="text-[#6B6875]">Welcome back,</h1>{" "}
 					<h1 className="ml-2"> Name!</h1>
 				</div>
@@ -53,13 +53,15 @@ export default function Dashboard() {
 				{/*recent activities*/}
 				<div
 					className="
-						h-full w-full
-						md:h-[50%] md:w-[80%] rounded-2xl bg-white
-						border-2  border-border
+						h-full w-full bg-amber-50
+						md:h-[50%] md:w-[80%] rounded-2xl md:bg-white
+						md:border-2  md:border-border
 						pl-10 pb-5 pt-2.5 hover:shadow-xl"
 				>
-					<h1 className=" text-black">Recent Activities</h1>
-					<p className="text-sm text-[#6B6875] font-medium">
+					<p className=" text-lg font-bold md:text-3xl md:font-bold text-black">
+						Recent Activities
+					</p>
+					<p className="text-xs text-[#6B6875] font-medium">
 						Stay updated with your activities
 					</p>
 					{MockActivities.slice(0, 4).map((activity) => {

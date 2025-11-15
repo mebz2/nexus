@@ -5,7 +5,7 @@ const Navbar = ({ path }: { path: string }) => {
 	return (
 		<div
 			className="
-			bg-white h-full  flex items-center pl-10 pr-8
+			bg-white h-full flex items-center pl-10 pr-8
 			justify-between box-border border-b border-[#EBEBEB]
 			"
 		>

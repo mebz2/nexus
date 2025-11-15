@@ -19,13 +19,13 @@ const Card = ({ id, label, Icon, path }: CardProps) => {
 			onMouseLeave={() => setVisible(false)}
 			id={id}
 			className="
-				flex justify-center items-center
-				no-underline w-full h-[23%]  md:w-[23%] bg-white md:h-[60%]
+				flex justify-start items-center pl-8 md:pl-3 lg:pl-0
+				md:justify-center no-underline w-[80%] h-[23%]  md:w-[23%] bg-white md:h-[60%]
 				shadow-sm hover:shadow-xl rounded-[10px]
 				hover:cursor-pointer border
 				border-border gap-[10%]"
 		>
-			<Icon className="hidden text-[100%] lg:block lg:text-[120%] text-black" />
+			<Icon className="text-[100%] hidden lg:block lg:text-[120%] text-black" />
 			<p className="text-[110%] font-semibold text-black">{label}</p>
 			<IoMdArrowRoundForward
 				className={`sm:hidden text-black md:block md:text-[70%]  lg:block lg:text-[100%]

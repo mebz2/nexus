@@ -13,7 +13,7 @@ function Layout({ children, path }: LayoutProps) {
 			<Activity mode="visible">
 				<Sidebar />
 			</Activity>
-			<div className="grid grid-rows-[1fr_15fr] h-screen">
+			<div className="grid grid-rows-[1fr_7fr] md:grid-rows-[1fr_12fr] h-screen">
 				<Navbar path={path} />
 				<div className="h-full w-full ">{children}</div>
 			</div>

@@ -9,7 +9,7 @@ export default function Dashboard() {
 	return (
 		<Layout path="Home">
 			{/*content*/}
-			<div className="flex flex-col p-20 items-center  h-full">
+			<div className="flex flex-col p-20 items-center h-full">
 				{/*welcome back message*/}
 				<div className=" flex w-[80%]">
 					<h1 className="text-[#6B6875]">Welcome back,</h1>{" "}
@@ -19,8 +19,9 @@ export default function Dashboard() {
 				{/*card container*/}
 				<div
 					className="
-					flex  mt-10  mb-5 items-center
-					justify-between h-[20%] w-[80%] "
+					flex  flex-col md:flex-row mt-10  mb-5 items-center
+					justify-between overflow-y-scroll h-[500px] w-full
+					md:h-[20%] md:overflow-y-hidden md:w-[80%] "
 				>
 					<Card
 						path="/groups"
@@ -52,7 +53,8 @@ export default function Dashboard() {
 				{/*recent activities*/}
 				<div
 					className="
-						h-[50%] w-[80%] rounded-2xl bg-white
+						h-full w-full
+						md:h-[50%] md:w-[80%] rounded-2xl bg-white
 						border-2  border-border
 						pl-10 pb-5 pt-2.5 hover:shadow-xl"
 				>

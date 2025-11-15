@@ -15,7 +15,7 @@ function Login() {
 			{/*Login Container*/}
 			<div
 				className="
-				w-full
+				w-full md:w-[50%]
 				lg:w-[25%] border border-border
 				rounded-[10px] shadow-2xl shadow-gray-400 h-fit
 				bg-white

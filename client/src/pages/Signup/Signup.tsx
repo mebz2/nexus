@@ -14,7 +14,7 @@ function Signup() {
 			{/*Singup Container*/}
 			<div
 				className="
-				w-full lg:w-[25%]  shadow-2xl shadow-gray-400
+				w-full md:w-[50%] lg:w-[25%]  shadow-2xl shadow-gray-400
 				border border-border rounded-[10px] h-fit "
 			>
 				{/*form header*/}

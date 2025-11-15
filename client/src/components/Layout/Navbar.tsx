@@ -3,10 +3,15 @@ import { FaAngleDown } from "react-icons/fa6";
 
 const Navbar = ({ path }: { path: string }) => {
 	return (
-		<div className=" bg-white h-full  flex items-center pl-10 pr-8 justify-between box-border border-b border-[#EBEBEB]">
+		<div
+			className="
+			bg-white h-full  flex items-center pl-10 pr-8
+			justify-between box-border border-b border-[#EBEBEB]
+			"
+		>
 			{/*bread crumbs*/}
 			<div>
-				<p>{path}</p>
+				<p className="">{path}</p>
 			</div>
 
 			{/*user name and dropdown*/}

@@ -2,7 +2,7 @@ import { Layout } from "../../components";
 
 function Inbox() {
 	return (
-		<Layout path="Inbox">
+		<Layout>
 			<h1>Inbox</h1>
 		</Layout>
 	);

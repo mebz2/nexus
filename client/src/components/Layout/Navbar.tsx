@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 
-const Navbar = ({ path }: { path: string }) => {
+const Navbar = () => {
+	const location = useLocation();
+	const path = location.pathname.replace("/", "");
+
 	return (
 		<div
 			className="
@@ -11,7 +14,7 @@ const Navbar = ({ path }: { path: string }) => {
 		>
 			{/*bread crumbs*/}
 			<div>
-				<p className="">{path}</p>
+				<p>{path.charAt(0).toUpperCase() + path.slice(1)}</p>
 			</div>
 
 			{/*user name and dropdown*/}

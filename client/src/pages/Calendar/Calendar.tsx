@@ -2,7 +2,7 @@ import { Layout } from "../../components";
 
 function Calendar() {
 	return (
-		<Layout path="Calendar">
+		<Layout>
 			<h1>Calendar</h1>
 		</Layout>
 	);

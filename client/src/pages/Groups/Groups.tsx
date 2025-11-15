@@ -3,7 +3,7 @@ import { MockGroups } from "../../mocks/";
 
 function Groups() {
 	return (
-		<Layout path="Groups">
+		<Layout>
 			<div className="flex flex-col items-center gap-2.5 h-full  ">
 				<SearchBar />
 				<div

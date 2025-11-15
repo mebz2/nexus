@@ -2,7 +2,7 @@ import { Layout } from "../../components";
 
 function Settings() {
 	return (
-		<Layout path="Settings">
+		<Layout>
 			<h1>Settings</h1>
 		</Layout>
 	);

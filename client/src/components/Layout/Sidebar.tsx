@@ -8,7 +8,7 @@ const Sidebar = () => {
 				className="bg-white w-fit flex mb-2.5"
 				onClick={() => navigate("/home")}
 			>
-				<h1 className="m-0 hover:cursor-pointer">nexus</h1>
+				<h1 className="mb-3 hover:cursor-pointer">nexus</h1>
 			</div>
 			<ul className="flex flex-col gap-6">
 				<li

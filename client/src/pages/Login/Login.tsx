@@ -51,13 +51,12 @@ function Login() {
 					/>
 
 					{/*login button*/}
-					<Button
-						label="Login"
-						height={45}
-						width={403}
-						onClick={handleClick}
-					/>
-
+					<div
+						className="
+						w-full h-10"
+					>
+						<Button label="Login" onClick={handleClick} />
+					</div>
 					<p>
 						Don't have an account?{" "}
 						<Link to="/signup" className="text-btn">

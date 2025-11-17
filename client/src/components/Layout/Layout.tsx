@@ -8,13 +8,13 @@ type LayoutProps = {
 
 function Layout({ children }: LayoutProps) {
 	return (
-		<div className="grid grid-cols-[1fr_7fr] bg-white h-screen">
+		<div className="grid grid-cols-[1fr_7fr] bg-white min-h-screen">
 			<Activity mode="visible">
 				<Sidebar />
 			</Activity>
-			<div className="grid grid-rows-[1fr_7fr] md:grid-rows-[1fr_15fr] h-screen">
+			<div className="grid grid-rows-[auto_7fr] md:grid-rows-[1fr_15fr] ">
 				<Navbar />
-				<div className="h-full w-full ">{children}</div>
+				<div className="overflow-y-auto">{children}</div>
 			</div>
 		</div>
 	);

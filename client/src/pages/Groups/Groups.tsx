@@ -4,7 +4,7 @@ import { MockGroups } from "../../mocks/";
 function Groups() {
 	return (
 		<Layout>
-			<div className="flex flex-col items-center gap-2.5 h-full  ">
+			<div className="flex flex-col items-center gap-2.5 ">
 				<SearchBar />
 				<div
 					className="

@@ -23,7 +23,7 @@ const Navbar = () => {
 					to="/login"
 					className="
 						hover:cursor-pointer rounded-sm h-10 w-9 flex
-						justify-center items-center bg-black"
+						justify-center items-center bg-black "
 				>
 					<p className="text-white font-bold text-xl">N</p>
 				</Link>

@@ -7,7 +7,7 @@ export default function Group() {
 	return (
 		<Layout>
 			{/*content*/}
-			<div className="flex h-full flex-col items-center">
+			<div className="flex min-h-screen flex-col items-center">
 				{/*navbar*/}
 				<div
 					className="

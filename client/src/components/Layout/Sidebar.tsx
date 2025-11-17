@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import SideBarBtn from "../SideBarBtn";
 
 const Sidebar = () => {
 	const navigate = useNavigate();
@@ -11,76 +12,39 @@ const Sidebar = () => {
 				<h1 className="mb-3 hover:cursor-pointer">nexus</h1>
 			</div>
 			<ul className="flex flex-col gap-6">
-				<li
-					className="text-[#797E87] hover:cursor-pointer hover:text-black font-semibold"
-					onClick={() => navigate("/home")}
-				>
-					Dashboard
+				<li>
+					<SideBarBtn label="Dashboard" path="/dashboard" />
 				</li>
-				<li
-					className="text-[#797E87] hover:cursor-pointer hover:text-black font-semibold"
-					onClick={() => navigate("/settings")}
-				>
-					Settings
+				<li>
+					<SideBarBtn label="Account Settings" path="/settings" />
 				</li>
 				<li className="flex flex-col gap-3 text-[#797E87] hover:cursor-pointer ">
-					<div
-						onClick={() => navigate("/groups")}
-						className="font-semibold w-full hover:text-black"
-					>
-						Groups
-					</div>
+					<SideBarBtn label="Groups" path="/groups" />
 					<ul className="flex flex-col pl-3 gap-3">
-						<li
-							className="flex hover:text-black"
-							onClick={() => navigate("/groups")}
-						>
-							Your Groups
+						<li>
+							<SideBarBtn label="Your Groups" path="" />
 						</li>
-						<li
-							className="flex hover:text-black"
-							onClick={() => navigate("/groups")}
-						>
-							Public Groups
+						<li>
+							<SideBarBtn label="Public Groups" path="" />
 						</li>
 					</ul>
 				</li>
-				<li
-					className="text-[#797E87] hover:cursor-pointer hover:text-black font-semibold"
-					onClick={() => navigate("/archive")}
-				>
-					Archive
+				<li>
+					<SideBarBtn label="Archive" path="/archive" />
 				</li>
-				<li
-					onClick={() => navigate("/calendar")}
-					className="flex flex-col text-[#797E87] gap-3 hover:cursor-pointer "
-				>
-					<div
-						className="hover:text-black w-full"
-						onClick={() => navigate("/calendar")}
-					>
-						Calendar
-					</div>
+				<li className="flex flex-col text-[#797E87] gap-3 hover:cursor-pointer ">
+					<SideBarBtn label="Calendar" path="/calendar" />
 					<ul className="flex flex-col pl-3 gap-3">
-						<li
-							className="flex hover:text-black"
-							onClick={() => navigate("/calendar")}
-						>
-							Private
+						<li>
+							<SideBarBtn label="Private Calendar" path="" />
 						</li>
-						<li
-							onClick={() => navigate("/calendar")}
-							className="flex hover:text-black"
-						>
-							Group
+						<li>
+							<SideBarBtn label="Group" path="" />
 						</li>
 					</ul>
 				</li>
-				<li
-					className="text-[#797E87] hover:cursor-pointer hover:text-black font-semibold "
-					onClick={() => navigate("/inbox")}
-				>
-					Inbox
+				<li>
+					<SideBarBtn label="Inbox" path="/inbox" />
 				</li>
 			</ul>
 		</div>

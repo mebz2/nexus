@@ -27,7 +27,7 @@ const GroupCard = (group: GroupCardProps) => {
 				<h2 className="line-clamp-1">{group.name}</h2>
 				<p className="line-clamp-3">{group.description}</p>
 				<IoMdArrowRoundForward
-					className={`text-xl text-black
+					className={`text-[100%] text-black
 				        absolute bottom-3 right-5
 				        ${visible ? "visible" : "invisible"}
 			        `}

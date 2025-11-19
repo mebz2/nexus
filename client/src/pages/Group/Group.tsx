@@ -11,9 +11,9 @@ export default function Group() {
 				{/*navbar*/}
 				<div
 					className="
-					w-[60%] h-[3.3%] mt-2.5 bg-[#F3F3FF]
+					w-[60%] h-7 mt-2.5 bg-[#F3F3FF]
 					grid grid-cols-4
-					rounded-lg"
+					rounded-lg "
 				>
 					<GroupButton
 						path="/group"

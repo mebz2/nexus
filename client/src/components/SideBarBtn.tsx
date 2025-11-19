@@ -22,7 +22,7 @@ const SideBarBtn = ({ label, Icon, path }: SideBarBtnProps) => {
 			`}
 			onClick={() => navigate(path)}
 		>
-			{Icon ? <Icon className="text-xl" /> : ""}
+			{Icon ? <Icon className="text-lg" /> : ""}
 			{label}
 		</div>
 	);

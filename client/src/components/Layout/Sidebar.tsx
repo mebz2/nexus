@@ -1,4 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { MdHome } from "react-icons/md";
+import { PiGearSixFill } from "react-icons/pi";
+import { IoMdMail } from "react-icons/io";
+import { BiSolidGroup, BiSolidArchiveIn } from "react-icons/bi";
+import { FaCalendarCheck } from "react-icons/fa6";
 import SideBarBtn from "../SideBarBtn";
 
 const Sidebar = () => {
@@ -13,13 +18,21 @@ const Sidebar = () => {
 			</div>
 			<ul className="flex flex-col gap-6">
 				<li>
-					<SideBarBtn label="Dashboard" path="/dashboard" />
+					<SideBarBtn label="Home" Icon={MdHome} path="/home" />
 				</li>
 				<li>
-					<SideBarBtn label="Account Settings" path="/settings" />
+					<SideBarBtn
+						label="Settings"
+						Icon={PiGearSixFill}
+						path="/settings"
+					/>
 				</li>
 				<li className="flex flex-col gap-3 text-[#797E87] hover:cursor-pointer ">
-					<SideBarBtn label="Groups" path="/groups" />
+					<SideBarBtn
+						label="Groups"
+						Icon={BiSolidGroup}
+						path="/groups"
+					/>
 					<ul className="flex flex-col pl-3 gap-3">
 						<li>
 							<SideBarBtn label="Your Groups" path="" />
@@ -30,10 +43,18 @@ const Sidebar = () => {
 					</ul>
 				</li>
 				<li>
-					<SideBarBtn label="Archive" path="/archive" />
+					<SideBarBtn
+						label="Archive"
+						Icon={BiSolidArchiveIn}
+						path="/archive"
+					/>
 				</li>
 				<li className="flex flex-col text-[#797E87] gap-3 hover:cursor-pointer ">
-					<SideBarBtn label="Calendar" path="/calendar" />
+					<SideBarBtn
+						label="Calendar"
+						Icon={FaCalendarCheck}
+						path="/calendar"
+					/>
 					<ul className="flex flex-col pl-3 gap-3">
 						<li>
 							<SideBarBtn label="Private Calendar" path="" />
@@ -44,7 +65,7 @@ const Sidebar = () => {
 					</ul>
 				</li>
 				<li>
-					<SideBarBtn label="Inbox" path="/inbox" />
+					<SideBarBtn label="Inbox" Icon={IoMdMail} path="/inbox" />
 				</li>
 			</ul>
 		</div>

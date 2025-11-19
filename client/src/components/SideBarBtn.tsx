@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import type { IconType } from "react-icons";
 
 type SideBarBtnProps = {
 	label: string;
 	path: string;
+	Icon?: IconType;
 };
-const SideBarBtn = ({ label, path }: SideBarBtnProps) => {
+const SideBarBtn = ({ label, Icon, path }: SideBarBtnProps) => {
 	const pagePath = location.pathname;
 	const navigate = useNavigate();
 	return (
@@ -12,14 +14,15 @@ const SideBarBtn = ({ label, path }: SideBarBtnProps) => {
 			className={`
 				${
 					path == pagePath
-						? "bg-black text-white"
-						: "text-[#797E87] hover:text-black hover:bg-[#E8E9EB]"
+						? "bg-black text-white font-bold"
+						: "text-[#797E87] hover:text-black hover:bg-[#E8E9EB] font-medium"
 				}
-				 hover:cursor-pointer rounded-sm
-				 font-semibold pl-2 p-1
+				 flex items-center gap-5 hover:cursor-pointer rounded-[5px]
+				 pl-3 p-1
 			`}
 			onClick={() => navigate(path)}
 		>
+			{Icon ? <Icon className="text-xl" /> : ""}
 			{label}
 		</div>
 	);

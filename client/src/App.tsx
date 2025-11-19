@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
 	Login,
 	Signup,
-	Dashboard,
+	Home,
 	Groups,
 	Group,
 	Archive,
@@ -18,7 +18,7 @@ function App() {
 				<Route index element={<Login />} />
 				<Route path="/signup" element={<Signup />} />
 				<Route path="/login" element={<Login />} />
-				<Route path="/home" element={<Dashboard />} />
+				<Route path="/home" element={<Home />} />
 				<Route path="/groups" element={<Groups />} />
 				<Route path="/archive" element={<Archive />} />
 				<Route path="/settings" element={<Settings />} />

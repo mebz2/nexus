@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import { FaAngleDown } from "react-icons/fa6";
 
 const Navbar = () => {
 	const location = useLocation();
@@ -29,11 +28,6 @@ const Navbar = () => {
 				</Link>
 
 				<p className="text-sm font-medium">Name</p>
-				<FaAngleDown
-					className="
-					hover:cursor-pointer
-				"
-				/>
 			</div>
 		</div>
 	);

@@ -8,7 +8,6 @@ export default function Group() {
 		<Layout>
 			{/*content*/}
 			<div className="flex min-h-screen flex-col items-center">
-				{/*navbar*/}
 				<div
 					className="
 					w-[60%] h-7 mt-2.5 bg-[#F3F3FF]
@@ -16,7 +15,7 @@ export default function Group() {
 					rounded-lg "
 				>
 					<GroupButton
-						path="/group"
+						path="/group/overview"
 						label="Overview"
 						active={active}
 						setActive={setActive}

@@ -14,7 +14,7 @@ function Layout({ children }: LayoutProps) {
 			</Activity>
 			<div className="grid grid-rows-[auto_7fr] md:grid-rows-[1fr_15fr] ">
 				<Navbar />
-				<div className="overflow-y-auto">{children}</div>
+				<div className="">{children}</div>
 			</div>
 		</div>
 	);

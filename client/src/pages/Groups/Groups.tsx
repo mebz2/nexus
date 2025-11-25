@@ -1,4 +1,4 @@
-import { SearchBar, GroupCard, Layout } from "../../components";
+import { GroupCard, Layout, SearchBar } from "../../components";
 import { MockGroups } from "../../mocks/";
 
 function Groups() {

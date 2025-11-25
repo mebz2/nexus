@@ -23,7 +23,7 @@ const Card = ({ id, label, Icon, path }: CardProps) => {
 				bg-white rounded-[10px] hover:shadow-xl hover:cursor-pointer
 				border-border gap-[10%] md:justify-center md:w-[23%]  md:h-[60%]
 				 xl:pl-0 shadow-sm border
-				"
+			"
 		>
 			<Icon className="text-[100%] hidden xl:block xl:text-[120%] text-black" />
 			<p className="text-[110%] font-semibold text-black">{label}</p>

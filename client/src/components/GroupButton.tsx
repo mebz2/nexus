@@ -11,15 +11,16 @@ const NavbarButton = ({ label, active, setActive, path }: ButtonProps) => {
 		<Link
 			to={path}
 			onClick={() => setActive(label)}
-			className={`w-full h-full
-               flex justify-center
-              items-center ${
-					active == label
-						? "bg-black rounded-[5px] text-white hover:text-white hover:bg-black  "
-						: "bg-[#F3F3FF] text-black hover:bg-gray-300 "
+			className={`
+				w-full h-full
+				flex justify-center
+				items-center 
+				${active == label
+					? "bg-primary rounded-[5px] text-white hover:text-white hover:bg-black  "
+					: "bg-[#F3F3FF] text-black hover:bg-gray-300 "
 				}
-              hover:text-black
-              hover:cursor-pointer`}
+				hover:text-black hover:cursor-pointer
+			`}
 		>
 			<p
 				className={`text-xs ${active == label ? "font-bold" : "font-medium "}`}

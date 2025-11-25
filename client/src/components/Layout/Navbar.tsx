@@ -7,8 +7,8 @@ const Navbar = () => {
 	return (
 		<div
 			className="
-			bg-white h-full flex items-center pl-10 pr-8
-			justify-between box-border border-b border-[#EBEBEB]
+				bg-white h-full flex items-center pl-10 pr-8
+				justify-between box-border border-b border-[#EBEBEB]
 			"
 		>
 			{/*bread crumbs*/}
@@ -22,7 +22,7 @@ const Navbar = () => {
 					to="/login"
 					className="
 						hover:cursor-pointer rounded-sm h-10 w-9 flex
-						justify-center items-center bg-black "
+						justify-center items-center bg-primary"
 				>
 					<p className="text-white font-bold text-xl">N</p>
 				</Link>

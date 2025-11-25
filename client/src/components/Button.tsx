@@ -13,7 +13,7 @@ const Button = ({ label, onClick, radius }: ButtonProps) => {
 			onClick={() => navigate("/home")}
 			className={`
 			  w-full h-full
-		      outline-none text-lg bg-black text-white
+		      outline-none text-lg bg-primary text-white
 		      ${radius ? `rounded-[${radius}px]` : "rounded-lg"} font-medium
 		      hover:shadow-lg hover:shadow-gray-600
 		      hover:cursor-pointer

@@ -12,10 +12,9 @@ const SideBarBtn = ({ label, Icon, path }: SideBarBtnProps) => {
 	return (
 		<div
 			className={`
-				${
-					path == pagePath
-						? "bg-black text-white font-bold"
-						: "text-[#797E87] hover:text-black hover:bg-[#E8E9EB] font-medium"
+				${path == pagePath
+					? "bg-primary text-white font-bold"
+					: "text-[#797E87] hover:text-black hover:bg-[#E8E9EB] font-medium"
 				}
 				 flex items-center gap-5 hover:cursor-pointer rounded-[5px]
 				 pl-3 p-1

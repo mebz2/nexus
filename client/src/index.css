@@ -3,6 +3,7 @@
 :root {
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	--primary-color: #001d3f;
+	--border-color: #e0e1e3;
 }
 
 @font-face {
@@ -41,7 +42,6 @@ h2 {
 
 .card-gradient {
 	background: linear-gradient(1.76deg, #cfe0ff 1.5%, #f3f3ff 98.58%);
-	background-color: #e0e1e3;
 }
 
 @theme {

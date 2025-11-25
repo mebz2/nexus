@@ -1,5 +1,8 @@
 import { FaFile } from "react-icons/fa";
 import { RxDotFilled } from "react-icons/rx";
+import { BsDownload } from "react-icons/bs";
+import { MdDelete } from "react-icons/md";
+
 type FileProps = {
 	name: string,
 	size: number,
@@ -8,18 +11,31 @@ type FileProps = {
 	uploaded_time: string,
 }
 const File = ({ name, size, file_type, uploaded_by, uploaded_time }: FileProps) => {
+	let new_size: string;
+	const mb: number = size / 1024;
+	const gb: number = mb / 1024;
+	if (gb >= 1) {
+		new_size = gb.toFixed(2) + " GB";
+	} else if (mb >= 1) {
+		new_size = mb.toFixed(2) + " MB";
+	} else {
+		new_size = size.toFixed(2) + " KB";
+	}
 	return (
 		<div className="
-				w-full h-[20%] flex items-center
+				w-400 h-[20%] flex items-center
 				pl-10 hover:border hover:border-[var(--border-color)] 
-				hover:rounded-sm hover:shadow-sm
+				hover:rounded-sm hover:shadow-sm 
 			"
 		>
+			{/* file icon */}
 			<FaFile className="mr-[35px]" />
-			<div className="h-full flex flex-col justify-center gap-1  ">
-				<p className="font-semibold text-xl">{name}</p>
+
+			{/*file name and description*/}
+			<div className="h-full flex flex-col justify-center gap-1 max-w-[60%]  ">
+				<p className="max-w-full font-semibold text-xl text-ellipsis whitespace-nowrap overflow-hidden ">{name}</p>
 				<div className="text-sm font-medium flex items-end ">
-					{size} kb
+					{new_size}
 					<RxDotFilled className="text-xs" />
 					Uploaded by {uploaded_by}
 					<RxDotFilled />
@@ -27,6 +43,10 @@ const File = ({ name, size, file_type, uploaded_by, uploaded_time }: FileProps) 
 					<RxDotFilled />
 					{file_type}
 				</div>
+			</div>
+			<div className="h-full flex gap-10 items-center ml-auto p-5 box-border mr-2">
+				<BsDownload className="text-lg hover:text-xl  hover:cursor-pointer" title={`download`} />
+				<MdDelete className="text-xl hover:text-2xl hover:cursor-pointer" title="delete" />
 			</div>
 		</div>
 	);

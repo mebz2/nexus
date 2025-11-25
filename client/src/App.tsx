@@ -25,7 +25,7 @@ function App() {
 				<Route path="/calendar" element={<Calendar />} />
 				<Route path="/inbox" element={<Inbox />} />
 				<Route path="/group" element={<Group />}>
-					<Route index element={<Overview />} />
+					<Route path="overview" element={<Overview />} />
 					<Route path="files" element={<Files />} />
 					<Route path="tasks" element={<Tasks />} />
 					<Route path="members" element={<Members />} />

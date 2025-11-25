@@ -1,11 +1,11 @@
-import { Card, Activity, Layout } from "../../components";
-import { MockActivities } from "../../mocks";
-import { FaUsers } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import { FaCalendarCheck } from "react-icons/fa6";
 import { BiSolidArchiveIn } from "react-icons/bi";
+import { FaUsers } from "react-icons/fa";
+import { FaCalendarCheck } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { Activity, Card, Layout } from "../../components";
+import { MockActivities } from "../../mocks";
 
-export default function Dashboard() {
+export default function Home() {
 	return (
 		<Layout>
 			{/*content*/}

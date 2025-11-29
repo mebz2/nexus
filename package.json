@@ -1,5 +1,6 @@
 {
 	"scripts": {
-		"dev": "npm run dev --prefix client"
+		"dev": "npm run dev --prefix client",
+		"install": "npm install --prefix client"
 	}
 }

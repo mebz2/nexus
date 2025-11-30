@@ -9,7 +9,7 @@ const SearchBar = () => {
 				onBlur={() => setFocus(false)}
 				type="text"
 				className={`
-		          h-12 w-[15%] mt-6 border-t-2 border-l-2
+		          h-12 w-[20%] mt-6 border-t-2 border-l-2
 		          border-b-2 border-r
 		          rounded-l-3xl pl-[3%]
 		          text-sm outline-none

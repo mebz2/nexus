@@ -55,15 +55,8 @@ const Sidebar = () => {
 						Icon={FaCalendarCheck}
 						path="/calendar"
 					/>
-					<ul className="flex flex-col pl-3 gap-3">
-						<li>
-							<SideBarBtn label="Private Calendar" path="" />
-						</li>
-						<li>
-							<SideBarBtn label="Group" path="" />
-						</li>
-					</ul>
 				</li>
+
 				<li>
 					<SideBarBtn label="Inbox" Icon={IoMdMail} path="/inbox" />
 				</li>

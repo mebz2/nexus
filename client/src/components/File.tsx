@@ -2,6 +2,7 @@ import { FaFile } from "react-icons/fa";
 import { RxDotFilled } from "react-icons/rx";
 import { BsDownload } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
+import { formatDistanceToNow } from "date-fns";
 
 type FileProps = {
 	name: string,
@@ -11,6 +12,7 @@ type FileProps = {
 	uploaded_time: string,
 }
 const File = ({ name, size, file_type, uploaded_by, uploaded_time }: FileProps) => {
+	// calculate file size
 	let new_size: string;
 	const mb: number = size / 1024;
 	const gb: number = mb / 1024;
@@ -21,6 +23,11 @@ const File = ({ name, size, file_type, uploaded_by, uploaded_time }: FileProps) 
 	} else {
 		new_size = size.toFixed(2) + " KB";
 	}
+
+	// calculate time since upload
+	let distance = formatDistanceToNow(uploaded_time, { addSuffix: true });
+	distance = distance.replace(/^about/, '');
+
 	return (
 		<div className="
 				w-400 h-[70px] flex items-center
@@ -39,7 +46,7 @@ const File = ({ name, size, file_type, uploaded_by, uploaded_time }: FileProps) 
 					<RxDotFilled className="text-xs" />
 					Uploaded by {uploaded_by}
 					<RxDotFilled />
-					{uploaded_time} hours ago
+					{distance}
 					<RxDotFilled />
 					{file_type}
 				</div>

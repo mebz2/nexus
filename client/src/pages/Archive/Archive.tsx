@@ -4,9 +4,9 @@ import { MockFiles } from "../../mocks";
 function Archive() {
 	return (
 		<Layout>
-			<div className="h-full flex flex-col  items-center box-border p-2 pt-0 ">
+			<div className="h-full flex flex-col  items-center box-border  ">
 				<SearchBar />
-				<div className="h-200 overflow-y-scroll flex flex-col">
+				<div className="h-200 overflow-y-scroll flex flex-col pl-2 pr-3 box-border">
 					{
 						MockFiles.map((file) => {
 							return <File

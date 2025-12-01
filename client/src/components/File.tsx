@@ -31,7 +31,7 @@ const File = ({ name, size, file_type, uploaded_by, uploaded_time }: FileProps) 
 	return (
 		<div className="
 				w-400 h-[70px] flex items-center
-				pl-10 hover:border hover:border-[var(--border-color)] 
+				pl-10 hover:border hover:border-(--border-color) 
 				hover:rounded-sm hover:shadow-sm 
 			"
 		>

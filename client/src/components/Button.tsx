@@ -5,7 +5,7 @@ type ButtonProps = {
 	onClick: () => void;
 	radius?: number;
 };
-const Button = ({ label, onClick, radius }: ButtonProps) => {
+const Button = ({ label, radius }: ButtonProps) => {
 	const navigate = useNavigate();
 	return (
 		<button
@@ -13,7 +13,7 @@ const Button = ({ label, onClick, radius }: ButtonProps) => {
 			onClick={() => navigate("/home")}
 			className={`
 			  w-full h-full
-		      outline-none text-lg bg-[var(--primary-color)] text-white
+		      outline-none text-lg bg-(--primary-color) text-white
 		      ${radius ? `rounded-[${radius}px]` : "rounded-lg"} font-medium
 		      hover:shadow-lg hover:shadow-gray-600
 		      hover:cursor-pointer

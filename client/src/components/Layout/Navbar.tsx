@@ -7,7 +7,7 @@ const Navbar = () => {
 	return (
 		<div
 			className="
-				bg-white h-full flex items-center pl-10 pr-8
+				bg-white flex items-center pl-10 pr-8
 				justify-between box-border border-b border-[#EBEBEB]
 			"
 		>

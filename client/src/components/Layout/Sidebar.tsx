@@ -20,28 +20,11 @@ const Sidebar = () => {
 				<li>
 					<SideBarBtn label="Home" Icon={MdHome} path="/home" />
 				</li>
+
 				<li>
-					<SideBarBtn
-						label="Settings"
-						Icon={PiGearSixFill}
-						path="/settings"
-					/>
+					<SideBarBtn label="Inbox" Icon={IoMdMail} path="/inbox" />
 				</li>
-				<li className="flex flex-col gap-3 text-[#797E87] hover:cursor-pointer ">
-					<SideBarBtn
-						label="Groups"
-						Icon={BiSolidGroup}
-						path="/groups"
-					/>
-					<ul className="flex flex-col pl-3 gap-3">
-						<li>
-							<SideBarBtn label="Your Groups" path="" />
-						</li>
-						<li>
-							<SideBarBtn label="Public Groups" path="" />
-						</li>
-					</ul>
-				</li>
+
 				<li>
 					<SideBarBtn
 						label="Archive"
@@ -49,6 +32,23 @@ const Sidebar = () => {
 						path="/archive"
 					/>
 				</li>
+
+				<li className="flex flex-col gap-3 text-[#797E87] hover:cursor-pointer ">
+					<SideBarBtn
+						label="Groups"
+						Icon={BiSolidGroup}
+						path="/groups"
+					/>
+					<ul className="flex flex-col pl-3 gap-3">
+						<li className="ml-3">
+							<SideBarBtn label="Your Groups" path="" />
+						</li>
+						<li className="ml-3">
+							<SideBarBtn label="Public Groups" path="" />
+						</li>
+					</ul>
+				</li>
+
 				<li className="flex flex-col text-[#797E87] gap-3 hover:cursor-pointer ">
 					<SideBarBtn
 						label="Calendar"
@@ -58,7 +58,11 @@ const Sidebar = () => {
 				</li>
 
 				<li>
-					<SideBarBtn label="Inbox" Icon={IoMdMail} path="/inbox" />
+					<SideBarBtn
+						label="Settings"
+						Icon={PiGearSixFill}
+						path="/settings"
+					/>
 				</li>
 			</ul>
 		</div>

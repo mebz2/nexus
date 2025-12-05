@@ -10,7 +10,7 @@ import {
 	Settings,
 	Calendar,
 } from "./pages";
-import { Files, Members, Overview, Tasks } from "./pages/Group/components";
+import { Files, Members, Overview, Tasks } from "./pages/Group/subpages";
 function App() {
 	return (
 		<BrowserRouter>

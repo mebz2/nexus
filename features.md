@@ -4,7 +4,6 @@
 
 ### Things to use
   - react icons for icons
-  - react dropdown
   - Clerk for authentication
 ---
 #### User

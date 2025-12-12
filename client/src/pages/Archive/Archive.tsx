@@ -17,7 +17,6 @@ function Archive() {
 						})
 					}
 				</div>
-
 			</div>
 		</Layout>
 	);

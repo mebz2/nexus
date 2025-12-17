@@ -9,13 +9,13 @@ function Signup() {
 	return (
 		<div
 			className="flex justify-center items-center
-			h-screen bg-[#EEEFF1]"
+			h-screen bg-white"
 		>
 			{/*Singup Container*/}
 			<div
 				className="
-				w-full md:w-[50%] lg:w-[25%]  shadow-2xl shadow-gray-400
-				border border-border rounded-[10px] h-fit "
+				w-full md:w-[50%] lg:w-[25%]  lg:shadow-2xl lg:shadow-gray-400
+				lg:border lg:border-border lg:rounded-[10px] h-fit "
 			>
 				{/*form header*/}
 				<FormHeader
@@ -23,9 +23,9 @@ function Signup() {
 					message="Enter your details to get started with nexus"
 				/>
 				{/*form container*/}
-				<div
+				<form
 					className="h-full flex flex-col items-center
-					p-9 gap-7 bg-white rounded-b-[10px]"
+					p-9 gap-7 bg-white lg:rounded-b-[10px]"
 				>
 					<Textfield
 						id="username"
@@ -68,7 +68,7 @@ function Signup() {
 							Sign in here
 						</Link>
 					</p>
-				</div>
+				</form>
 			</div>
 		</div>
 	);

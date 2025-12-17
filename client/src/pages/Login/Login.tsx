@@ -10,14 +10,14 @@ function Login() {
 		// div for the screen
 		<div
 			className="flex flex-col justify-center items-center
-			h-screen bg-[#EEEFF1]"
+			h-screen bg-white"
 		>
 			{/*Login Container*/}
 			<div
 				className="
 				w-full md:w-[50%]
-				lg:w-[25%] border border-border
-				rounded-[10px] shadow-2xl shadow-gray-400 h-fit
+				lg:w-[25%] lg:border lg:border-border
+				lg:rounded-[10px] lg:shadow-2xl lg:shadow-gray-400 h-fit
 				bg-white
 				"
 			>
@@ -27,10 +27,10 @@ function Login() {
 					message="Enter your credentials to access your account"
 				/>
 				{/*form container*/}
-				<div
+				<form
 					className="
 					bg-white flex flex-col items-center
-					p-9 gap-7 rounded-b-[10px]"
+					p-9 gap-7 lg:rounded-b-[10px]"
 				>
 					{/*email text field*/}
 					<Textfield
@@ -63,7 +63,7 @@ function Login() {
 							Create one here
 						</Link>
 					</p>
-				</div>
+				</form>
 			</div>
 
 			<div

@@ -35,6 +35,9 @@
 
 ## Setup
 
+> [!NOTE]
+> Only the frontend is working right now, all the data you see is dummy data
+
 - Clone the repository on your local device
 ```bash
 git clone https://github.com/mebz2/nexus
@@ -54,3 +57,6 @@ npm run install
 ```bash
 npm run dev
 ```
+
+> [!HINT]
+> this is a hint

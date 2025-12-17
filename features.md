@@ -5,6 +5,10 @@
 ### Things to use
   - react icons for icons
   - Clerk for authentication
+  - cors for integrating different ports for client and server
+  - checkout swagger for documentation
+> [!NOTE]
+> try to make them listen to the same port
 ---
 #### User
 - Create Account

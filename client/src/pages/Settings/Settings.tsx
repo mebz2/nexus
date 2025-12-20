@@ -59,7 +59,7 @@ function Settings() {
 							type="text"
 							disabled={!edit}
 							placeholder={username}
-							className="border-b-2 flex outline-none"
+							className="border-b-2 flex outline-none w-60"
 						/>
 
 						<textarea
@@ -69,7 +69,7 @@ function Settings() {
 							className="
 								outline-none border border-border
 								rounded-sm focus:border-primary
-								min-h-[100px] 
+								min-h-[100px] w-60 pt-3 pl-2
 							"
 						/>
 

@@ -59,4 +59,3 @@
 - Notice Board
   - owner and admins can post information on the notice board
   - contains information about upcoming events from the calendar
-- Use qr codes somewhere if needed

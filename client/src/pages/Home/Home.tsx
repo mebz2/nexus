@@ -36,12 +36,14 @@ export default function Home() {
 						label="Archive"
 						Icon={BiSolidArchiveIn}
 					/>
+
 					<Card
-						path="/archive"
+						path="/calendar"
 						id="calendar"
 						label="Calendar"
 						Icon={FaCalendarCheck}
 					/>
+
 					<Card
 						path="/inbox"
 						id="inbox"

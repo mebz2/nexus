@@ -23,12 +23,7 @@ export default function Home() {
 					md:flex-row mt-10 overflow-y-auto h-[500px] w-full
 					md:h-[150px] md:w-[80%] "
 				>
-					<Card
-						path="/groups"
-						id="groups"
-						label="Groups"
-						Icon={FaUsers}
-					/>
+					<Card path="/groups" id="groups" label="Groups" Icon={FaUsers} />
 
 					<Card
 						path="/archive"
@@ -36,20 +31,13 @@ export default function Home() {
 						label="Archive"
 						Icon={BiSolidArchiveIn}
 					/>
-
 					<Card
-						path="/calendar"
+						path="/archive"
 						id="calendar"
 						label="Calendar"
 						Icon={FaCalendarCheck}
 					/>
-
-					<Card
-						path="/inbox"
-						id="inbox"
-						label="Inbox"
-						Icon={IoMdMail}
-					/>
+					<Card path="/inbox" id="inbox" label="Inbox" Icon={IoMdMail} />
 				</div>
 
 				{/*recent activities*/}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Layout } from "../../components";
+import { Layout } from "@/components";
 import { MdModeEdit } from "react-icons/md";
 
 function Settings() {

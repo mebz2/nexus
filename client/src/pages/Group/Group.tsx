@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Layout, GroupButton } from "../../components";
+import { Layout, GroupButton } from "@/components";
 
 export default function Group() {
 	const [active, setActive] = useState<string>("Overview");

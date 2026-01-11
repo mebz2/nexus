@@ -1,5 +1,5 @@
-import { Layout, File, SearchBar } from "../../components";
-import { MockFiles } from "../../mocks";
+import { Layout, File, SearchBar } from "@/components";
+import { MockFiles } from "@/mocks";
 
 function Archive() {
 	return (

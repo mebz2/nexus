@@ -5,7 +5,17 @@ function Groups() {
 	return (
 		<Layout>
 			<div className="flex flex-col items-center gap-2.5 ">
-				<SearchBar />
+				<div className="w-full flex items-center">
+					<SearchBar />
+					<button className="
+						h-10 w-40 mr-5 rounded-lg border-none 
+						outline-none hover:cursor-pointer font-medium
+						bg-(--primary-color) text-white
+						hover:shadow-lg hover:shadow-gray-600
+					">
+						Create Group
+					</button>
+				</div>
 				<div
 					className="
 					h-[80%] w-full grid grid-cols-5

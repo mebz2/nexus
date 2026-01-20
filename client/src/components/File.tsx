@@ -52,8 +52,8 @@ const File = ({ name, size, file_type, uploaded_by, uploaded_time }: FileProps) 
 				</div>
 			</div>
 			<div className="h-full flex gap-10 items-center ml-auto p-5 box-border mr-2">
-				<BsDownload className="text-lg hover:text-xl  hover:cursor-pointer" title={`download`} />
-				<MdDelete className="text-xl hover:text-2xl hover:cursor-pointer" title="delete" />
+				<BsDownload className="text-lg hover:cursor-pointer" title="Download" />
+				<MdDelete className="text-xl hover:cursor-pointer" title="Delete" />
 			</div>
 		</div>
 	);

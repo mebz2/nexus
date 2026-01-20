@@ -32,7 +32,7 @@ export default function Home() {
 						Icon={BiSolidArchiveIn}
 					/>
 					<Card
-						path="/archive"
+						path="/calendar"
 						id="calendar"
 						label="Calendar"
 						Icon={FaCalendarCheck}

@@ -58,5 +58,3 @@ npm run install
 npm run dev
 ```
 
-> [!HINT]
-> this is a hint

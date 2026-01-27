@@ -3,6 +3,9 @@ const app = express()
 
 
 app.get('/', (req, res) => {
-	res.download('server.js')
+	res.send("hello")
 })
 app.listen(3000)
+
+const userRouter = require('./routes/users.js')
+app.use('/users', userRouter)

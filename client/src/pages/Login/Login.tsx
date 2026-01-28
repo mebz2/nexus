@@ -82,4 +82,3 @@ function Login() {
 
 export default Login;
 
-// className="w-[491px] border border-border

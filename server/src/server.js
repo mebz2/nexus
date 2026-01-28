@@ -7,5 +7,5 @@ app.get('/', (req, res) => {
 })
 app.listen(3000)
 
-const userRouter = require('./routes/users.js')
+const userRouter = require('./src/routes/users.js')
 app.use('/users', userRouter)

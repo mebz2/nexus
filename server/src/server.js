@@ -1,8 +1,14 @@
 const express = require("express")
 const app = express()
+const cors = require('cors')
 
 // Middleware for parsing JSON bodies
 app.use(express.json());
+
+// Use CORS middleware to allow requests from the client
+app.use(cors({
+	origin: 'http://localhost:5173' // Adjust port if your client runs on a different one
+}));
 
 app.get('/', (req, res) => {
 	res.send("hello")

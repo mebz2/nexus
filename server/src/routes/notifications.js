@@ -5,14 +5,14 @@ const router = express.Router();
 // @desc    Get all notifications for the current user
 // @access  Private
 router.get('/notifications', (req, res) => {
-  res.json({ msg: 'Get all notifications route' });
+	res.send("get all notifications");
 });
 
 // @route   PUT api/notifications/:notificationId
 // @desc    Mark a notification as read
 // @access  Private
 router.put('/notifications/:notificationId', (req, res) => {
-  res.json({ msg: `Mark notification ${req.params.notificationId} as read route` });
+	res.send(`Mark notification ${req.params.notificationId} as read route`);
 });
 
 module.exports = router;

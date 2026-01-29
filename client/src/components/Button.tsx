@@ -15,7 +15,7 @@ const Button = ({ label, radius }: ButtonProps) => {
 			  w-full h-full
 		      outline-none text-lg bg-(--primary-color) text-white
 		      ${radius ? `rounded-[${radius}px]` : "rounded-lg"} font-medium
-		      hover:shadow-lg hover:shadow-gray-600
+		      hover:shadow-lg hover:shadow-gray-600 hover:font-bold
 		      hover:cursor-pointer
 	      `}
 		>

@@ -1,18 +1,23 @@
 import { GroupCard, Layout, SearchBar } from "@/components";
 import { MockGroups } from "@/mocks/";
+import { useNavigate } from "react-router-dom";
+
 
 function Groups() {
+	const navigate = useNavigate();
 	return (
 		<Layout>
 			<div className="flex flex-col items-center gap-2.5 ">
 				<div className="w-full flex items-center">
 					<SearchBar />
 					<button className="
-						h-10 w-40 mr-5 rounded-lg border-none 
-						outline-none hover:cursor-pointer font-medium
-						bg-(--primary-color) text-white
-						hover:shadow-lg hover:shadow-gray-600
-					">
+							h-10 w-40 mr-5 rounded-lg border-none 
+							outline-none hover:cursor-pointer font-medium
+							bg-(--primary-color) text-white
+							hover:shadow-lg hover:shadow-gray-600
+						"
+						onClick={() => { navigate("/groups/creategroup") }}
+					>
 						Create Group
 					</button>
 				</div>

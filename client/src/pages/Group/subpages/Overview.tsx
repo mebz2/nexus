@@ -19,21 +19,25 @@ const Overview = () => {
 					<OverviewBtn
 						Icon={IoMdCloudUpload}
 						label="Upload Files"
+						path="addfile"
 					/>
 
 					<OverviewBtn
 						Icon={MdOutlineAdd}
 						label="Add Task"
+						path="addfile"
 					/>
 
 					<OverviewBtn
 						Icon={IoMdPersonAdd}
 						label="Add Member"
+						path="addfile"
 					/>
 
 					<OverviewBtn
 						Icon={IoMdSettings}
 						label="Settings"
+						path="addfile"
 					/>
 
 				</div>

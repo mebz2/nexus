@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Layout, GroupButton } from "@/components";
+import { useLocation } from "react-router-dom";
 
 export default function Group() {
-	const [active, setActive] = useState<string>("Overview");
+	const location = useLocation();
+	const segments: string[] = location.pathname.split('/').filter(Boolean);
+	const lastPath: string | undefined = segments.pop();
+	const [active, setActive] = useState<string | undefined>(lastPath);
 	return (
 		<Layout>
 			{/*content*/}

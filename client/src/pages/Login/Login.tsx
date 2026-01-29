@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { Textfield, Button, FormHeader } from "@/components";
 
 const handleClick = () => {
-	console.log("clicked");
+	console.log("Trying to fetch /api/auth/login");
+
 };
 
 function Login() {

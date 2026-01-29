@@ -12,7 +12,7 @@ import {
 	CreateGroup,
 	AddFile,
 } from "./pages";
-import { Files, Members, Overview, Tasks, AddFileGroup } from "./pages/Group/subpages";
+import { Files, Members, Overview, AddFileGroup } from "./pages/Group/subpages";
 function App() {
 	return (
 		<BrowserRouter>
@@ -32,7 +32,6 @@ function App() {
 				<Route path="/group" element={<Group />}>
 					<Route path="overview" element={<Overview />} />
 					<Route path="files" element={<Files />} />
-					<Route path="tasks" element={<Tasks />} />
 					<Route path="members" element={<Members />} />
 				</Route>
 			</Routes>

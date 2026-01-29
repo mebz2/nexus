@@ -14,8 +14,8 @@ export default function Group() {
 			<div className="flex min-h-screen flex-col items-center">
 				<div
 					className="
-					w-[60%] h-7 mt-2.5 bg-[#F3F3FF]
-					grid grid-cols-4
+					w-[40%] h-7 mt-2.5 bg-[#F3F3FF]
+					grid grid-cols-3
 					rounded-lg "
 				>
 					<GroupButton
@@ -30,12 +30,7 @@ export default function Group() {
 						active={active}
 						setActive={setActive}
 					/>
-					<GroupButton
-						path="/group/tasks"
-						label="Tasks"
-						active={active}
-						setActive={setActive}
-					/>
+
 					<GroupButton
 						path="/group/members"
 						label="Members"
@@ -49,3 +44,4 @@ export default function Group() {
 		</Layout>
 	);
 }
+

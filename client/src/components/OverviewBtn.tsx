@@ -13,7 +13,8 @@ const OverviewBtn = ({ label, Icon, path }: OverviewProps) => {
 			className="bg-primary w-[90%] h-[13%] 
 						flex items-center pl-4 rounded-sm text-white 
 						cursor-pointer outline-none hover:shadow-xl
-						hover:font-semibold gap-5"
+						hover:bg-white hover:border hover:border-border 
+						hover:font-semibold hover:text-primary gap-5"
 			onClick={() => navigate(`/group/${path}`)}
 		>
 			<Icon />

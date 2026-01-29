@@ -3,7 +3,6 @@ import { MdHome } from "react-icons/md";
 import { PiGearSixFill } from "react-icons/pi";
 import { IoMdMail } from "react-icons/io";
 import { BiSolidGroup, BiSolidArchiveIn } from "react-icons/bi";
-import { FaCalendarCheck } from "react-icons/fa6";
 import SideBarBtn from "../SideBarBtn";
 
 const Sidebar = () => {
@@ -43,18 +42,8 @@ const Sidebar = () => {
 						<li className="ml-3">
 							<SideBarBtn label="Your Groups" path="" />
 						</li>
-						<li className="ml-3">
-							<SideBarBtn label="Public Groups" path="" />
-						</li>
-					</ul>
-				</li>
 
-				<li className="flex flex-col text-[#797E87] gap-3 hover:cursor-pointer ">
-					<SideBarBtn
-						label="Calendar"
-						Icon={FaCalendarCheck}
-						path="/calendar"
-					/>
+					</ul>
 				</li>
 
 				<li>

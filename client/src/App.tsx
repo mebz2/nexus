@@ -8,11 +8,10 @@ import {
 	Archive,
 	Inbox,
 	Settings,
-	Calendar,
 	CreateGroup,
 	AddFile,
 } from "./pages";
-import { Files, Members, Overview, AddFileGroup } from "./pages/Group/subpages";
+import { Files, Members, Overview, AddFileGroup, InviteMember } from "./pages/Group/subpages";
 function App() {
 	return (
 		<BrowserRouter>
@@ -23,11 +22,11 @@ function App() {
 				<Route path="/home" element={<Home />} />
 				<Route path="/groups" element={<Groups />} />
 				<Route path="/group/addfile" element={<AddFileGroup />} />
+				<Route path="/group/invite-member" element={<InviteMember />} />
 				<Route path="/groups/creategroup" element={<CreateGroup />} />
 				<Route path="/archive" element={<Archive />} />
 				<Route path="/archive/addfile" element={<AddFile />} />
 				<Route path="/settings" element={<Settings />} />
-				<Route path="/calendar" element={<Calendar />} />
 				<Route path="/inbox" element={<Inbox />} />
 				<Route path="/group" element={<Group />}>
 					<Route path="overview" element={<Overview />} />

@@ -16,7 +16,7 @@ const Members = () => {
 						hover:shadow-lg hover:shadow-gray-600
 						flex items-center justify-center gap-2
 					"
-					onClick={() => { navigate("/group/addfile") }}
+					onClick={() => { navigate("/group/invite-member") }}
 				>
 					<MdOutlineAdd />
 					Invite Member

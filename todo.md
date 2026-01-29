@@ -8,7 +8,7 @@
     - [x] Files
         - [x] pop up for adding files
     - [ ] Members
-        - [ ] pop up for adding members
+        - [x] pop up for adding members
     - [ ] settings
 - [ ] Inbox
 - [ ] Settings 
@@ -18,6 +18,7 @@
         - [ ] place for entering otp
 - [ ] Signup
     - [ ] place to confirm email by entering otp
+- [ ] pagination
 
 
 ## BACKEND

@@ -16,7 +16,7 @@ function AddFile() {
 				text-primary
 			">
 				<IoMdArrowRoundBack />
-				Go Back to Group
+				Back to Group
 			</Link>
 
 			{ /* Container for create group card */}

@@ -1,6 +1,5 @@
 import { Activity, OverviewBtn } from "@/components";
 import { IoMdCloudUpload, IoMdPersonAdd, IoMdSettings } from "react-icons/io";
-import { MdOutlineAdd } from "react-icons/md";
 import { FaUser } from "react-icons/fa6";
 import { MockActivities } from "@/mocks";
 
@@ -12,7 +11,7 @@ const Overview = () => {
 				{/* Quick Actions */}
 				<div
 					className="h-[330px] w-[500px] border  flex flex-col
-					border-border rounded-lg p-5 box-border gap-4 shadow-xl"
+					border-border rounded-lg p-5 box-border gap-8 shadow-xl"
 				>
 					<p className="font-semibold text-lg text-primary">Quick Actions</p>
 
@@ -23,21 +22,15 @@ const Overview = () => {
 					/>
 
 					<OverviewBtn
-						Icon={MdOutlineAdd}
-						label="Add Task"
-						path="addfile"
-					/>
-
-					<OverviewBtn
 						Icon={IoMdPersonAdd}
 						label="Add Member"
-						path="addfile"
+						path="invite-member"
 					/>
 
 					<OverviewBtn
 						Icon={IoMdSettings}
 						label="Settings"
-						path="addfile"
+						path="settings"
 					/>
 
 				</div>
@@ -72,10 +65,10 @@ const Overview = () => {
 						pl-10 pb-5 pt-2.5 hover:shadow-xl"
 			>
 				<p className=" text-lg font-bold md:text-2xl md:font-bold xl:text-3xl text-black">
-					Recent Activities
+					Recent Group Activities
 				</p>
 				<p className="text-xs text-[#6B6875] font-medium">
-					Stay updated with your activities
+					Stay updated with group activities
 				</p>
 				{MockActivities.slice(0, 4).map((activity) => {
 					return (

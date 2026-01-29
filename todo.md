@@ -7,8 +7,6 @@
     - [x] Overview
     - [x] Files
         - [x] pop up for adding files
-    - [ ] Tasks
-        - [ ] pop up for adding tasks
     - [ ] Members
         - [ ] pop up for adding members
     - [ ] settings

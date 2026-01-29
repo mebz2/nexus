@@ -1,0 +1,62 @@
+[
+	{
+		"name": "alex_pro",
+		"position": "owner"
+	},
+	{
+		"name": "sarah_dev",
+		"position": "admin"
+	},
+	{
+		"name": "jordan_k",
+		"position": "member"
+	},
+	{
+		"name": "tech_lead_mike",
+		"position": "admin"
+	},
+	{
+		"name": "linda_ops",
+		"position": "owner"
+	},
+	{
+		"name": "sam_coder",
+		"position": "member"
+	},
+	{
+		"name": "casey_v",
+		"position": "member"
+	},
+	{
+		"name": "morgan_flux",
+		"position": "admin"
+	},
+	{
+		"name": "taylor_swift_code",
+		"position": "member"
+	},
+	{
+		"name": "blake_shield",
+		"position": "owner"
+	},
+	{
+		"name": "river_dev",
+		"position": "member"
+	},
+	{
+		"name": "quinn_manager",
+		"position": "admin"
+	},
+	{
+		"name": "jamie_stack",
+		"position": "member"
+	},
+	{
+		"name": "drew_bit",
+		"position": "member"
+	},
+	{
+		"name": "skyler_admin",
+		"position": "admin"
+	}
+]

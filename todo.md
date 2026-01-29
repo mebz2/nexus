@@ -5,8 +5,8 @@
 - [x] pop up for adding file in archive
 - [ ] inside each group
     - [x] Overview
-    - [ ] Files
-        - [ ] pop up for adding files
+    - [x] Files
+        - [x] pop up for adding files
     - [ ] Tasks
         - [ ] pop up for adding tasks
     - [ ] Members

@@ -12,7 +12,7 @@ import {
 	CreateGroup,
 	AddFile,
 } from "./pages";
-import { Files, Members, Overview, Tasks } from "./pages/Group/subpages";
+import { Files, Members, Overview, Tasks, AddFileGroup } from "./pages/Group/subpages";
 function App() {
 	return (
 		<BrowserRouter>
@@ -22,6 +22,7 @@ function App() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/groups" element={<Groups />} />
+				<Route path="/group/addfile" element={<AddFileGroup />} />
 				<Route path="/groups/creategroup" element={<CreateGroup />} />
 				<Route path="/archive" element={<Archive />} />
 				<Route path="/archive/addfile" element={<AddFile />} />

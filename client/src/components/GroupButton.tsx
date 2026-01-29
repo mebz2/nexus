@@ -14,7 +14,7 @@ const NavbarButton = ({ label, active, setActive, path }: ButtonProps) => {
 			className={`
 				w-full h-full
 				flex justify-center
-				items-center 
+				items-center outline-none
 				${active == label.toLowerCase()
 					? "bg-primary rounded-[5px] text-white hover:text-white hover:bg-black  "
 					: "bg-[#F3F3FF] text-black hover:bg-gray-300 "

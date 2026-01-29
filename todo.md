@@ -2,7 +2,7 @@
 
 ## FRONTEND
 - [x] pop up for creating group
-- [ ] pop up for adding file in archive
+- [x] pop up for adding file in archive
 - [ ] inside each group
     - [ ] Overview
     - [ ] Files

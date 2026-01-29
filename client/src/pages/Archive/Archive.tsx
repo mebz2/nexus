@@ -1,7 +1,9 @@
 import { Layout, File, SearchBar } from "@/components";
+import { useNavigate } from "react-router-dom";
 import { MockFiles } from "@/mocks";
 
 function Archive() {
+	const navigate = useNavigate();
 	return (
 		<Layout>
 			<div className="h-full flex flex-col  items-center box-border  ">
@@ -12,7 +14,9 @@ function Archive() {
 						outline-none hover:cursor-pointer font-medium
 						bg-(--primary-color) text-white
 						hover:shadow-lg hover:shadow-gray-600
-					">
+					"
+						onClick={() => { navigate("/archive/addfile") }}
+					>
 						Add File
 					</button>
 				</div>

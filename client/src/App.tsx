@@ -9,7 +9,8 @@ import {
 	Inbox,
 	Settings,
 	Calendar,
-	CreateGroup
+	CreateGroup,
+	AddFile,
 } from "./pages";
 import { Files, Members, Overview, Tasks } from "./pages/Group/subpages";
 function App() {
@@ -23,6 +24,7 @@ function App() {
 				<Route path="/groups" element={<Groups />} />
 				<Route path="/groups/creategroup" element={<CreateGroup />} />
 				<Route path="/archive" element={<Archive />} />
+				<Route path="/archive/addfile" element={<AddFile />} />
 				<Route path="/settings" element={<Settings />} />
 				<Route path="/calendar" element={<Calendar />} />
 				<Route path="/inbox" element={<Inbox />} />

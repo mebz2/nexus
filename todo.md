@@ -7,7 +7,7 @@
     - [x] Overview
     - [x] Files
         - [x] pop up for adding files
-    - [ ] Members
+    - [x] Members
         - [x] pop up for adding members
     - [ ] settings
 - [ ] Inbox

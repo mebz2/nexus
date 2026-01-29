@@ -62,20 +62,10 @@ function Settings() {
 							className="border-b-2 flex outline-none w-60"
 						/>
 
-						<textarea
-							id="bio"
-							placeholder="bio"
-							disabled={!edit}
-							className="
-								outline-none border border-border
-								rounded-sm focus:border-primary
-								min-h-[100px] w-60 pt-3 pl-2
-							"
-						/>
-
 						<div className="w-full mt-auto flex justify-end gap-5">
 							<button
 								onClick={handleSave}
+								type="submit"
 								className="
 								border-2 p-1 w-20 self-end mt-auto rounded-sm border-border
 								hover:cursor-pointer  hover:shadow-lg outline-none

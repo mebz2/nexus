@@ -38,12 +38,6 @@ const Sidebar = () => {
 						Icon={BiSolidGroup}
 						path="/groups"
 					/>
-					<ul className="flex flex-col pl-3 gap-3">
-						<li className="ml-3">
-							<SideBarBtn label="Your Groups" path="" />
-						</li>
-
-					</ul>
 				</li>
 
 				<li>

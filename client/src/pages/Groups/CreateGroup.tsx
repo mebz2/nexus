@@ -47,11 +47,6 @@ function CreateGroup() {
 					/>
 				</div>
 
-				<div className="flex gap-2 w-fit ">
-					<input type="checkbox" id="public-group-box" />
-					<p className="font-light text-sm">Public Group</p>
-				</div>
-
 				<div className="h-9 w-50 mx-auto">
 					<Button label="Create Group" radius={5} onClick={() => { console.log("Create group") }} />
 				</div>

@@ -47,7 +47,7 @@ export default function Home() {
 			<div className="flex flex-col items-start p-20 md:items-center  ">
 				{/*welcome back message*/}
 				<div className=" flex sm:justify-start w-full md:w-[80%]">
-					<h1 className="text-[#6B6875]">Welcome back,</h1>{" "}
+					<h1 className="text-[#6B6875]">Welcome,</h1>{" "}
 					<h1 className="ml-2"> {user.username}!</h1>
 				</div>
 

@@ -1,11 +1,64 @@
 
 import { Popup, Textfield } from "@/components";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
+
+type User = {
+	_id: string,
+	username: string,
+	email: string
+};
 
 function Settings() {
+	const { user } = useOutletContext<{ user: User }>();
+
 	const navigate = useNavigate();
 	const [deletePopup, setDeletePopup] = useState<boolean>(false);
+
+	const handleLogout = async () => {
+		try {
+			const response = await fetch("/api/auth/logout", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				}
+			});
+
+			if (response.ok) {
+				navigate("/login");
+				window.location.reload();
+			}
+		} catch (err) {
+			console.error("Logout failed", err);
+		}
+	}
+
+	const updateUsername = async () => {
+		const input = document.getElementById("username") as HTMLInputElement;
+
+		if (!input) {
+			alert("input element not found")
+			return
+		}
+
+		const value = input.value.trim();
+		if (!value) {
+			alert("Please enter a new username")
+			return
+		}
+
+		const res = await fetch("/api/settings/username", {
+			method: "PATCH",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ newUsername: value }),
+		});
+
+		if (res.ok) {
+			window.location.reload();
+		}
+
+	};
+
 	return (
 		<div>
 			<div className="max-w-2xl mx-auto p-6 md:p-12">
@@ -23,12 +76,14 @@ function Settings() {
 									<Textfield
 										id="username"
 										errorId="username-error"
-										placeholder="username"
+										placeholder={user.username}
 										label="username"
 										type="text"
 									/>
 									<button className="px-4 py-2 bg-primary text-white rounded-md text-sm hover:shadow-lg
-									hover:font-bold transition cursor-pointer self-end h-10">
+										hover:font-bold transition cursor-pointer self-end h-10"
+										onClick={updateUsername}
+									>
 										Save
 									</button>
 								</div>
@@ -54,7 +109,7 @@ function Settings() {
 							<button
 								className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-200 
 								cursor-pointer transition"
-								onClick={() => console.log("Logging out...")}
+								onClick={handleLogout}
 							>
 								Log Out
 							</button>

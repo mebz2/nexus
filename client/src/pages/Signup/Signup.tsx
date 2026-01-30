@@ -2,29 +2,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { Textfield, Button, FormHeader } from "@/components";
 import { useState } from "react";
 
-const handleClick = async () => {
-	try {
-		const response = await fetch("/api/auth/signup", {
-			method: "POST",
-			headers: {
-				'Content-Type': "application/json"
-			},
-			body: JSON.stringify({
-				username: "john",
-				email: "john@example.com",
-				password: "12345"
-			})
-
-		});
-		const data = await response.json();
-		console.log(data);
-	} catch (err) {
-		console.error('Error fetching /api/auth/signup', err);
-	}
-};
-
 function Signup() {
 	const navigate = useNavigate();
+
 	// to store form data
 	const [formData, setFormData] = useState({
 		username: '',
@@ -150,7 +130,7 @@ function Signup() {
 						className="
 						w-full h-10"
 					>
-						<Button label="Create Account" onClick={handleClick} type="submit" />
+						<Button label="Create Account" type="submit" />
 					</div>
 					<p>
 						Already have an account?{" "}

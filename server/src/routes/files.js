@@ -1,47 +1,49 @@
 const express = require('express');
 const router = express.Router();
+const multer = require("multer");
+const path = require('path')
+const fs = require('fs')
 
-// -- Group Files --
+const File = require('../models/File')
 
-// @route   GET api/groups/:groupId/files
-// @desc    Get all files for a specific group
-// @access  Private
-router.get('/groups/:groupId/files', (req, res) => {
-	res.send(`Get all files for group ${req.params.groupId} route`);
-});
+const uploadDir = path.join(__dirname, '../uploads')
+if (!fs.existsSync(uploadDir)) {
+	fs.mkdirSync(uploadDir, { recursive: true });
+}
 
-// @route   POST api/groups/:groupId/files
-// @desc    Upload a new file to a group
-// @access  Private
-router.post('/groups/:groupId/files', (req, res) => {
-	res.send(`Upload file to group ${req.params.groupId} route`);
-});
+const storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, uploadDir)
+	},
+	filename: function (req, file, cb) {
+		const uniqueSufix = Date.now() + '-' + Math.round(Math.random() * 1e9)
+		cb(null, uniqueSufix + '-' + file.originalname)
+	}
+})
 
+const upload = multer({ storage })
 
-// -- Personal Files --
+router.post('/files/upload', upload.single('file'), async (req, res) => {
+	try {
+		if (!req.file) return res.status(400).json({ message: "No file uploaded" })
 
-// @route   GET api/files/personal
-// @desc    Get all personal files for the logged-in user
-// @access  Private
-router.get('/files/personal', (req, res) => {
-	res.send('Get all personal files route');
-});
+		const newFile = new File({
+			fileName: req.file.originalname,
+			fileSizeB: req.file.size,
+			fileType: req.file.mimetype,
+			uploader: req.body.uploader,
+			storageType: req.body.storageType,
+			groupId: req.body.groupId || null,
+			fileUrl: req.file.path
+		})
 
-// @route   POST api/files/personal
-// @desc    Upload a new personal file
-// @access  Private
-router.post('/files/personal', (req, res) => {
-	res.send('Upload personal file route');
-});
+		await newFile.save()
 
-
-// -- General File Operations --
-
-// @route   DELETE api/files/:fileId
-// @desc    Delete a specific file (works for both personal and group files)
-// @access  Private
-router.delete('/files/:fileId', (req, res) => {
-	res.send(`Delete file ${req.params.fileId} route`);
-});
+		res.status(200).json({ message: "File uploaded successfully", file: newFile })
+	} catch (err) {
+		console.error(err)
+		res.status(500).json({ message: 'Server error' })
+	}
+})
 
 module.exports = router;

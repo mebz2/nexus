@@ -1,47 +1,40 @@
-const fileSchema = new Schema({
-	filename: {
+const mongoose = require('mongoose');
+
+const fileSchema = new mongoose.Schema({
+	fileName: {
 		type: String,
-		required: true
+		required: true,
+		trim: true
 	},
-	originalName: {
-		type: String,
-		required: true
-	},
-	sizeKB: {
+	fileSizeB: {
 		type: Number,
 		required: true
 	},
-	mimetype: {
-		type: String, // e.g., 'image/png', 'application/pdf'
-		required: true
-	},
-	url: {
+	fileType: {
 		type: String,
 		required: true
 	},
 	uploader: {
-		type: Schema.Types.ObjectId,
+		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User',
 		required: true
 	},
-	// Determines if the file is personal or belongs to a group
-	scope: {
+	storageType: {
 		type: String,
-		enum: ['user_archive', 'group'],
+		enum: ['personal', 'group'],
 		required: true
 	},
-	// Only populated if scope is 'group'
-	group: {
-		type: Schema.Types.ObjectId,
+	groupId: {
+		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Group',
-		required: function () { return this.scope === 'group'; }
+		default: null
 	},
-	// Only populated if scope is 'user_archive' (Private file)
-	owner: {
-		type: Schema.Types.ObjectId,
-		ref: 'User',
-		required: function () { return this.scope === 'user_archive'; }
+	fileUrl: {
+		type: String,
+		required: true
 	}
-}, { timestamps: true });
+}, {
+	timestamps: true
+});
 
 module.exports = mongoose.model('File', fileSchema);

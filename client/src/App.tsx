@@ -26,6 +26,7 @@ function App() {
 					<Route path="/home" element={<Home />} />
 					<Route path="/groups" element={<Groups />} />
 					<Route path="/archive" element={<Archive />} />
+					<Route path="/archive/addfile" element={<AddFile />} />
 					<Route path="/settings" element={<Settings />} />
 					<Route path="/inbox" element={<Inbox />} />
 					<Route path="/group" element={<Group />}>
@@ -34,7 +35,6 @@ function App() {
 						<Route path="members" element={<Members />} />
 					</Route>
 				</Route>
-				<Route path="/archive/addfile" element={<AddFile />} />
 				<Route path="/settings/change-password" element={<ChangePassword />} />
 				<Route path="/group/addfile" element={<AddFileGroup />} />
 				<Route path="/group/invite-member" element={<InviteMember />} />

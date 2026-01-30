@@ -48,7 +48,7 @@ function CreateGroup() {
 				</div>
 
 				<div className="h-9 w-50 mx-auto">
-					<Button label="Create Group" radius={5} onClick={() => { console.log("Create group") }} />
+					<Button label="Create Group" radius={5} type="submit" onClick={() => { console.log("Create group") }} />
 				</div>
 			</div>
 

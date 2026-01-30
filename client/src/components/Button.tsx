@@ -1,16 +1,15 @@
-import { useNavigate } from "react-router-dom";
 
 type ButtonProps = {
+	type: "button" | "submit" | "reset";
 	label: string;
-	onClick: () => void;
+	onClick?: () => void;
 	radius?: number;
 };
-const Button = ({ label, radius }: ButtonProps) => {
-	const navigate = useNavigate();
+const Button = ({ label, radius, onClick, type }: ButtonProps) => {
 	return (
 		<button
-			type="button"
-			onClick={() => navigate("/home")}
+			type={type}
+			onClick={onClick ? onClick : undefined}
 			className={`
 			  w-full h-full
 		      outline-none text-lg bg-(--primary-color) text-white
@@ -20,7 +19,7 @@ const Button = ({ label, radius }: ButtonProps) => {
 	      `}
 		>
 			{label}
-		</button>
+		</button >
 	);
 };
 

@@ -1,11 +1,71 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Textfield, Button, FormHeader } from "@/components";
-
-const handleClick = () => {
-	console.log("hello");
-};
+import { useState } from "react";
 
 function Signup() {
+	const navigate = useNavigate();
+
+	// to store form data
+	const [formData, setFormData] = useState({
+		username: '',
+		email: '',
+		password: '',
+		confirmPassword: ''
+	});
+
+	// to store errors if any
+	const [error, setError] = useState('');
+
+	// to handle changes
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value });
+		setError(''); // Clear error when user types
+	};
+
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+
+		if (formData.username.length < 3) {
+			setError("Username must be atleast 3 characters long");
+		}
+		if (formData.password !== formData.confirmPassword) {
+			setError("Passwords do not match");
+			return;
+		}
+
+		if (formData.password.length < 8) {
+			setError("Password must be at least 8 characters long.");
+			return;
+		}
+
+		// if passwords match and username is correct send a post request
+		try {
+			const response = await fetch("/api/auth/signup", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					username: formData.username,
+					email: formData.email,
+					password: formData.password
+				}),
+			})
+
+			const data = await response.json();
+
+			if (!response.ok) {
+				setError(data.message || 'Signup Failed');
+				return;
+			}
+
+			navigate("/login");
+		} catch (err) {
+			console.error(err);
+			setError("Something went wrong try again");
+		}
+	};
+
 	return (
 		<div
 			className="flex justify-center items-center
@@ -13,9 +73,10 @@ function Signup() {
 		>
 			{/*Singup Container*/}
 			<div
-				className="
-				w-full md:w-[50%] lg:w-[25%]  lg:shadow-2xl lg:shadow-gray-400
-				lg:border lg:border-border lg:rounded-[10px] h-fit "
+				className={`
+				w-full md:w-[50%] lg:w-[25%]  lg:shadow-2xl 
+				${error ? 'border-red-500 lg:shadow-red-300' : 'lg:shadow-gray-400 lg:border lg:border-border'}
+				lg:rounded-[10px] h-fit `}
 			>
 				{/*form header*/}
 				<FormHeader
@@ -26,41 +87,51 @@ function Signup() {
 				<form
 					className="h-full flex flex-col items-center
 					p-9 gap-7 bg-white lg:rounded-b-[10px]"
+					onSubmit={handleSubmit}
 				>
 					<Textfield
+						onChange={handleChange}
 						id="username"
 						label="Username"
+						name="username"
 						type="text"
 						placeholder="John"
 						errorId="username-error"
 					/>
 					<Textfield
+						onChange={handleChange}
 						id="email"
 						label="Email"
+						name="email"
 						type="email"
 						placeholder="example@gmail.com"
 						errorId="email-error"
 					/>
 					<Textfield
+						onChange={handleChange}
 						id="password"
 						label="Password"
+						name="password"
 						type="password"
 						placeholder="Enter your password"
 						errorId="password-error"
 					/>
 					<Textfield
+						onChange={handleChange}
 						id="cpassword"
 						label="Confirm Password"
+						name="confirmPassword"
 						type="password"
 						placeholder="Confirm your password"
 						errorId="cpassword-error"
 					/>
 
+					<p className="text-red-500 text-xs font-medium animate-pulse">{error}</p>
 					<div
 						className="
 						w-full h-10"
 					>
-						<Button label="Create Account" onClick={handleClick} />
+						<Button label="Create Account" type="submit" />
 					</div>
 					<p>
 						Already have an account?{" "}

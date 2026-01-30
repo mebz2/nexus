@@ -48,7 +48,7 @@ git clone https://github.com/mebz2/nexus
 cd nexus
 ```
 
-- Install all the packages for the client
+- Install all the packages for the client and server
 ```bash
 npm run install
 ```

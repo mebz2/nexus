@@ -3,13 +3,15 @@
 ## FRONTEND
 - [x] pop up for creating group
 - [x] pop up for adding file in archive
-- [ ] inside each group
+- [x] inside each group
     - [x] Overview
     - [x] Files
         - [x] pop up for adding files
     - [x] Members
         - [x] pop up for adding members
-    - [ ] settings
+    - [x] settings
+        - [x] kickout members
+        - [x] promote members
 - [ ] Inbox
 - [ ] Settings 
     - [ ] change password

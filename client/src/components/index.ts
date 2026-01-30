@@ -11,3 +11,4 @@ export { default as File } from "./File";
 export { default as Layout } from "./Layout/Layout";
 export { default as OverviewBtn } from "./OverviewBtn";
 export { default as Member } from "./Member";
+export { default as Popup } from "./Popup";

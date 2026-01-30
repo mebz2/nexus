@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Layout } from "@/components";
 import { useNavigate } from 'react-router-dom';
 
 const ChangePassword = () => {
@@ -17,7 +16,7 @@ const ChangePassword = () => {
 		setError(''); // Clear error when user types
 	};
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 
 		if (formData.newPassword !== formData.confirmPassword) {
@@ -30,12 +29,31 @@ const ChangePassword = () => {
 			return;
 		}
 
-		console.log("Submit to Backend:", formData);
-		alert("Password updated successfully!");
+
+		try {
+			const response = await fetch("/api/settings/password", {
+				method: "PATCH",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					newPassword: formData.newPassword,
+					oldPassword: formData.currentPassword
+				}),
+			})
+
+			const data = await response.json()
+			if (!response.ok) {
+				setError(data.message || "Something went wrong")
+				return;
+			}
+
+			navigate("/login")
+		} catch (err) {
+			console.error("Server connnection error", err)
+		}
 	};
 
 	return (
-		<Layout>
+		<div>
 			<div className="max-w-md mx-auto mt-16 p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
 				<div className="mb-8 text-center">
 					<h1 className="text-2xl font-bold text-gray-900">Change Password</h1>
@@ -54,6 +72,7 @@ const ChangePassword = () => {
 							type="password"
 							name="currentPassword"
 							required
+							autoComplete='current-password'
 							value={formData.currentPassword}
 							onChange={handleChange}
 							className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none transition"
@@ -72,6 +91,7 @@ const ChangePassword = () => {
 							type="password"
 							name="newPassword"
 							required
+							autoComplete='new-password'
 							value={formData.newPassword}
 							onChange={handleChange}
 							className={`w-full px-4 py-2 border rounded-lg focus:ring-2 outline-none transition ${error ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-primary'
@@ -89,6 +109,7 @@ const ChangePassword = () => {
 							type="password"
 							name="confirmPassword"
 							required
+							autoComplete='new-password'
 							value={formData.confirmPassword}
 							onChange={handleChange}
 							className={`w-full px-4 py-2 border rounded-lg focus:ring-2 outline-none transition ${error ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-primary'
@@ -122,7 +143,7 @@ const ChangePassword = () => {
 					</div>
 				</form>
 			</div>
-		</Layout>
+		</div>
 	);
 };
 

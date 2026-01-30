@@ -40,8 +40,7 @@ const updatePassword = async (req, res) => {
 			return res.status(401).json({ message: 'Invalid credentials' });
 		}
 
-		const salt = await bcrypt.genSalt(11);
-		user.password = await bcrypt.hash(newPassword, salt);
+		user.password = await bcrypt.hash(newPassword, 10);
 		await user.save();
 
 		res.status(201).json({ message: 'Password updated successfully' });

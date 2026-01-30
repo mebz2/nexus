@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Textfield, Button, FormHeader } from "@/components";
 import { useState } from "react";
 
 
 
 function Login() {
+	const navigate = useNavigate();
 	// to store form data
 	const [formData, setFormData] = useState({
 		email: '',
@@ -48,10 +49,14 @@ function Login() {
 			const data = await response.json();
 
 			if (!response.ok) {
-				setError(data.message || 'Signup Failed');
+				setError(data.message || 'Login Failed');
 				return;
 			}
+
+			navigate("/home")
+
 		} catch (err) {
+			console.error(err);
 			setError("Something went wrong try again");
 		}
 	}

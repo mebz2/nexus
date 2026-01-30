@@ -27,12 +27,14 @@ app.use(cookieParser());
 const authRouter = require('./routes/auth.js');
 const groupsRouter = require('./routes/groups.js');
 const filesRouter = require('./routes/files.js');
+// const homeRouter = require('./routes/home.js');
 const notificationsRouter = require('./routes/notifications.js'); // Import the new notifications router
 
 app.use('/api/auth', authRouter);
 app.use('/api/groups', groupsRouter);
 app.use('/api', filesRouter);
 app.use('/api', notificationsRouter);
+// app.use('/api', homeRouter);
 
 app.get('/', (req, res) => {
 	res.send("API is running")

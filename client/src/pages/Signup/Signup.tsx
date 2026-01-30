@@ -59,8 +59,9 @@ function Signup() {
 				return;
 			}
 
-			navigate("/home");
+			navigate("/login");
 		} catch (err) {
+			console.error(err);
 			setError("Something went wrong try again");
 		}
 	};

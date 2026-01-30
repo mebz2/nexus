@@ -1,6 +1,5 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
-const isProduction = process.env.NODE_ENV === "production";
 const login = async (req, res) => {
 	try {
 		const { email, password } = req.body;
@@ -20,12 +19,7 @@ const login = async (req, res) => {
 			});
 		}
 
-		res.cookie("userId", user._id.toString(), {
-			httpOnly: true,
-			sameSite: "lax",
-			secure: isProduction, // require https only in production
-			maxAge: 365 * 24 * 60 * 60 * 1000 // 365 days in milliseconds
-		})
+		res.cookie("userId", user._id.toString())
 
 		res.status(200).json({
 			message: "Login successfull",

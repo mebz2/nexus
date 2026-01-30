@@ -2,6 +2,7 @@ const express = require('express');
 const checkEmailExists = require("../middleware/checkEmail");
 const { signup } = require("../controllers/signup");
 const { login } = require("../controllers/login");
+const { fetchUser } = require("../controllers/fetchUser");
 const router = express.Router();
 
 // @route   POST api/auth/signup
@@ -17,9 +18,7 @@ router.post('/login', login);
 // @route   GET api/auth/me
 // @desc    Get current user
 // @access  Private
-router.get('/me', (req, res) => {
-	res.json({ message: "Get me" });
-});
+router.get('/me', fetchUser);
 
 router.post("/logout", (req, res) => {
 	res.clearCookie("userId")

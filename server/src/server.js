@@ -1,6 +1,7 @@
 require('dotenv').config();
 console.log(`My uri is: ${process.env.MONGO_URI}`);
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const cors = require('cors');
 const connectDB = require('./config/db');
 
@@ -15,8 +16,12 @@ app.use(cors({
 	origin: 'http://localhost:5173', // Adjust port if your client runs on a different one
 	credentials: true
 }));
+
 // Middleware for parsing JSON bodies
 app.use(express.json());
+
+//Middleware for parsing cookiesa
+app.use(cookieParser());
 
 // routes
 const authRouter = require('./routes/auth.js');

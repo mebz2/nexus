@@ -21,4 +21,9 @@ router.get('/me', (req, res) => {
 	res.json({ message: "Get me" });
 });
 
+router.post("/logout", (req, res) => {
+	res.clearCookie("userId")
+	res.status(200).json({ message: "Logged our successfully" });
+})
+
 module.exports = router;

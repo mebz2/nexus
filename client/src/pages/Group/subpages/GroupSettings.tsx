@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const GroupSettings = () => {
 	const [deletePopup, setDeletePopup] = useState<boolean>(false);
+	const [leavePopup, setLeavePopup] = useState<boolean>(false);
 	return (
 		<div className="flex flex-col items-center 
 				pt-15 h-screen overflow-y-auto gap-3"
@@ -19,7 +20,7 @@ const GroupSettings = () => {
 
 			<div className="w-[35%] h-[40%] border border-border 
 					rounded-lg flex  flex-col items-center p-5 gap-5
-					shadow-lg"
+					shadow-lg "
 			>
 				<div className="w-[70%]">
 					<Textfield id="group-name" label="Group name" type="text"
@@ -46,14 +47,32 @@ const GroupSettings = () => {
 			>
 				<button
 					className="bg-[#FFCCCC] p-3 box-border w-[40%] 
-				rounded-lg border border-[#FF0707]  text-[#FF0000] cursor-pointer"
+				rounded-lg border border-[#FF0707]  text-[#FF0000] cursor-pointer "
 					onClick={() => { setDeletePopup(true) }}
 				>
 					Delete Group
 				</button>
+
+				<button
+					className="bg-[#FFCCCC] p-3 box-border w-[40%] 
+				rounded-lg border border-[#FF0707]  text-[#FF0000] cursor-pointer"
+					onClick={() => { setLeavePopup(true) }}
+				>
+					Leave Group
+				</button>
+
 			</div>
+			{/* popup for deleting the group*/}
 			<Popup trigger={deletePopup} setTrigger={setDeletePopup}>
 				<p>Are you sure you want to delete this group?</p>
+				<button className="self-end border w-[15%] p-1 mt-2 rounded-sm 
+				bg-primary text-white cursor-pointer hover:font-bold">
+					Yes
+				</button>
+			</Popup>
+			{/* popup for leaving the group*/}
+			<Popup trigger={leavePopup} setTrigger={setLeavePopup}>
+				<p>Are you sure you want to leave this group?</p>
 				<button className="self-end border w-[15%] p-1 mt-2 rounded-sm 
 				bg-primary text-white cursor-pointer hover:font-bold">
 					Yes

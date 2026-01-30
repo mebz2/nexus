@@ -65,7 +65,7 @@ function Groups() {
 				<div className="flex items-center justify-between p-5 shrink-0 bg-white">
 					<div className="flex-1"><SearchBar /></div>
 					<button
-						className="h-10 w-40 ml-4 rounded-lg bg-(--primary-color) text-white font-medium shrink-0"
+						className="h-10 w-40 ml-4 rounded-lg bg-(--primary-color) text-white font-medium shrink-0 cursor-pointer"
 						onClick={() => navigate("/groups/creategroup")}
 					>
 						Create Group

@@ -1,4 +1,5 @@
 import { Layout } from "@/components";
+import { MockMessages } from "@/mocks";
 
 function Inbox() {
 	return (
@@ -13,14 +14,14 @@ function Inbox() {
 
 					{/* Scrollable List */}
 					<div className="flex-1 overflow-y-auto">
-						{[1, 2, 3, 4, 5].map((i) => (
-							<div key={i} className="p-4 border-b border-gray-100 hover:bg-blue-50 cursor-pointer transition">
+						{MockMessages.map((message) => (
+							<div key={message.id} className="p-4 border-b border-gray-100 hover:bg-blue-50 cursor-pointer transition">
 								<div className="flex justify-between mb-1">
-									<span className="font-bold text-sm text-gray-900">John Doe</span>
+									<span className="font-bold text-sm text-gray-900">{message.sender}</span>
 									<span className="text-xs text-gray-500">10:45 AM</span>
 								</div>
-								<p className="text-sm text-gray-700 font-medium truncate">Invitation</p>
-								<p className="text-xs text-gray-500 truncate">Hey, just checking in on the latest...</p>
+								<p className="text-sm text-gray-700 font-medium truncate">{message.title}</p>
+								<p className="text-xs text-gray-500 truncate">{message.message}</p>
 							</div>
 						))}
 					</div>

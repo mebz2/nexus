@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"group-name": "Calculus",
+		"message": "Dear user you have been invited to join the Calculus Group, if you are willing to join our group accept this invite",
+		"sender": "Mebea",
+		"recipient": "John",
+		"title": "Invitation"
+	},
+	{
+		"id": 2,
+		"group-name": "History",
+		"message": "Dear user you have been invited to join the History Group, if you are willing to join our group accept this invite",
+		"sender": "Kaleb",
+		"recipient": "John",
+		"title": "Invitation"
+	},
+	{
+		"id": 3,
+		"group-name": "Chemistry",
+		"message": "Dear user you have been kicked out of Chemistry Group",
+		"sender": "Doe",
+		"recipient": "John",
+		"title": "Kickout"
+	}
+]

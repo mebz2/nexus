@@ -13,14 +13,15 @@
         - [x] kickout members
         - [x] promote members
 - [ ] Inbox
-- [ ] Settings 
-    - [ ] change password
+- [x] Settings 
+    - [x] change password
+    - [x] delete account
+    - [x] change username
+    - [x] Logout
 - [ ] Login
-    - [ ] forgot password
-        - [ ] place for entering otp
 - [ ] Signup
     - [ ] place to confirm email by entering otp
-- [ ] pagination
+- [x] pagination
 
 
 ## BACKEND

@@ -1,96 +1,70 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+// import { Layout } from "@/components";
+
 import { Layout } from "@/components";
-import { MdModeEdit } from "react-icons/md";
 
+// import { MdModeEdit } from "react-icons/md";
 function Settings() {
-	const [username, setUsername] = useState<string>("Username");
-	const [edit, setEdit] = useState<boolean>(false);
-	const [save, setSave] = useState<boolean>(false);
-
-	function handleEdit() {
-		setEdit(!edit);
-	}
-
-	function handleSave() {
-		setSave(true);
-		setEdit(false);
-	}
-
-	useEffect(() => {
-		const userInput = document.getElementById("username");
-		const newName = userInput?.textContent;
-		if (save && newName) {
-			setUsername(newName);
-			setEdit(false)
-		}
-	}, [save]);
-
-	useEffect(() => {
-		const userInput = document.getElementById("username");
-		if (edit) {
-			if (userInput) {
-				userInput.focus();
-			}
-		}
-	}, [edit])
-
-
 	return (
 		<Layout>
-			<div className="h-230 overflow-y-auto flex flex-col items-center p-3 gap-5">
-				<h2 className="">User Information</h2>
-				<div className="
-					w-3xl h-[380px] rounded-2xl border-2 border-border 
-					flex flex-col items-center p-5 box-border
-				">
-					<MdModeEdit
-						onClick={handleEdit}
-						className="self-end  text-2xl hover:cursor-pointer"
-					/>
+			<div className="max-w-2xl mx-auto p-6 md:p-12">
+				<h1 className="text-3xl font-bold text-gray-900 mb-8">Account Settings</h1>
 
-					<form className="
-						w-[70%] flex flex-col items-center h-70
-						gap-8 
-					"
-					>
+				<div className="space-y-8">
 
-						<input
-							id="username"
-							type="text"
-							disabled={!edit}
-							placeholder={username}
-							className="border-b-2 flex outline-none w-60"
-						/>
-
-						<div className="w-full mt-auto flex justify-end gap-5">
-							<button
-								onClick={handleSave}
-								type="submit"
-								className="
-								border-2 p-1 w-20 self-end mt-auto rounded-sm border-border
-								hover:cursor-pointer  hover:shadow-lg outline-none
-							"
-							>
-								Save
-							</button>
-							<button
-								onClick={handleEdit}
-								type="reset"
-								className="
-								border-2 p-1 w-20 self-end mt-auto rounded-sm border-border
-								hover:cursor-pointer  hover:shadow-lg outline-none
-							"
-							>
-								Discard
-							</button>
-
+					{/* Profile Section */}
+					<section className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+						<h2 className="text-lg font-semibold mb-4">Profile Information</h2>
+						<div className="space-y-4">
+							<div>
+								<label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
+								<div className="flex gap-2">
+									<input
+										type="text"
+										value="username"
+										// onChange={(e) => setUsername(e.target.value)}
+										className="flex-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+									/>
+									<button className="px-4 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700 transition">
+										Save
+									</button>
+								</div>
+							</div>
 						</div>
-					</form>
+					</section>
+
+					{/* Security Section */}
+					<section className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+						<h2 className="text-lg font-semibold mb-4">Security</h2>
+						<button className="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-md 
+										text-sm font-medium hover:bg-gray-50 transition cursor-pointer"
+						>
+							Change Password
+						</button>
+					</section>
+
+					{/* Actions Section */}
+					<section className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+						<h2 className="text-lg font-semibold mb-4 text-gray-900">Account Actions</h2>
+						<div className="flex flex-col md:flex-row gap-4">
+							<button
+								className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-200 transition"
+								onClick={() => alert("Logging out...")}
+							>
+								Log Out
+							</button>
+							<button
+								className="flex-1 px-4 py-2 bg-red-50 text-red-600 border border-red-200 rounded-md text-sm font-medium hover:bg-red-100 transition"
+								onClick={() => alert("Are you sure you want to delete your account?")}
+							>
+								Delete Account
+							</button>
+						</div>
+					</section>
 
 				</div>
 			</div>
-		</Layout >
+		</Layout>
 	);
 }
-
 export default Settings;

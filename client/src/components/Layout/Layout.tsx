@@ -14,7 +14,7 @@ function Layout({ children }: LayoutProps) {
 			</Activity>
 			<div className="grid grid-rows-[auto_7fr] md:grid-rows-[1fr_15fr] ">
 				<Navbar />
-				<div className="">{children}</div>
+				<div className="overflow-hidden">{children}</div>
 			</div>
 		</div>
 	);

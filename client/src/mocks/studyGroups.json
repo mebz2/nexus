@@ -134,5 +134,165 @@
 		"members": 10,
 		"createdAt": "2025-02-15T13:00:00Z",
 		"updatedAt": "2025-03-29T07:50:00Z"
+	},
+	{
+		"id": "b12f3d4a-5c67-4e8b-9a1d-2e3f4g5h6i7j",
+		"name": "Cloud Architects",
+		"description": "Discussing AWS, Azure, and GCP infrastructure and best practices.",
+		"members": 45,
+		"createdAt": "2025-01-15T08:30:00Z",
+		"updatedAt": "2025-05-12T11:20:00Z"
+	},
+	{
+		"id": "c23g4h5b-6d78-5f9c-0b2e-3f4g5h6i7j8k",
+		"name": "Pythonistas",
+		"description": "Everything Python from Django web apps to Data Science scripts.",
+		"members": 128,
+		"createdAt": "2024-11-20T10:00:00Z",
+		"updatedAt": "2025-06-01T14:45:00Z"
+	},
+	{
+		"id": "d34h5i6c-7e89-6g0d-1c3f-4g5h6i7j8k9l",
+		"name": "UI/UX Visionaries",
+		"description": "A space to critique designs, share Figma tips, and discuss accessibility.",
+		"members": 89,
+		"createdAt": "2025-02-14T09:15:00Z",
+		"updatedAt": "2025-05-20T16:30:00Z"
+	},
+	{
+		"id": "e45i6j7d-8f90-7h1e-2d4g-5h6i7j8k9l0m",
+		"name": "Cyber Sentinel",
+		"description": "Focusing on ethical hacking, network security, and cryptography.",
+		"members": 67,
+		"createdAt": "2025-03-01T13:45:00Z",
+		"updatedAt": "2025-04-28T10:00:00Z"
+	},
+	{
+		"id": "f56j7k8e-9g01-8i2f-3e5h-6i7j8k9l0m1n",
+		"name": "Rust Explorers",
+		"description": "Learning system-level programming with a focus on memory safety.",
+		"members": 34,
+		"createdAt": "2025-04-10T11:20:00Z",
+		"updatedAt": "2025-05-05T09:12:00Z"
+	},
+	{
+		"id": "g67k8l9f-0h12-9j3g-4f6i-7j8k9l0m1n2o",
+		"name": "AI & ML Lab",
+		"description": "Deep learning, neural networks, and the future of LLMs.",
+		"members": 210,
+		"createdAt": "2024-12-05T15:30:00Z",
+		"updatedAt": "2025-06-02T12:00:00Z"
+	},
+	{
+		"id": "h78l9m0g-1i23-0k4h-5g7j-8k9l0m1n2o3p",
+		"name": "React Masters",
+		"description": "Advanced hooks, state management, and Next.js optimization.",
+		"members": 312,
+		"createdAt": "2025-01-20T14:00:00Z",
+		"updatedAt": "2025-05-25T18:40:00Z"
+	},
+	{
+		"id": "i89m0n1h-2j34-1l5i-6h8k-9l0m1n2o3p4q",
+		"name": "DevOps Daily",
+		"description": "CI/CD pipelines, Docker, Kubernetes, and automation.",
+		"members": 56,
+		"createdAt": "2025-03-12T08:00:00Z",
+		"updatedAt": "2025-05-18T13:20:00Z"
+	},
+	{
+		"id": "j90n1o2i-3k45-2m6j-7i9l-0m1n2o3p4q5r",
+		"name": "Mobile Devs",
+		"description": "Building cross-platform apps using Flutter and React Native.",
+		"members": 94,
+		"createdAt": "2025-02-28T17:10:00Z",
+		"updatedAt": "2025-04-30T11:50:00Z"
+	},
+	{
+		"id": "k01o2p3j-4l56-3n7k-8j0m-1n2o3p4q5r6s",
+		"name": "Game Dev Foundry",
+		"description": "Unreal Engine and Unity developers sharing assets and logic.",
+		"members": 42,
+		"createdAt": "2025-01-10T12:00:00Z",
+		"updatedAt": "2025-05-02T15:10:00Z"
+	},
+	{
+		"id": "l12p3q4k-5m67-4o8l-9k1n-2o3p4q5r6s7t",
+		"name": "TypeScript Titans",
+		"description": "Advanced typing, utility types, and strict mode enthusiast.",
+		"members": 88,
+		"createdAt": "2025-03-15T09:40:00Z",
+		"updatedAt": "2025-05-22T10:30:00Z"
+	},
+	{
+		"id": "m23q4r5l-6n78-5p9m-0l2o-3p4q5r6s7t8u",
+		"name": "The SQL Squad",
+		"description": "Database optimization, normalization, and complex queries.",
+		"members": 29,
+		"createdAt": "2025-04-05T14:25:00Z",
+		"updatedAt": "2025-04-20T08:15:00Z"
+	},
+	{
+		"id": "n34r5s6m-7o89-6q0n-1m3p-4q5r6s7t8u9v",
+		"name": "Open Source Allies",
+		"description": "Collaborating on GitHub projects and helping beginners contribute.",
+		"members": 156,
+		"createdAt": "2024-10-12T11:00:00Z",
+		"updatedAt": "2025-05-15T14:00:00Z"
+	},
+	{
+		"id": "o45s6t7n-8p90-7r1o-2n4q-5r6s7t8u9v0w",
+		"name": "Go Gophers",
+		"description": "Building high-performance backend services with Golang.",
+		"members": 51,
+		"createdAt": "2025-02-05T16:30:00Z",
+		"updatedAt": "2025-05-10T12:45:00Z"
+	},
+	{
+		"id": "p56t7u8o-9q01-8s2p-3o5r-6s7t8u9v0w1x",
+		"name": "VR/AR Lab",
+		"description": "Designing immersive experiences for the Metaverse.",
+		"members": 23,
+		"createdAt": "2025-03-20T10:15:00Z",
+		"updatedAt": "2025-05-28T09:00:00Z"
+	},
+	{
+		"id": "q67u8v9p-0r12-9t3q-4p6s-7t8u9v0w1x2y",
+		"name": "Blockchain Builders",
+		"description": "Web3, Smart Contracts, and Solidity development.",
+		"members": 72,
+		"createdAt": "2025-01-30T13:00:00Z",
+		"updatedAt": "2025-06-01T15:20:00Z"
+	},
+	{
+		"id": "r78v9w0q-1s23-0u4r-5q7t-8u9v0w1x2y3z",
+		"name": "Embedded Systems",
+		"description": "Arduino, Raspberry Pi, and C++ for hardware control.",
+		"members": 38,
+		"createdAt": "2025-02-12T08:50:00Z",
+		"updatedAt": "2025-04-15T11:10:00Z"
+	},
+	{
+		"id": "s89w0x1r-2t34-1v5s-6r8u-9v0w1x2y3z4a",
+		"name": "QA Warriors",
+		"description": "Automated testing, Jest, Selenium, and bug hunting.",
+		"members": 47,
+		"createdAt": "2025-03-05T15:10:00Z",
+		"updatedAt": "2025-05-20T14:30:00Z"
+	},
+	{
+		"id": "t90x1y2s-3u45-2w6t-7s9v-0w1x2y3z4a5b",
+		"name": "Clean Code Club",
+		"description": "Discussing design patterns and refactoring techniques.",
+		"members": 63,
+		"createdAt": "2025-01-05T09:20:00Z",
+		"updatedAt": "2025-04-12T17:00:00Z"
+	},
+	{
+		"id": "u01y2z3t-4v56-3x7u-8t0w-1x2y3z4a5b6c",
+		"name": "Startup Launchpad",
+		"description": "Entrepreneurs and devs building the next big thing.",
+		"members": 140,
+		"createdAt": "2024-11-15T10:45:00Z",
+		"updatedAt": "2025-06-02T09:30:00Z"
 	}
 ]

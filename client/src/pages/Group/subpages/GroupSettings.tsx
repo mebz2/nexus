@@ -4,7 +4,7 @@ import { Popup, Textfield } from "@/components";
 import { useState } from "react";
 
 const GroupSettings = () => {
-	const [deletePopup, setDeletePopup] = useState<boolean>(true);
+	const [deletePopup, setDeletePopup] = useState<boolean>(false);
 	return (
 		<div className="flex flex-col items-center 
 				pt-15 h-screen overflow-y-auto gap-3"

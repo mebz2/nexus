@@ -8,3 +8,4 @@ export { default as Archive } from "./Archive/Archive";
 export { default as AddFile } from "./Archive/AddFile";
 export { default as Inbox } from "./Inbox/Inbox";
 export { default as Settings } from "./Settings/Settings";
+export { default as ChangePassword } from "./Settings/ChangePassword";

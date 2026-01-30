@@ -10,6 +10,7 @@ import {
 	Settings,
 	CreateGroup,
 	AddFile,
+	ChangePassword
 } from "./pages";
 import { Files, Members, Overview, AddFileGroup, InviteMember, GroupSettings } from "./pages/Group/subpages";
 function App() {
@@ -26,6 +27,7 @@ function App() {
 				<Route path="/archive" element={<Archive />} />
 				<Route path="/archive/addfile" element={<AddFile />} />
 
+				<Route path="/settings/change-password" element={<ChangePassword />} />
 				<Route path="/settings" element={<Settings />} />
 				<Route path="/inbox" element={<Inbox />} />
 

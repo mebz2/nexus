@@ -1,8 +1,11 @@
 
-import { Layout, Textfield } from "@/components";
+import { Layout, Popup, Textfield } from "@/components";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-// import { MdModeEdit } from "react-icons/md";
 function Settings() {
+	const navigate = useNavigate();
+	const [deletePopup, setDeletePopup] = useState<boolean>(false);
 	return (
 		<Layout>
 			<div className="max-w-2xl mx-auto p-6 md:p-12">
@@ -38,6 +41,7 @@ function Settings() {
 						<h2 className="text-lg font-semibold mb-4">Security</h2>
 						<button className="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-md 
 										text-sm font-medium hover:bg-gray-50 transition cursor-pointer"
+							onClick={() => { navigate("/settings/change-password") }}
 						>
 							Change Password
 						</button>
@@ -50,14 +54,14 @@ function Settings() {
 							<button
 								className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-200 
 								cursor-pointer transition"
-								onClick={() => alert("Logging out...")}
+								onClick={() => console.log("Logging out...")}
 							>
 								Log Out
 							</button>
 							<button
 								className="flex-1 px-4 py-2 bg-red-50 text-red-600 border border-red-200 rounded-md text-sm font-medium 
 								cursor-pointer hover:bg-red-100 transition"
-								onClick={() => alert("Are you sure you want to delete your account?")}
+								onClick={() => { setDeletePopup(true) }}
 							>
 								Delete Account
 							</button>
@@ -65,14 +69,18 @@ function Settings() {
 					</section>
 
 				</div>
+				<Popup trigger={deletePopup} setTrigger={setDeletePopup}>
+					<p>Are you sure you want to delete your account?</p>
+					<button className="self-end border w-[15%] p-1 mt-2 rounded-sm 
+				bg-primary text-white cursor-pointer hover:font-bold">
+						Yes
+					</button>
+				</Popup>
+
 			</div>
+
 		</Layout>
 	);
 }
 export default Settings;
-// <input
-// 										type="text"
-// 										value="username"
-// 										// onChange={(e) => setUsername(e.target.value)}
-// 										className="flex-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
-// 									/>
+

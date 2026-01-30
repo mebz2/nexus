@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import { Textfield, Button, FormHeader } from "@/components";
 
-const handleClick = () => {
-	console.log("Trying to fetch /api/auth/login");
+const handleClick = async () => {
+	try {
+		const response = await fetch("/api/auth/me");
+		const data = await response.json();
+		console.log(data);
+	} catch (error) {
+		console.error("Error fetching /api/me", error);
+	}
 
 };
 
@@ -56,7 +62,7 @@ function Login() {
 						className="
 						w-full h-10"
 					>
-						<Button label="Login" onClick={handleClick} />
+						<Button label="Login" onClick={handleClick} type="submit" />
 					</div>
 					<p>
 						Don't have an account?{" "}

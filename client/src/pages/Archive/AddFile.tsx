@@ -38,7 +38,7 @@ function AddFile() {
 				<input id="file-input" type="file" multiple className="hover:font-bold mb-10 mt-10" />
 
 				<div className="h-9 w-50 mx-auto">
-					<Button label="Add File" radius={5} onClick={() => { console.log("Add File") }} />
+					<Button label="Add File" radius={5} type="button" onClick={() => { console.log("Add File") }} />
 				</div>
 			</div>
 

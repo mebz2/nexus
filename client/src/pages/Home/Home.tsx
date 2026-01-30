@@ -1,7 +1,7 @@
 import { BiSolidArchiveIn } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { Activity, Card, Layout } from "@/components";
+import { Activity, Card } from "@/components";
 import { MockActivities } from "@/mocks";
 import { useEffect, useState } from "react";
 
@@ -42,7 +42,7 @@ export default function Home() {
 	if (!user) return <p>Not logged in</p>
 
 	return (
-		<Layout>
+		<div>
 			{/*content*/}
 			<div className="flex flex-col items-start p-20 md:items-center  ">
 				{/*welcome back message*/}
@@ -95,6 +95,6 @@ export default function Home() {
 					})}
 				</div>
 			</div>
-		</Layout>
+		</div>
 	);
 }

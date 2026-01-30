@@ -13,6 +13,7 @@ import {
 	ChangePassword
 } from "./pages";
 import { Files, Members, Overview, AddFileGroup, InviteMember, GroupSettings } from "./pages/Group/subpages";
+import { Layout } from "./components";
 function App() {
 	return (
 		<BrowserRouter>
@@ -21,21 +22,20 @@ function App() {
 				<Route path="/signup" element={<Signup />} />
 				<Route path="/login" element={<Login />} />
 
-				<Route path="/home" element={<Home />} />
-				<Route path="/groups" element={<Groups />} />
-
-				<Route path="/archive" element={<Archive />} />
-				<Route path="/archive/addfile" element={<AddFile />} />
-
-				<Route path="/settings/change-password" element={<ChangePassword />} />
-				<Route path="/settings" element={<Settings />} />
-				<Route path="/inbox" element={<Inbox />} />
-
-				<Route path="/group" element={<Group />}>
-					<Route path="overview" element={<Overview />} />
-					<Route path="files" element={<Files />} />
-					<Route path="members" element={<Members />} />
+				<Route element={<Layout />}>
+					<Route path="/home" element={<Home />} />
+					<Route path="/groups" element={<Groups />} />
+					<Route path="/archive" element={<Archive />} />
+					<Route path="/settings" element={<Settings />} />
+					<Route path="/inbox" element={<Inbox />} />
+					<Route path="/group" element={<Group />}>
+						<Route path="overview" element={<Overview />} />
+						<Route path="files" element={<Files />} />
+						<Route path="members" element={<Members />} />
+					</Route>
 				</Route>
+				<Route path="/archive/addfile" element={<AddFile />} />
+				<Route path="/settings/change-password" element={<ChangePassword />} />
 				<Route path="/group/addfile" element={<AddFileGroup />} />
 				<Route path="/group/invite-member" element={<InviteMember />} />
 				<Route path="/group/settings" element={<GroupSettings />} />

@@ -1,11 +1,11 @@
-import { Layout, File, SearchBar } from "@/components";
+import { File, SearchBar } from "@/components";
 import { useNavigate } from "react-router-dom";
 import { MockFiles } from "@/mocks";
 
 function Archive() {
 	const navigate = useNavigate();
 	return (
-		<Layout>
+		<div>
 			<div className="h-full flex flex-col  items-center box-border  ">
 				<div className="w-full flex items-center">
 					<SearchBar />
@@ -32,7 +32,7 @@ function Archive() {
 					}
 				</div>
 			</div>
-		</Layout>
+		</div>
 	);
 }
 

@@ -1,5 +1,5 @@
 
-import { Layout, Popup, Textfield } from "@/components";
+import { Popup, Textfield } from "@/components";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +7,7 @@ function Settings() {
 	const navigate = useNavigate();
 	const [deletePopup, setDeletePopup] = useState<boolean>(false);
 	return (
-		<Layout>
+		<div>
 			<div className="max-w-2xl mx-auto p-6 md:p-12">
 				<h1 className="text-3xl font-bold text-gray-900 mb-8">Account Settings</h1>
 
@@ -79,7 +79,7 @@ function Settings() {
 
 			</div>
 
-		</Layout>
+		</div>
 	);
 }
 export default Settings;

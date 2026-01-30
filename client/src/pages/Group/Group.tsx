@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Layout, GroupButton } from "@/components";
+import { GroupButton } from "@/components";
 import { useLocation } from "react-router-dom";
 
 export default function Group() {
@@ -9,7 +9,7 @@ export default function Group() {
 	const lastPath: string | undefined = segments.pop();
 	const [active, setActive] = useState<string | undefined>(lastPath);
 	return (
-		<Layout>
+		<div>
 			{/*content*/}
 			<div className="flex min-h-screen flex-col items-center">
 				<div
@@ -41,7 +41,7 @@ export default function Group() {
 
 				<Outlet />
 			</div>
-		</Layout>
+		</div>
 	);
 }
 

@@ -1,9 +1,8 @@
-import { Layout } from "@/components";
 import { MockMessages } from "@/mocks";
 
 function Inbox() {
 	return (
-		<Layout>
+		<div>
 			<div className="flex h-full overflow-hidden bg-gray-50">
 
 				{/* 1. Thread List (Left Pane) */}
@@ -51,7 +50,8 @@ function Inbox() {
 					{/* Reply Area */}
 
 				</main>
-			</div>		</Layout>
+			</div>
+		</div>
 	);
 }
 

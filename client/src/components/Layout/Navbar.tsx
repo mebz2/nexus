@@ -1,39 +1,9 @@
-import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-type User = {
-	_id: string,
-	username: string,
-	email: string
-};
 
-const Navbar = () => {
-	const [user, setUser] = useState<User | null>(null);
+const Navbar = (username: string | null) => {
 	const location = useLocation();
 	const path = location.pathname.replace("/", "");
 
-	useEffect(() => {
-		const fetchUser = async () => {
-			try {
-				const res = await fetch("/api/auth/me", {
-					credentials: "include",
-				});
-
-				if (!res.ok) {
-					setUser(null);
-					return;
-				}
-
-				const data: { user: User } = await res.json();
-				setUser(data.user);
-			} catch (err) {
-				setUser(null);
-			}
-		};
-
-		fetchUser();
-	}, [])
-
-	if (!user) return <p>Not logged in navbar</p>
 	return (
 		<div
 			className="
@@ -54,10 +24,10 @@ const Navbar = () => {
 						hover:cursor-pointer rounded-sm h-10 w-9 flex
 						justify-center items-center bg-primary"
 				>
-					<p className="text-white font-bold text-xl">{user.username[0]}</p>
+					<p className="text-white font-bold text-xl">{username ? username[0] : `N`}</p>
 				</Link>
 
-				<p className="text-sm font-medium">{user.username}</p>
+				<p className="text-sm font-medium">{username}</p>
 			</div>
 		</div>
 	);

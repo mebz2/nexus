@@ -3,43 +3,17 @@ import { FaUsers } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { Activity, Card } from "@/components";
 import { MockActivities } from "@/mocks";
-import { useEffect, useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 type User = {
 	_id: string,
 	username: string,
 	email: string
 };
+
 export default function Home() {
-	const [user, setUser] = useState<User | null>(null);
-	const [loading, setLoading] = useState(true);
-	//
-	useEffect(() => {
-		const fetchUser = async () => {
-			try {
-				const res = await fetch("/api/auth/me", {
-					credentials: "include",
-				});
 
-				if (!res.ok) {
-					setUser(null);
-					return;
-				}
-
-				const data: { user: User } = await res.json();
-				setUser(data.user);
-			} catch (err) {
-				setUser(null);
-			} finally {
-				setLoading(false)
-			}
-		};
-
-		fetchUser();
-	}, [])
-
-	if (loading) return <p>Loading...</p>
-	if (!user) return <p>Not logged in</p>
+	const { user } = useOutletContext<{ user: User }>();
 
 	return (
 		<div>

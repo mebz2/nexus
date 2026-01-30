@@ -3,9 +3,6 @@ import { Activity, useEffect, useState, type ReactNode } from "react";
 import Sidebar from "./Sidebar";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
-type LayoutProps = {
-	children: ReactNode;
-};
 
 type User = {
 	_id: string,
@@ -78,8 +75,9 @@ function Layout() {
 				</div>
 
 				<div className="overflow-hidden">
-					<Outlet />
+					<Outlet context={{ user }} />
 				</div>
+
 			</div>
 		</div>
 	);

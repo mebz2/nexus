@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Textfield, Button, FormHeader } from "@/components";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ const handleClick = async () => {
 };
 
 function Signup() {
-
+	const navigate = useNavigate();
 	// to store form data
 	const [formData, setFormData] = useState({
 		username: '',
@@ -42,8 +42,12 @@ function Signup() {
 		setError(''); // Clear error when user types
 	};
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
+
+		if (formData.username.length < 3) {
+			setError("Username must be atleast 3 characters long");
+		}
 		if (formData.password !== formData.confirmPassword) {
 			setError("Passwords do not match");
 			return;
@@ -53,8 +57,33 @@ function Signup() {
 			setError("Password must be at least 8 characters long.");
 			return;
 		}
-	};
 
+		// if passwords match and username is correct send a post request
+		try {
+			const response = await fetch("/api/auth/signup", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					username: formData.username,
+					email: formData.email,
+					password: formData.password
+				}),
+			})
+
+			const data = await response.json();
+
+			if (!response.ok) {
+				setError(data.message || 'Signup Failed');
+				return;
+			}
+
+			navigate("/home");
+		} catch (err) {
+			setError("Something went wrong try again");
+		}
+	};
 
 	return (
 		<div

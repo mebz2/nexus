@@ -1,12 +1,11 @@
 const express = require('express');
+const checkEmailExists = require("../middleware/checkEmail");
 const router = express.Router();
 
 // @route   POST api/auth/signup
 // @desc    Register user
 // @access  Public
-router.post('/signup', (req, res) => {
-	res.json({ message: "Signup route" });
-});
+router.post('/signup', checkEmailExists);
 
 // @route   POST api/auth/login
 // @desc    Authenticate user & get token

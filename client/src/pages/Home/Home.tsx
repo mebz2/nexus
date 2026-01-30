@@ -1,6 +1,5 @@
 import { BiSolidArchiveIn } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
-import { FaCalendarCheck } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { Activity, Card, Layout } from "@/components";
 import { MockActivities } from "@/mocks";
@@ -31,12 +30,7 @@ export default function Home() {
 						label="Archive"
 						Icon={BiSolidArchiveIn}
 					/>
-					<Card
-						path="/calendar"
-						id="calendar"
-						label="Calendar"
-						Icon={FaCalendarCheck}
-					/>
+
 					<Card path="/inbox" id="inbox" label="Inbox" Icon={IoMdMail} />
 				</div>
 

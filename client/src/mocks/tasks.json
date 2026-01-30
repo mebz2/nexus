@@ -1,0 +1,62 @@
+[
+	{
+		"title": "Setup project repository",
+		"isCompleted": true,
+		"group": "65a1234567890abcdef11111",
+		"assignedTo": "65b9876543210fedcba99999"
+	},
+	{
+		"title": "Design system audit",
+		"isCompleted": false,
+		"group": "65a1234567890abcdef22222",
+		"assignedTo": "65b9876543210fedcba88888"
+	},
+	{
+		"itlet": "Configure CI/CD pipeline",
+		"isCompleted": false,
+		"group": "65a1234567890abcdef11111",
+		"assignedTo": "65b9876543210fedcba77777"
+	},
+	{
+		"etitl": "Write API documentation",
+		"isCompleted": false,
+		"group": "65a1234567890abcdef11111",
+		"assignedTo": null
+	},
+	{
+		"title": "Client feedback review",
+		"isCompleted": true,
+		"group": "65a1234567890abcdef33333",
+		"assignedTo": "65b9876543210fedcba99999"
+	},
+	{
+		"title": "Refactor Authentication logic",
+		"isCompleted": false,
+		"group": "65a1234567890abcdef11111",
+		"assignedTo": "65b9876543210fedcba77777"
+	},
+	{
+		"title": "Social media assets creation",
+		"isCompleted": false,
+		"group": "65a1234567890abcdef22222",
+		"assignedTo": "65b9876543210fedcba88888"
+	},
+	{
+		"title": "Database migration script",
+		"isCompleted": false,
+		"group": "65a1234567890abcdef11111",
+		"assignedTo": null
+	},
+	{
+		"title": "Competitor analysis report",
+		"isCompleted": false,
+		"group": "65a1234567890abcdef33333",
+		"assignedTo": "65b9876543210fedcba66666"
+	},
+	{
+		"title": "Fix navigation bug",
+		"isCompleted": true,
+		"group": "65a1234567890abcdef11111",
+		"assignedTo": "65b9876543210fedcba99999"
+	}
+]

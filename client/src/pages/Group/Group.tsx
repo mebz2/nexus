@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Layout, GroupButton } from "@/components";
+import { useLocation } from "react-router-dom";
 
 export default function Group() {
-	const [active, setActive] = useState<string>("Overview");
+	const location = useLocation();
+	const segments: string[] = location.pathname.split('/').filter(Boolean);
+	const lastPath: string | undefined = segments.pop();
+	const [active, setActive] = useState<string | undefined>(lastPath);
 	return (
 		<Layout>
 			{/*content*/}
 			<div className="flex min-h-screen flex-col items-center">
 				<div
 					className="
-					w-[60%] h-7 mt-2.5 bg-[#F3F3FF]
-					grid grid-cols-4
+					w-[40%] h-7 mt-2.5 bg-[#F3F3FF]
+					grid grid-cols-3
 					rounded-lg "
 				>
 					<GroupButton
@@ -26,12 +30,7 @@ export default function Group() {
 						active={active}
 						setActive={setActive}
 					/>
-					<GroupButton
-						path="/group/tasks"
-						label="Tasks"
-						active={active}
-						setActive={setActive}
-					/>
+
 					<GroupButton
 						path="/group/members"
 						label="Members"
@@ -45,3 +44,4 @@ export default function Group() {
 		</Layout>
 	);
 }
+

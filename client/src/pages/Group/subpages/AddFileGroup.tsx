@@ -11,12 +11,12 @@ function AddFile() {
 		>
 
 			{ /* link to go back to groups page */}
-			<Link to={"/archive"} className="
+			<Link to={"/group/files"} className="
 				mb-5 flex items-center gap-2 hover:font-bold
 				text-primary
 			">
 				<IoMdArrowRoundBack />
-				Back to Archive
+				Back to Group
 			</Link>
 
 			{ /* Container for create group card */}
@@ -31,7 +31,7 @@ function AddFile() {
 						Upload File
 					</p>
 					<p className="font-extralight text-sm">
-						Upload your personal files
+						Upload files to group
 					</p>
 				</div>
 

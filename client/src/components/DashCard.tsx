@@ -21,7 +21,7 @@ const Card = ({ id, label, Icon, path }: CardProps) => {
 			className="
 				flex justify-center items-center box-border w-[80%] h-[23%] no-underline
 				bg-white rounded-[10px] hover:shadow-xl hover:cursor-pointer
-				border-border gap-[10%] md:justify-center md:w-[23%]  md:h-[60%]
+				border-border gap-[10%] md:justify-center md:w-[30%]  md:h-[60%]
 				 xl:pl-0 shadow-sm border
 			"
 		>

@@ -15,6 +15,16 @@ function Settings() {
 	const navigate = useNavigate();
 	const [deletePopup, setDeletePopup] = useState<boolean>(false);
 
+	const handleDelete = async () => {
+		try {
+			await fetch("/api/settings/account", {
+				method: "DELETE",
+			})
+			navigate("/login")
+		} catch (err) {
+			alert("Failed to delete account!")
+		}
+	}
 	const handleLogout = async () => {
 		try {
 			const response = await fetch("/api/auth/logout", {
@@ -127,7 +137,9 @@ function Settings() {
 				<Popup trigger={deletePopup} setTrigger={setDeletePopup}>
 					<p>Are you sure you want to delete your account?</p>
 					<button className="self-end border w-[15%] p-1 mt-2 rounded-sm 
-				bg-primary text-white cursor-pointer hover:font-bold">
+				bg-primary text-white cursor-pointer hover:font-bold"
+						onClick={handleDelete}
+					>
 						Yes
 					</button>
 				</Popup>

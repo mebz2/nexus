@@ -50,4 +50,24 @@ const updatePassword = async (req, res) => {
 	}
 };
 
-module.exports = { updateUsername, updatePassword };
+const deleteAccount = async (req, res) => {
+	try {
+		const userId = req.cookies.userId;
+
+		if (!userId) {
+			return res.status(401).json({ message: "User not authenticated" })
+		}
+
+		const deletedUser = await User.findByIdAndDelete(userId);
+		if (!deletedUser) {
+			return res.status(404).json({ message: "User not found" })
+		}
+
+		res.status(200).json({ message: "Account deleted successfully" })
+	} catch (err) {
+		console.error("Delete account error:", err)
+		res.status(500).json({ message: "Server error" });
+	}
+};
+
+module.exports = { updateUsername, updatePassword, deleteAccount };

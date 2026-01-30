@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.router()
+const router = express.Router()
 
 router.post('/', (req, res) => {
 	res.send("Updated settings")

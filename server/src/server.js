@@ -13,16 +13,17 @@ app.use(cors({
 app.get('/', (req, res) => {
 	res.send("hello")
 })
-app.listen(3000)
 
 const authRouter = require('./routes/auth.js');
 const groupsRouter = require('./routes/groups.js');
 const filesRouter = require('./routes/files.js');
 const notificationsRouter = require('./routes/notifications.js'); // Import the new notifications router
-const settingsRouter = require('./routes/settings.js');
+// const settingsRouter = require('./routes/settings.js');
 
 app.use('/api/auth', authRouter);
 app.use('/api/groups', groupsRouter);
 app.use('/api', filesRouter);
 app.use('/api', notificationsRouter);
-app.use('/api/settings', settingsRouter); 
+// app.use('/api/settings', settingsRouter);
+
+app.listen(3000)

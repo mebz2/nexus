@@ -1,37 +1,21 @@
 const express = require('express');
 const router = express.Router();
+const { createGroup } = require("../controllers/groupControllers")
 
-// @route   GET api/groups
-// @desc    Get all groups for the logged-in user
-// @access  Private
 router.get('/', (req, res) => {
 	res.send('Get all groups route');
 });
 
-// @route   POST api/groups
-// @desc    Create a new group
-// @access  Private
-router.post('/', (req, res) => {
-	res.send('Create new group route');
-});
+router.post('/create', createGroup);
 
-// @route   GET api/groups/:groupId
-// @desc    Get detailed information for a specific group
-// @access  Private
 router.get('/:groupId', (req, res) => {
 	res.send(`Get group ${req.params.groupId} details route`);
 });
 
-// @route   PUT api/groups/:groupId
-// @desc    Update a group's details
-// @access  Private
 router.put('/:groupId', (req, res) => {
 	res.send(`Update group ${req.params.groupId} details route`);
 });
 
-// @route   DELETE api/groups/:groupId
-// @desc    Delete a group
-// @access  Private
 router.delete('/:groupId', (req, res) => {
 	res.send(`Delete group ${req.params.groupId} route`);
 });

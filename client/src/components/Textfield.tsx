@@ -15,7 +15,7 @@ const Textfield = ({
 	errorId,
 	placeholder,
 	name,
-	onChange
+	onChange,
 }: TextfieldProps) => {
 	return (
 		<div className="flex flex-col w-full gap-2">

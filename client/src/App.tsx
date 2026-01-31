@@ -34,13 +34,14 @@ function App() {
 						<Route path="files" element={<Files />} />
 						<Route path="members" element={<Members />} />
 					</Route>
-				</Route>
-				<Route path="/settings/change-password" element={<ChangePassword />} />
-				<Route path="/group/addfile" element={<AddFileGroup />} />
-				<Route path="/group/invite-member" element={<InviteMember />} />
-				<Route path="/group/settings" element={<GroupSettings />} />
-				<Route path="/groups/creategroup" element={<CreateGroup />} />
 
+					<Route path="/group/addfile" element={<AddFileGroup />} />
+					<Route path="/group/invite-member" element={<InviteMember />} />
+					<Route path="/group/settings" element={<GroupSettings />} />
+					<Route path="/groups/creategroup" element={<CreateGroup />} />
+				</Route>
+
+				<Route path="/settings/change-password" element={<ChangePassword />} />
 			</Routes>
 		</BrowserRouter>
 	);

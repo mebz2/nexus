@@ -73,7 +73,7 @@ const GroupSettings = () => {
 
         <button
           className="bg-[#FFCCCC] p-3 box-border w-[40%]
-				rounded-lg border border-[#FF0707]  text-[#FF0000] cursor-pointer"
+				rounded-lg border border-[#FF0707]  text-[#FF0000] cursor-pointer hidden"
           onClick={() => {
             setLeavePopup(true);
           }}
@@ -81,6 +81,7 @@ const GroupSettings = () => {
           Leave Group
         </button>
       </div>
+
       {/* popup for deleting the group*/}
       <Popup trigger={deletePopup} setTrigger={setDeletePopup}>
         <p>Are you sure you want to delete this group?</p>
@@ -91,6 +92,7 @@ const GroupSettings = () => {
           Yes
         </button>
       </Popup>
+
       {/* popup for leaving the group*/}
       <Popup trigger={leavePopup} setTrigger={setLeavePopup}>
         <p>Are you sure you want to leave this group?</p>

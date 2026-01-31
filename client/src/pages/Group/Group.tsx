@@ -28,7 +28,6 @@ export default function Group() {
         console.error(err);
       }
     };
-
     fetchGroup();
   }, [groupId]);
 
@@ -45,27 +44,27 @@ export default function Group() {
 					rounded-lg "
         >
           <GroupButton
-            path={`/group/${groupId}/overview`}
+            path={`/groups/${groupId}/overview`}
             label="Overview"
             active={active}
             setActive={setActive}
           />
           <GroupButton
-            path="/group/files"
+            path={`/groups/${groupId}/files`}
             label="Files"
             active={active}
             setActive={setActive}
           />
 
           <GroupButton
-            path="/group/members"
+            path={`/groups/${groupId}/members`}
             label="Members"
             active={active}
             setActive={setActive}
           />
         </div>
 
-        <Outlet />
+        <Outlet context={{ group }} />
       </div>
     </div>
   );

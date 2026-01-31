@@ -11,14 +11,12 @@ type GroupCardProps = {
 };
 
 const GroupCard = ({ name, description, groupId }: GroupCardProps) => {
-  const navigate = useNavigate();
   const [visible, setVisible] = useState<boolean>(false);
   return (
     <Link to={`/groups/${groupId}/overview`}>
       <div
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
-        // onClick={() => navigate(`/group/${groupId}/overview`)}
         className={`
 			      h-full w-full border-t border-border p-5 flex
 			      flex-col gap-10 bg-white rounded-xl

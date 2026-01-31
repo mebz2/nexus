@@ -43,9 +43,13 @@ function App() {
             <Route path="members" element={<Members />} />
           </Route>
 
-          <Route path="/group/addfile" element={<AddFileGroup />} />
-          <Route path="/group/invite-member" element={<InviteMember />} />
-          <Route path="/group/settings" element={<GroupSettings />} />
+          <Route path="/group/:groupId/addfile" element={<AddFileGroup />} />
+          <Route
+            path="/group/:groupId/invite-member"
+            element={<InviteMember />}
+          />
+          <Route path="/group/:groupId/settings" element={<GroupSettings />} />
+
           <Route path="/groups/creategroup" element={<CreateGroup />} />
         </Route>
 

@@ -26,6 +26,27 @@ type FileType = {
 const Files = () => {
   const [files, setFiles] = useState<FileType[]>([]);
   const { group } = useOutletContext<{ group: Group }>();
+
+  const deleteFile = async (id: string) => {
+    console.log("Deleting file");
+    try {
+      const response = await fetch(`/api/files/delete/${id}`, {
+        method: "DELETE",
+        credentials: "include",
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setFiles((prevFiles) => prevFiles.filter((file) => file._id !== id));
+      } else {
+        console.log(data);
+        console.error("Failed to delete this file");
+      }
+    } catch (err) {
+      console.error("Error deleting file:", err);
+    }
+  };
+
   useEffect(() => {
     const fetchFiles = async () => {
       try {
@@ -65,7 +86,7 @@ const Files = () => {
               uploaded_by={file.uploader}
               uploaded_time={file.createdAt}
               onDelete={() => {
-                console.log("delete");
+                deleteFile(file._id);
               }}
               url=""
             />

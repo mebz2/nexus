@@ -18,14 +18,24 @@
     - [x] delete account
     - [x] change username
     - [x] Logout
-- [ ] Login
-- [ ] Signup
-    - [ ] place to confirm email by entering otp
 - [x] pagination
 
 
 ## BACKEND
-- [ ] connect the servers
-- [ ] routes
-- [ ] Controllers
-- [ ] middleware
+- [x] connect the servers
+- [x] routes
+- [x] Controllers
+- [x] middleware
+
+## GROUPS
+- [ ] upload file
+- [ ] update group
+- [ ] delete group
+- [ ] leave group
+- [ ] fetch individual group data
+    - [ ]  fetch files
+    - [ ]  fetch members
+- [ ] promote 
+- [ ] kickout
+
+## Inbox

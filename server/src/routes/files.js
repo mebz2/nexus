@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { fetchArchive } = require('../controllers/fileController')
+const { fetchArchive, deleteFile } = require('../controllers/fileController')
 const multer = require("multer");
 const path = require('path')
 const fs = require('fs')
@@ -48,6 +48,8 @@ router.post('/files/upload', upload.single('file'), async (req, res) => {
 })
 
 router.get('/files/archive', fetchArchive)
+
+router.delete('/files/delete/:id', deleteFile)
 
 module.exports = router;
 

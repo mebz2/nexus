@@ -14,6 +14,26 @@ type FileType = {
 function Archive() {
 	const [files, setFiles] = useState<FileType[]>([])
 
+	const deleteFile = async (id: string) => {
+		console.log("Deleting file")
+		try {
+			const response = await fetch(`/api/files/delete/${id}`, {
+				method: "DELETE",
+				credentials: 'include',
+			})
+
+			const data = await response.json();
+			if (response.ok) {
+				setFiles(prevFiles => prevFiles.filter(file => file._id !== id))
+			} else {
+				console.log(data)
+				console.error("Failed to delete this file")
+			}
+		} catch (err) {
+			console.error("Error deleting file:", err)
+		}
+	};
+
 	useEffect(() => {
 		const fetchFiles = async () => {
 			try {
@@ -61,6 +81,7 @@ function Archive() {
 							return <File key={file._id}
 								name={file.fileName} size={file.fileSizeB} file_type={file.fileType}
 								uploaded_by={file.uploader.username} uploaded_time={file.createdAt}
+								onDelete={() => deleteFile(file._id)}
 							/>
 
 						})

@@ -1,7 +1,6 @@
 const express = require('express');
 const checkEmailExists = require("../middleware/checkEmail");
-const { signup } = require("../controllers/signup");
-const { login } = require("../controllers/login");
+const { login, signup } = require("../controllers/authControllers");
 const { fetchUser } = require("../controllers/fetchUser");
 const router = express.Router();
 

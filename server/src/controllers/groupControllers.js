@@ -23,6 +23,22 @@ const createGroup = async (req, res) => {
 	}
 };
 
+const fetchGroups = async (req, res) => {
+	try {
+		const userId = new mongoose.Types.ObjectId(req.cookies.userId);
+
+		if (!userId) return res.status(401).json({ message: "Not authenticated" })
+
+		const groups = await Group.find({ members: userId })
+
+		return res.status(200).json(groups)
+	} catch (err) {
+		console.error(err)
+		return res.status(500).json({ message: 'Error fetching user groups' });
+	}
+}
+
 module.exports = {
-	createGroup
+	createGroup,
+	fetchGroups
 }

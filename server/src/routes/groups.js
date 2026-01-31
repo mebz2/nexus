@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { createGroup } = require("../controllers/groupControllers")
+const { createGroup, fetchGroups } = require("../controllers/groupControllers")
 
 router.get('/', (req, res) => {
 	res.send('Get all groups route');
@@ -8,9 +8,7 @@ router.get('/', (req, res) => {
 
 router.post('/create', createGroup);
 
-router.get('/:groupId', (req, res) => {
-	res.send(`Get group ${req.params.groupId} details route`);
-});
+router.get('/me', fetchGroups)
 
 router.put('/:groupId', (req, res) => {
 	res.send(`Update group ${req.params.groupId} details route`);

@@ -1,16 +1,46 @@
-import { useState } from "react"; // 1. Import useState
+import { useEffect, useState } from "react"; // 1. Import useState
 import { GroupCard, SearchBar } from "@/components";
 import { MockGroups } from "@/mocks/";
 import { useNavigate } from "react-router-dom";
+
+type File = {
+	_id: string;
+	name: string;
+	description: string
+};
 
 function Groups() {
 	const navigate = useNavigate();
 	const [currentPage, setCurrentPage] = useState(1);
 	const itemsPerPage = 15;
 
+	const [files, setFiles] = useState<File[]>([])
+
+	useEffect(() => {
+		const fetchGroups = async () => {
+			try {
+				const response = await fetch('/api/groups/me', {
+					method: "GET",
+					credentials: 'include'
+				})
+
+				if (!response.ok) return
+
+				const data = await response.json()
+				console.log(data)
+				setFiles(data)
+
+			} catch (err) {
+				console.error("Server errors: ", err)
+			}
+		};
+		fetchGroups();
+	}, [])
+
+
 	const lastIndex = currentPage * itemsPerPage;
 	const firstIndex = lastIndex - itemsPerPage;
-	const currentGroups = MockGroups.slice(firstIndex, lastIndex);
+	const currentGroups = files.slice(firstIndex, lastIndex);
 	const totalPages = Math.ceil(MockGroups.length / itemsPerPage);
 
 	return (
@@ -33,13 +63,13 @@ function Groups() {
 				<div className="flex-1 overflow-y-auto px-15 pt-5 pb-10">
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
 						{currentGroups.map((group) => (
-							<GroupCard /* key={group.id} */ {...group} />
+							<GroupCard key={group._id} name={group.name} description={group.description} />
 						))}
 					</div>
 				</div>
 
 				{/* Pagination - Fixed at bottom, always visible */}
-				{MockGroups.length > itemsPerPage && (
+				{files.length > itemsPerPage && (
 					<div className="shrink-0 bg-white border-t border-gray-100 p-4 flex justify-center items-center gap-6 z-10">
 						<button
 							disabled={currentPage === 1}

@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 type GroupCardProps = {
 	name: string;
 	description: string;
-	members: number;
-	createdAt?: string;
-	updatedAt?: string;
+	// members: number;
+	// createdAt?: string;
+	// updatedAt?: string;
 };
 
-const GroupCard = (group: GroupCardProps) => {
+const GroupCard = ({ name, description }: GroupCardProps) => {
 	const [visible, setVisible] = useState<boolean>(false);
 	return (
 		<Link to="/group/overview">
@@ -24,8 +24,8 @@ const GroupCard = (group: GroupCardProps) => {
 			      hover:cursor-pointer box-border
 			     `}
 			>
-				<h2 className="line-clamp-1">{group.name}</h2>
-				<p className="line-clamp-3">{group.description}</p>
+				<h2 className="line-clamp-1">{name}</h2>
+				<p className="line-clamp-3">{description}</p>
 				<IoMdArrowRoundForward
 					className={`text-[100%] text-black
 				        absolute bottom-3 right-5

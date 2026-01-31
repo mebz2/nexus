@@ -1,12 +1,33 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Popup, Textfield } from "@/components";
 import { useState } from "react";
 
 const GroupSettings = () => {
+  const navigate = useNavigate();
   const { groupId } = useParams<{ groupId: string }>();
   const [deletePopup, setDeletePopup] = useState<boolean>(false);
   const [leavePopup, setLeavePopup] = useState<boolean>(false);
+
+  const handleDelete = async () => {
+    try {
+      const res = await fetch(`/api/groups/${groupId}`, {
+        method: "DELETE",
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        alert("Successfully deleted group!");
+        navigate("/groups");
+      } else {
+        console.log(data);
+        alert("Failed to delete group!");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
     <div
       className="flex flex-col items-center
@@ -88,6 +109,7 @@ const GroupSettings = () => {
         <button
           className="self-end border w-[15%] p-1 mt-2 rounded-sm
 				bg-primary text-white cursor-pointer hover:font-bold"
+          onClick={handleDelete}
         >
           Yes
         </button>

@@ -54,8 +54,29 @@ const fetchGroupData = async (req, res) => {
   }
 };
 
+const deleteGroup = async (req, res) => {
+  try {
+    const { groupId } = req.params;
+
+    const group = await Group.findOneAndDelete({
+      _id: groupId,
+    });
+
+    if (!group) {
+      return res
+        .status(404)
+        .json({ message: "File not found or unauthorized" });
+    }
+
+    res.status(200).json({ message: "Group deleted successfully" });
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 module.exports = {
   createGroup,
   fetchGroups,
   fetchGroupData,
+  deleteGroup,
 };

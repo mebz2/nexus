@@ -47,4 +47,37 @@ const deleteFile = async (req, res) => {
 	}
 };
 
-module.exports = { fetchArchive, deleteFile };
+const downloadFile = async (req, res) => {
+	try {
+		const { id } = req.params;
+		const file = await File.findById(id);
+
+		if (!file) {
+			return res.status(404).json({ message: "file not found" });
+		}
+
+		console.log(fileUrl)
+		const filePath = file.fileUrl;
+
+		console.log(filePath)
+
+		return res.download(filePath, file.fileName, (err) => {
+			if (!err) return;
+
+			if (res.headersSent) {
+				console.log("Download was interrupted by user or network.");
+				return;
+			}
+
+			console.error("Download stream interrupted:", err.message);
+			return res.status(500).json({ message: "Download failed" });
+		});
+	} catch (err) {
+		console.error("Catch block:", err);
+		if (!res.headersSent) {
+			return res.status(500).json({ message: "Server error" });
+		}
+	}
+}
+
+module.exports = { fetchArchive, deleteFile, downloadFile };

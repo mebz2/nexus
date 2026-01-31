@@ -11,9 +11,10 @@ type FileProps = {
 	uploaded_by: string,
 	uploaded_time: string,
 	onDelete: () => void,
+	url: string;
 }
 
-const File = ({ name, size, file_type, uploaded_by, uploaded_time, onDelete }: FileProps) => {
+const File = ({ name, size, file_type, uploaded_by, uploaded_time, onDelete, url }: FileProps) => {
 	// calculate file size
 	let new_size: string;
 	const kb: number = size / 1024
@@ -57,7 +58,9 @@ const File = ({ name, size, file_type, uploaded_by, uploaded_time, onDelete }: F
 				</div>
 			</div>
 			<div className="h-full flex gap-10 items-center ml-auto p-5 box-border mr-2">
-				<BsDownload className="text-lg hover:cursor-pointer" title="Download" />
+				<a href={url} download={name} onClick={() => console.log(url)}>
+					<BsDownload className="text-lg hover:cursor-pointer" title="Download" />
+				</a>
 				<MdDelete className="text-xl hover:cursor-pointer" title="Delete" onClick={onDelete} />
 			</div>
 		</div>

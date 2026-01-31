@@ -9,6 +9,7 @@ type FileType = {
 	fileType: string;
 	uploader: string;
 	createdAt: string;
+	fileUrl: string;
 };
 
 function Archive() {
@@ -80,7 +81,7 @@ function Archive() {
 						files.map((file) => {
 							return <File key={file._id}
 								name={file.fileName} size={file.fileSizeB} file_type={file.fileType}
-								uploaded_by={file.uploader.username} uploaded_time={file.createdAt}
+								uploaded_by={file.uploader.username} uploaded_time={file.createdAt} url={file.fileUrl}
 								onDelete={() => deleteFile(file._id)}
 							/>
 

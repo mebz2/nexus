@@ -1,6 +1,24 @@
 const File = require("../models/File");
 const mongoose = require("mongoose");
 
+const fetchGroupFiles = async (req, res) => {
+  try {
+    const { groupId } = req.params;
+
+    // Optional safety check
+    if (!mongoose.Types.ObjectId.isValid(groupId)) {
+      return res.status(400).json({ message: "Invalid group ID" });
+    }
+
+    const files = await File.find({ groupId });
+
+    res.status(200).json(files);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Failed to fetch files" });
+  }
+};
+
 const fetchArchive = async (req, res) => {
   try {
     const userId = new mongoose.Types.ObjectId(req.cookies.userId);
@@ -84,4 +102,4 @@ const downloadFile = async (req, res) => {
   }
 };
 
-module.exports = { fetchArchive, deleteFile, downloadFile };
+module.exports = { fetchArchive, deleteFile, downloadFile, fetchGroupFiles };

@@ -4,6 +4,7 @@ const {
   fetchArchive,
   deleteFile,
   downloadFile,
+  fetchGroupFiles,
 } = require("../controllers/fileController");
 const multer = require("multer");
 const path = require("path");

@@ -14,14 +14,17 @@ type FileProps = {
 const File = ({ name, size, file_type, uploaded_by, uploaded_time }: FileProps) => {
 	// calculate file size
 	let new_size: string;
-	const mb: number = size / 1024;
+	const kb: number = size / 1024
+	const mb: number = kb / 1024;
 	const gb: number = mb / 1024;
 	if (gb >= 1) {
 		new_size = gb.toFixed(2) + " GB";
 	} else if (mb >= 1) {
 		new_size = mb.toFixed(2) + " MB";
-	} else {
+	} else if (kb >= 1) {
 		new_size = size.toFixed(2) + " KB";
+	} else {
+		new_size = size.toFixed(2) + " B";
 	}
 
 	// calculate time since upload

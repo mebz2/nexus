@@ -1,9 +1,12 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Popup, Textfield } from "@/components";
 import { useState } from "react";
 
+
 const GroupSettings = () => {
+
+
 	const [error, setError] = useState('')
 	const navigate = useNavigate();
 	const { groupId } = useParams<{ groupId: string }>();
@@ -102,7 +105,7 @@ const GroupSettings = () => {
 						label="Group name"
 						type="text"
 						errorId="group-name-error"
-						placeholder="Group Name"
+						placeholder="Group name"
 					></Textfield>
 				</div>
 

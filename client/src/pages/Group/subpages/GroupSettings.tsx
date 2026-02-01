@@ -4,6 +4,7 @@ import { Popup, Textfield } from "@/components";
 import { useState } from "react";
 
 const GroupSettings = () => {
+	const [error, setError] = useState('')
 	const navigate = useNavigate();
 	const { groupId } = useParams<{ groupId: string }>();
 	const [deletePopup, setDeletePopup] = useState<boolean>(false);
@@ -29,6 +30,49 @@ const GroupSettings = () => {
 		}
 	};
 
+	const handleUpdate = async (e: React.FormEvent) => {
+		e.preventDefault();
+
+		const nameInput = document.getElementById("group-name") as HTMLInputElement
+		const descriptionInput = document.getElementById("group-description") as HTMLInputElement
+
+		const name = nameInput?.value.trim();
+		const description = descriptionInput?.value.trim();
+
+		if (!name && !description) {
+			setError('Please update atleast one field!')
+			return
+		}
+
+		const body: { name?: string, description?: string } = {}
+
+		if (name) body.name = name;
+		if (description) body.description = description;
+
+		try {
+			const res = await fetch(`/api/groups/${groupId}`, {
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				credentials: "include",
+				body: JSON.stringify(body)
+			});
+
+			const data = await res.json();
+
+			if (!res.ok) {
+				setError(`Failed to update group: ${data.message}`);
+				return
+			}
+
+			alert("Group updated Successfully")
+			navigate(`/groups/${groupId}/overview`)
+		} catch (err) {
+			console.error(err);
+		}
+	}
+
 	return (
 		<div
 			className="flex flex-col items-center
@@ -45,12 +89,14 @@ const GroupSettings = () => {
 				Back to Group
 			</Link>
 
-			<div
-				className="w-[35%] h-[40%] border border-border
+			<form
+				className={`w-[35%] h-[40%] 
+				${error ? 'shadlow-xl shadow-red-500' : 'border border-border'}
 					rounded-lg flex  flex-col items-center p-5 gap-5
-					shadow-lg "
+					shadow-lg `}
+				onSubmit={handleUpdate}
 			>
-				<div className="w-[70%]">
+				<div className="w-[70%] ">
 					<Textfield
 						id="group-name"
 						label="Group name"
@@ -68,16 +114,23 @@ const GroupSettings = () => {
 						errorId="group-description-error"
 						placeholder="Group Description"
 					></Textfield>
+
 				</div>
 
+				{error && (
+					<p className="text-red-500 text-xs font-medium animate-pulse">
+						{error}
+					</p>
+				)}
 				<button
 					className="self-end mt-auto mr-5 p-2
 					rounded-sm bg-primary text-white font-semibold
 					cursor-pointer hover:font-bold hover:shadow-lg"
+					type="submit"
 				>
 					Save Changes
 				</button>
-			</div>
+			</form>
 
 			<div
 				className="w-[35%] h-[20%] border border-border

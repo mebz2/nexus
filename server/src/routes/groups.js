@@ -5,6 +5,7 @@ const {
 	fetchGroups,
 	fetchGroupData,
 	deleteGroup,
+	updateGroup
 } = require("../controllers/groupControllers");
 
 router.post("/create", createGroup);
@@ -15,7 +16,5 @@ router.get("/:groupId", fetchGroupData);
 
 router.delete("/:groupId", deleteGroup);
 
-router.put("/:groupId", (req, res) => {
-	res.send(`Update group ${req.params.groupId} details route`);
-});
+router.put("/:groupId", updateGroup);
 module.exports = router;

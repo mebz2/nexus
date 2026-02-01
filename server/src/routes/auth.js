@@ -4,19 +4,10 @@ const { login, signup } = require("../controllers/authControllers");
 const { fetchUser } = require("../controllers/fetchUser");
 const router = express.Router();
 
-// @route   POST api/auth/signup
-// @desc    Register user
-// @access  Public
 router.post('/signup', checkEmailExists, signup);
 
-// @route   POST api/auth/login
-// @desc    Authenticate user & get token
-// @access  Public
 router.post('/login', login);
 
-// @route   GET api/auth/me
-// @desc    Get current user
-// @access  Private
 router.get('/me', fetchUser);
 
 router.post("/logout", (req, res) => {

@@ -28,12 +28,12 @@
 - [x] middleware
 
 ## GROUPS
-- [ ] upload file
+- [x] upload file
 - [ ] update group
-- [ ] delete group
+- [x] delete group
 - [ ] leave group
-- [ ] fetch individual group data
-    - [ ]  fetch files
+- [x] fetch individual group data
+    - [x]  fetch files
     - [ ]  fetch members
 - [ ] promote 
 - [ ] kickout
